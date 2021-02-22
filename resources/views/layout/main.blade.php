@@ -30,7 +30,7 @@
 
 <body>
     <div class="sticky">
-        <nav class="uk-navbar-container main-navbar" uk-navbar="mode: click">
+        <nav class="uk-navbar-container main-navbar" uk-navbar="mode: click" style="display: none">
             <div class="uk-navbar-left">
                 <a class="uk-navbar-item uk-logo" href="#">
                     <img src="{{ asset('img/LOGOS/logocolor_only.png') }}" width="89px" height="89px">
@@ -68,6 +68,32 @@
                 </ul>
             </div>
         </nav>
+        <nav class="uk-navbar-container main-navbar" uk-navbar="dropbar: true" style="z-index: 981">
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="#" uk-navbar-toggle-icon></a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav nav-item">
+                                <li><a href="#">Producciones</a></li>
+                                <li><a href="#">Proyectos</a></li>
+                                <li><a href="#">Próximos eventos</a></li>
+                                <li><a href="#">Quiénes somos</a></li>
+                                <li><a href="#">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-navbar-center">
+                <a class="uk-navbar-item uk-logo" href="#">
+                    <img src="{{ asset('img/LOGOS/logocolor_text.png') }}" height="57px" width="102.45px"
+                        class="uk-margin-small-left">
+                </a>
+            </div>
+        </nav>
+
+        <div class="uk-navbar-dropbar"></div>
     </div>
     <div class="container">
         <div class="uk-container uk-container-large">
