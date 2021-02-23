@@ -23,7 +23,7 @@
 
         <div class="uk-width-1-1 uk-margin-top uk-margin-bottom">
             <div class=" uk-grid-match" uk-grid>
-                <div class="uk-width-1-3@s">
+                <div class="uk-width-1-3@m">
                     <div class="uk-card more-info">
                         <h1>MÁS INFORMACIÓN</h1>
                         <p><strong>EQUIPO CREATIVO</strong></p>
@@ -39,7 +39,7 @@
                         <p><strong>Gestión Cultural: &nbsp</strong>Procella Romero</p>
                     </div>
                 </div>
-                <div class="uk-width-expand@s">
+                <div class="uk-width-expand@m">
                     <div class="uk-card video-carousel">
                         <div class="video-slider">
                             <!-- SLIDE 1 -->
