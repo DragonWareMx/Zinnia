@@ -14,9 +14,6 @@ class EventSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('events')->insert([
-            '' => 'DragonWare',
-            
-        ]);
+        
     }
 }
