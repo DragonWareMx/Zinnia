@@ -51,7 +51,9 @@
                         <img id="gal_high" class="gal_high" src="{{ asset('/img/fotoZinnia/Procella.png') }}" alt="">
                     </div>
                 </div>
-                <div class="uk-width-1 uk-background-primary gal_desc font_vietnam">Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawd awdawdad awdawd awd awd awdaw dawdawd met, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</div>
+                <div class="uk-width-1 gal_desc font_vietnam" uk-tooltip="title: Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawd awdawdad awdawd awd awd awdaw dawdawd met, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.d">Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawd awdawdad awdawd awd awd awdaw dawdawd met, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</div>
+            <div class="font_vietnam uk-margin-top uk-width-1 uk-text-center" style="font-size: 22px; color:#FFFFFF;">GALERIA DE FOTOS</div>
+            <div class="font_vietnam uk-margin-small-top uk-width-1 uk-text-center" style="font-size: 14px;color: #FFFFFF;">15 fotos para ver</div>
             </div>
             <div class="uk-width-1-2@m">
             </div>
