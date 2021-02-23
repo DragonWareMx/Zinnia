@@ -123,3 +123,25 @@
     left: auto;
     right: 0;
 }
+.p_container{
+    background: #1C1C1C;
+}
+
+.div_images_p{
+    height: 375px;
+    width: 100%;
+}
+.next_btn{
+    width:100%;
+    text-align: right;
+    color: #FFFFFF;
+}
+.gal_low{
+    display:flex;
+    margin-top:14px;
+    margin-left:auto;
+    margin-right:0px;
+    width: 186px;
+    height: 126px;
+    object-fit: cover;
+}

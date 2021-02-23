@@ -20,6 +20,27 @@
         <div class="uk-margin-auto uk-text-center uk-width-2-3@m font_vietnam" style="font-size: 14px;">Texto breve
             descriptivo, o informativo acerca de las producciones por zinnia, ejemplo, elaborado con amor, pasión y
             dedicación en cada paso.</div>
+    </div>
+
+    <div class="p_container uk-margin-medium-top uk-margin-medium-bottom" style="height: 526px; width:100%">
+        <div class="uk-container">
+            <div class="uk-width-1-2@m">
+                <div class="div_images_p uk-flex">
+                    <div class="uk-width-1-4 uk-background-primary " style="height:100%;">
+                        <div class="next_btn font_vietnam">Siguiente</div>
+                        <img id="gal_low" class="gal_low" src="{{ asset('/img/fotoZinnia/Procella.png') }}" alt="">
+                    </div>
+                    <div class="uk-width-3-4 uk-background-default">
+                        <img id="gal_high" class="gal_low" src="{{ asset('/img/fotoZinnia/Procella.png') }}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-1-2@m">
+            </div>
+        </div>
+    </div>
+        
+    <div class="uk-container">
 
         <div class="uk-width-1-1 uk-margin-top uk-margin-bottom">
             <div class=" uk-grid-match" uk-grid>
