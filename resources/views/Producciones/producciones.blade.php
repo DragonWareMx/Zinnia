@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('head')
+<title>ZINNIA - Producciones</title>
 <link href="{{ asset('/css/productions.css') }}" rel="stylesheet">
 <script src="https://www.youtube.com/iframe_api"></script>
 
@@ -140,21 +141,42 @@
                 <div class="uk-width-3-5@m">
                     <div class="uk-card more-info">
                         <h1>CRÍTICAS</h1>
-                        <p>"Una obra impresionante que hace llorar a cualquiera"
-                            José Agustín Solórzano, El Universal. </p>
+                        <p>"Una obra impresionante que hace llorar a cualquiera"</p>
+                        <p class="autor">José Agustín Solórzano, <strong>El Universal</strong>.</p>
                         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquid ex ea commodi consequat."
-                            José Agustín Solórzano, El Universal. </p>
+                            laboris nisi ut aliquid ex ea commodi consequat."</p>
+                        <p class="autor">José Agustín Solórzano, <strong>El Universal</strong>.</p>
                     </div>
                 </div>
                 <div class="uk-width-expand@m">
-                    <div class="uk-card">
-                        hola
+                    <div class="uk-card critic-important">
+                        <div class="critic-inside">
+                            <div
+                                class="uk-width-1 uk-text-left uk-padding uk-padding-remove-bottom uk-margin-small-bottom">
+                                <img src="{{ asset('img/iconos/quote.png') }}" width="50px" height="50px">
+                            </div>
+                            <div class="uk-width-1 uk-padding uk-padding-remove-top">
+                                <p class="critic-text uk-width-1 uk-text-left">“Crítica importante, lorem ipsum dolor
+                                    sit amet consectetur
+                                    adipiscing
+                                    elit, sed
+                                    eiusmod.”</p>
+                                <p class="critic-autor uk-width-1 uk-text-right">-Lorem ipsum dolor sit amet</p>
+                                <div class="critic-autor uk-width-1 uk-text-right" style="text-decoration: underline">
+                                    Lorem ipsum</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <div class="uk-section uk-section-small">
+        <div class="uk-container uk-container-xlarge uk-flex uk-flex-right">
+            <button class="uk-button font_titles" style="color: black"> &#x3C; REGRESAR</button>
         </div>
     </div>
 </div>
