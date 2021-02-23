@@ -30,7 +30,7 @@
 
 <body>
     <div class="sticky">
-        <nav class="uk-navbar-container main-navbar" uk-navbar="mode: click" style="display: none">
+        <nav class="uk-navbar-container main-navbar" uk-navbar="mode: click">
             <div class="uk-navbar-left">
                 <a class="uk-navbar-item uk-logo" href="#">
                     <img src="{{ asset('img/LOGOS/logocolor_only.png') }}" width="89px" height="89px">
@@ -44,8 +44,8 @@
                         <a href="#">Producciones</a>
                         <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li><a href="#">Producciones</a></li>
-                                <li><a href="#">Coproducciones y colaboraciones</a></li>
+                                <li><a href="{{ route('producciones') }}">Producciones</a></li>
+                                <li><a href="{{ route('producciones') }}">Coproducciones y colaboraciones</a></li>
                             </ul>
                         </div>
                     </li>
@@ -68,14 +68,14 @@
                 </ul>
             </div>
         </nav>
-        <nav class="uk-navbar-container main-navbar" uk-navbar="dropbar: true" style="z-index: 981">
+        <nav class="uk-navbar-container main-navbar" uk-navbar="dropbar: true" style="z-index: 981; display: none">
             <div class="uk-navbar-left">
                 <ul class="uk-navbar-nav">
                     <li>
                         <a href="#" uk-navbar-toggle-icon></a>
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav nav-item">
-                                <li><a href="#">Producciones</a></li>
+                                <li><a href="{{ route('producciones') }}">Producciones</a></li>
                                 <li><a href="#">Proyectos</a></li>
                                 <li><a href="#">Próximos eventos</a></li>
                                 <li><a href="#">Quiénes somos</a></li>
@@ -95,11 +95,9 @@
 
         <div class="uk-navbar-dropbar"></div>
     </div>
-    <div class="container">
-        <div class="uk-container uk-container-large">
-            @yield('content')
-        </div>
-    </div>
+
+    @yield('content')
+
     <footer class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid>
         <div>
             <div class="uk-padding-small uk-flex uk-flex-left@m uk-flex-center uk-flex-middle">
