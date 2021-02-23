@@ -25,12 +25,16 @@
 
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ asset('js/menu.js') }}"></script>
+
     @yield('head')
 </head>
 
 <body>
     <div class="sticky">
-        <nav class="uk-navbar-container main-navbar" uk-navbar="mode: click">
+        <nav class="uk-navbar-container main-navbar menu-desktop" uk-navbar="mode: click" style="">
             <div class="uk-navbar-left">
                 <a class="uk-navbar-item uk-logo" href="#">
                     <img src="{{ asset('img/LOGOS/logocolor_only.png') }}" width="89px" height="89px">
@@ -68,14 +72,24 @@
                 </ul>
             </div>
         </nav>
-        <nav class="uk-navbar-container main-navbar" uk-navbar="dropbar: true" style="z-index: 981; display: none">
+        <nav class="uk-navbar-container main-navbar menu-phone" uk-navbar="mode: click" style="z-index: 981; ">
             <div class="uk-navbar-left">
                 <ul class="uk-navbar-nav">
                     <li>
                         <a href="#" uk-navbar-toggle-icon></a>
-                        <div class="uk-navbar-dropdown">
-                            <ul class="uk-nav uk-navbar-dropdown-nav nav-item">
-                                <li><a href="{{ route('producciones') }}">Producciones</a></li>
+                        <div class="uk-navbar-dropdown" uk-dropdown="pos: bottom-left; mode: click; offset: 13;">
+                            <ul class="uk-nav uk-navbar-dropdown-nav nav-item" style="margin: 0px">
+                                <li>
+                                    <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+                                        <li class="uk-parent">
+                                            <a href="{{ route('producciones') }}">Producciones</a>
+                                            <ul class="uk-nav-sub">
+                                                <li><a href="#">Producciones</a></li>
+                                                <li><a href="#">Coproducciones y colaboraciones</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li><a href="#">Proyectos</a></li>
                                 <li><a href="#">Próximos eventos</a></li>
                                 <li><a href="#">Quiénes somos</a></li>
@@ -119,8 +133,8 @@
             </div>
         </div>
         <div>
-            <div class="uk-padding-small uk-light uk-flex uk-flex-middle uk-flex-right@m uk-flex-center">
-                <div class="texto-dragonware uk-margin-small-right uk-flex uk-flex-middle">
+            <div class="uk-padding uk-light uk-flex uk-flex-middle uk-flex-right@m uk-flex-center">
+                <div class="texto-dragonware uk-flex uk-flex-middle">
                     Desarrollado por DragonWare.
                     <img src="{{ asset('img/ico/dragonBlanco.png') }}" width="23px" height="16px">
                 </div>

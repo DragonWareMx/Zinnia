@@ -23,6 +23,10 @@ html, body
     color: black !important;
 }
 
+.hide{
+    display: none;
+}
+
 .nav-item:hover, .nav-item a:hover{
     color: rgb(102, 101, 101) !important;
 }
