@@ -26,14 +26,15 @@
         <div class="uk-container">
             <div class="uk-width-1-2@m">
                 <div class="div_images_p uk-flex">
-                    <div class="uk-width-1-4 uk-background-primary " style="height:100%;">
+                    <div class="uk-width-1-4 uk-margin-right" style="height:100%;">
                         <div class="next_btn font_vietnam">Siguiente</div>
                         <img id="gal_low" class="gal_low" src="{{ asset('/img/fotoZinnia/Procella.png') }}" alt="">
                     </div>
-                    <div class="uk-width-3-4 uk-background-default">
-                        <img id="gal_high" class="gal_low" src="{{ asset('/img/fotoZinnia/Procella.png') }}" alt="">
+                    <div class="uk-width-3-4">
+                        <img id="gal_high" class="gal_high" src="{{ asset('/img/fotoZinnia/Procella.png') }}" alt="">
                     </div>
                 </div>
+                <div class="uk-width-1 uk-background-primary gal_desc font_vietnam">Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawd awdawdad awdawd awd awd awdaw dawdawd met, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</div>
             </div>
             <div class="uk-width-1-2@m">
             </div>
@@ -77,6 +78,11 @@
                             <div class="slide">
                                 <iframe class="video"
                                     src="https://www.youtube.com/embed/gSRFqpheg6Y?ecver=2&enablejsapi=1"></iframe>
+                            </div>
+                            <!-- SLIDE 7 -->
+                            <div class="slide">
+                                <iframe class="video"
+                                    src="https://www.youtube.com/embed/J3pF2jkQ4vc?ecver=2&enablejsapi=1"></iframe>
                             </div>
                             <!-- END OF SLIDES -->
                             <div class="slide-arrow left"></div>

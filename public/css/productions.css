@@ -100,6 +100,8 @@
     height: 45%;
     width: 15%;
     cursor: pointer;
+    color: azure;
+    text-shadow: 1px 0 0 rgb(0, 0, 0), -1px 0 0 rgb(0, 0, 0), 0 1px 0 rgb(0, 0, 0), 0 -1px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
     opacity: .4;
 }
 .slide-arrow:hover{
@@ -135,13 +137,32 @@
     width:100%;
     text-align: right;
     color: #FFFFFF;
+    font-size: 12px;
+    font-style: normal;
+    cursor: pointer;
+    margin-top:208px;
 }
 .gal_low{
-    display:flex;
     margin-top:14px;
     margin-left:auto;
     margin-right:0px;
-    width: 186px;
-    height: 126px;
+    width: 171px;
+    height: 111px;
     object-fit: cover;
+}
+
+.gal_high{
+    width: 461.7px;
+    height: 318.6px;
+    object-fit: cover;
+    margin-top:32px;
+}
+
+.gal_desc{
+    max-height: 40px;
+    font-style: normal;
+    text-align: right;
+    font-size: 14px;
+    color: #FFFFFF;
+    overflow-y: hidden;
 }
