@@ -45,17 +45,7 @@
                             <!-- SLIDE 1 -->
                             <div class="slide">
                                 <iframe class="video"
-                                    src="https://www.youtube.com/embed/b6li05zh3Kg?ecver=2&enablejsapi=1"></iframe>
-                            </div>
-                            <!-- SLIDE 2 -->
-                            <div class="slide">
-                                <iframe class="video"
-                                    src="https://www.youtube.com/embed/zW-AIXAnLcE?ecver=2&enablejsapi=1"></iframe>
-                            </div>
-                            <!-- SLIDE 3 -->
-                            <div class="slide">
-                                <iframe class="video"
-                                    src="https://www.youtube.com/embed/XEOCbFJjRw0?ecver=2&enablejsapi=1"></iframe>
+                                    src="https://www.youtube.com/embed/GEo5bmUKFvI?ecver=2&enablejsapi=1"></iframe>
                             </div>
                             <!-- SLIDE 4 -->
                             <div class="slide">
@@ -66,11 +56,6 @@
                             <div class="slide">
                                 <iframe class="video"
                                     src="https://www.youtube.com/embed/gSRFqpheg6Y?ecver=2&enablejsapi=1"></iframe>
-                            </div>
-                            <!-- SLIDE 6 -->
-                            <div class="slide">
-                                <iframe class="video"
-                                    src="https://www.youtube.com/embed/GEo5bmUKFvI?ecver=2&enablejsapi=1"></iframe>
                             </div>
                             <!-- END OF SLIDES -->
                             <div class="slide-arrow left"></div>
