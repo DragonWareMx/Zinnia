@@ -19,14 +19,14 @@ class CreateVideosTable extends Migration
 
             $table->string('link',100);
             $table->text('descripcion');
-            $table->unsignedBigInteger('production_id');
-            $table->unsignedBigInteger('proyect_id');
-            $table->unsignedBigInteger('event_id');
+            $table->unsignedBigInteger('production_id')->nullable();
+            $table->unsignedBigInteger('proyect_id')->nullable();
+            $table->unsignedBigInteger('event_id')->nullable();
             
             
-            $table->foreign('production_id')->references('id')->on('productions')->onDelete('cascade')->nullable();
-            $table->foreign('proyect_id')->references('id')->on('proyects')->onDelete('cascade')->nullable();
-            $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade')->nullable();
+            $table->foreign('production_id')->references('id')->on('productions')->onDelete('cascade');
+            $table->foreign('proyect_id')->references('id')->on('proyects')->onDelete('cascade');
+            $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
         });
     }
 

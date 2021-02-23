@@ -22,10 +22,11 @@ class CreateProductionsTable extends Migration
             $table->text('masinfo');        //datos técnicos
             $table->string('pdf', 250);     // url pdf descargable 
             $table->text('reconocimientos')->nullable();
-            $table->date('fecha');
+            $table->string('fecha',45);
             $table->text('criticas')->nullable();
             $table->text('quote')->nullable(); //crítica más representativa
             $table->enum('tipo',['producción','coproducción']);
+            $table->string('contacto',250)->nullable(); //sólo para coproducción
         });
     }
 
