@@ -1,0 +1,30 @@
+.font_titles{
+    font-family: Shadows Into Light;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.font_vietnam{
+    font-family: Be Vietnam;
+}
+
+.searcher{
+    width: 430px;
+    height: 36px;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;  
+    font-family: Be Vietnam;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    color: #B8B8B8;
+    padding-left:17px;
+    outline: none;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.searcher_button{
+    height: 36px;
+}
