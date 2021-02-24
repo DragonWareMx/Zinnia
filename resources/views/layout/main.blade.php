@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{{ asset('img/LOGOS/logocolor_only.png') }}">
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" />
@@ -22,32 +23,36 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ asset('js/menu.js') }}"></script>
 
     @yield('head')
 </head>
 
 <body>
+    @yield('content')
     <div class="sticky">
-        <nav class="uk-navbar-container main-navbar" uk-navbar="mode: click">
+        <nav class="uk-navbar-container main-navbar menu-desktop" uk-navbar="mode: click" style="">
             <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+                <a class="uk-navbar-item uk-logo" href="#">
+                    <img src="{{ asset('img/LOGOS/logocolor_only.png') }}" width="89px" height="89px">
+                    <img src="{{ asset('img/LOGOS/logocolor_text.png') }}" height="57px" width="102.45px"
+                        class="uk-margin-small-left">
+                </a>
             </div>
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
                     <li class="nav-item">
                         <a href="#">Producciones</a>
-                        {{-- <div class="uk-navbar-dropdown main-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="#">Producciones</a></li>
-                                    <li><a href="#">Coproducciones y colaboraciones</a></li>
-                                </ul>
-                            </div> --}}
                         <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li><a href="#">Producciones</a></li>
-                                <li><a href="#">Coproducciones y colaboraciones</a></li>
+                                <li><a href="{{ route('producciones') }}">Producciones</a></li>
+                                <li><a href="{{ route('producciones') }}">Coproducciones y colaboraciones</a></li>
                             </ul>
                         </div>
                     </li>
@@ -70,29 +75,50 @@
                 </ul>
             </div>
         </nav>
+        <nav class="uk-navbar-container main-navbar menu-phone" uk-navbar="mode: click" style="z-index: 981; ">
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="#" uk-navbar-toggle-icon></a>
+                        <div class="uk-navbar-dropdown" uk-dropdown="pos: bottom-left; mode: click; offset: 13;">
+                            <ul class="uk-nav uk-navbar-dropdown-nav nav-item" style="margin: 0px">
+                                <li>
+                                    <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+                                        <li class="uk-parent">
+                                            <a href="{{ route('producciones') }}">Producciones</a>
+                                            <ul class="uk-nav-sub">
+                                                <li><a href="#">Producciones</a></li>
+                                                <li><a href="#">Coproducciones y colaboraciones</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Proyectos</a></li>
+                                <li><a href="#">Próximos eventos</a></li>
+                                <li><a href="#">Quiénes somos</a></li>
+                                <li><a href="#">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-navbar-center">
+                <a class="uk-navbar-item uk-logo" href="#">
+                    <img src="{{ asset('img/LOGOS/logocolor_text.png') }}" height="57px" width="102.45px"
+                        class="uk-margin-small-left">
+                </a>
+            </div>
+        </nav>
+
+        <div class="uk-navbar-dropbar"></div>
     </div>
-    <div class="container">
-        <div class="uk-container uk-container-large">
-            @yield('content')
-        </div>
-    </div>
-    {{-- <footer class="main-footer">
-        <div class="footer-left">
-            <a class="uk-navbar-item uk-logo" href="#">Logo</a>
-        </div>
-        <div class="footer-center">
-            <a class="uk-navbar-item uk-logo" href="#">Logo</a>
-        </div>
-        <div class="footer-right">
-            <a class="uk-navbar-item uk-logo" href="#">Logo</a>
-        </div>
-    </footer> --}}
+
+
     <footer class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid>
         <div>
-            <div class="uk-padding-small uk-flex uk-flex-left uk-flex-middle">
+            <div class="uk-padding-small uk-flex uk-flex-left@m uk-flex-center uk-flex-middle">
                 <a class="uk-logo" href="#">
-                    <img src="{{ asset('img/LOGOS/LogoHorizontal.png') }}" height="75px" width="166.54px"
-                        style="filter: grayscale(1) ;">
+                    <img src="{{ asset('img/LOGOS/LogoHorizontal2.png') }}" height="75px" width="166.54px">
                 </a>
             </div>
         </div>
@@ -109,8 +135,8 @@
             </div>
         </div>
         <div>
-            <div class="uk-padding-small uk-light uk-flex uk-flex-middle uk-flex-right">
-                <div class="texto-dragonware uk-margin-small-right uk-flex uk-flex-middle">
+            <div class="uk-padding uk-light uk-flex uk-flex-middle uk-flex-right@m uk-flex-center">
+                <div class="texto-dragonware uk-flex uk-flex-middle">
                     Desarrollado por DragonWare.
                     <img src="{{ asset('img/ico/dragonBlanco.png') }}" width="23px" height="16px">
                 </div>

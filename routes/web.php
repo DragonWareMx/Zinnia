@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/lay', function () {
     return view('layout.main');
 });
+
+//PRODUCCIONES
+
+Route::get('/producciones', 'ProductionController@index')->name('producciones');
