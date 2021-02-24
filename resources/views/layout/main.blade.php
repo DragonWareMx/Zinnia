@@ -35,6 +35,7 @@
 </head>
 
 <body>
+    @yield('content')
     <div class="sticky">
         <nav class="uk-navbar-container main-navbar menu-desktop" uk-navbar="mode: click" style="">
             <div class="uk-navbar-left">
@@ -112,7 +113,6 @@
         <div class="uk-navbar-dropbar"></div>
     </div>
 
-    @yield('content')
 
     <footer class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid>
         <div>

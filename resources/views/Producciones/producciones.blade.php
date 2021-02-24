@@ -71,7 +71,7 @@
         <div class="uk-width-1-1">
             <div class=" uk-grid-match" uk-grid>
                 <div class="uk-width-1-3@m">
-                    <div class="uk-card more-info">
+                    <div class="more-info">
                         <h1>MÁS INFORMACIÓN</h1>
                         <p><strong>EQUIPO CREATIVO</strong></p>
                         <p><strong>Asistente general: &nbsp</strong>Laura Camacho</p>
@@ -87,7 +87,7 @@
                     </div>
                 </div>
                 <div class="uk-width-expand@m">
-                    <div class="uk-card video-carousel">
+                    <div class="video-carousel">
                         <div class="video-slider">
                             <!-- SLIDE 1 -->
                             <div class="slide">
@@ -136,10 +136,10 @@
     </div>
 
     <div class="uk-container  uk-container-xlarge">
-        <div class="uk-width-1-1">
+        <div class="uk-width-1-1" style="z-index: 100">
             <div class=" uk-grid-match" uk-grid>
                 <div class="uk-width-3-5@m">
-                    <div class="uk-card more-info">
+                    <div class="more-info">
                         <h1>CRÍTICAS</h1>
                         <p>"Una obra impresionante que hace llorar a cualquiera"</p>
                         <p class="autor">José Agustín Solórzano, <strong>El Universal</strong>.</p>
@@ -150,7 +150,7 @@
                     </div>
                 </div>
                 <div class="uk-width-expand@m">
-                    <div class="uk-card critic-important">
+                    <div class="critic-important">
                         <div class="critic-inside">
                             <div
                                 class="uk-width-1 uk-text-left uk-padding uk-padding-remove-bottom uk-margin-small-bottom">
@@ -179,6 +179,8 @@
             <button class="uk-button font_titles" style="color: black"> &#x3C; REGRESAR</button>
         </div>
     </div>
+
+    <div style="height: 2000px">aiuda</div>
 </div>
 
 <script>
