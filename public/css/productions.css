@@ -164,7 +164,9 @@
     text-align: right;
     font-size: 14px;
     color: #FFFFFF;
-    overflow-y: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
 }
 
 .div-reconocimientos{
@@ -265,4 +267,43 @@
     letter-spacing: 0em;
     text-align: left;
     color: #FFFFFF;
+}
+
+.gal_white{
+    width: 95%;
+    height: 524px;
+    background: #FFFFFF;
+    border: 1px solid #D2D2D2;
+    box-sizing: border-box;
+    margin-left:20px;
+    margin-top:15px;
+}
+
+.p_title{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #000000;
+    height: 51px;
+    padding: 13px;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
+}
+
+.p_desc{
+    font-size: 14px;
+    text-align: justify;
+    color: #000000;
+    margin-top:17px;
+    padding: 13px;
+    height: 80px;
+}
+
+.p_data{
+    color: #000000;
+    font-size: 12px;
+    padding-left: 13px;
+    margin-top:10px;
 }
