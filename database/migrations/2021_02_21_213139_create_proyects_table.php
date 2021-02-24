@@ -17,13 +17,15 @@ class CreateProyectsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('titulo', 250);
+            $table->string('titulo2', 250);
+            $table->string('titulo3', 250);
             $table->text('descripcion');    
             $table->string('subtitulo');
             $table->text('creditos');       //info importante      
             $table->text('masinfo');        //datos técnicos
             $table->string('pdf', 250);     // url pdf descargable 
-            $table->text('metodologia')->nullable();
-            $table->text('objetivos')->nullable();
+            $table->text('txtTitulo2')->nullable();
+            $table->text('txtTitulo3')->nullable();
             $table->text('quote')->nullable(); //frase representativa
             $table->enum('estado',['vigente','concluído']);
         });
