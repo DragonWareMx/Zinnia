@@ -179,8 +179,6 @@
             <button class="uk-button font_titles" style="color: black"> &#x3C; REGRESAR</button>
         </div>
     </div>
-
-    <div style="height: 2000px">aiuda</div>
 </div>
 
 <script>
