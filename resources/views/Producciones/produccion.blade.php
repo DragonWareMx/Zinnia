@@ -65,7 +65,7 @@
                 <div class="gal_white">
                     <div class="p_title font_vietnam"  uk-tooltip="{{$element->titulo}}" >{{ Str::limit($element->titulo, 65) }}</div>
                     <div class="p_desc font_vietnam">{{ $element->sinopsis, 240 }}</div>
-                    <div class="more-info uk-width-1" style="border: none; padding-top:0px;">
+                    <div class="more-info uk-width-1 uk-text-break uk-overflow-auto" style="border: none; padding-top:0px;">
                         {!! $element->descripcion !!}
                     </div>
                 </div>
@@ -77,7 +77,7 @@
         <div class="uk-width-1-1">
             <div class=" uk-grid-match" uk-grid>
                 <div class="uk-width-1-3@m">
-                    <div class="more-info">
+                    <div class="more-info uk-text-break">
                         <h1>MÁS INFORMACIÓN</h1>
                         {!! $element->masinfo !!}
                     </div>
