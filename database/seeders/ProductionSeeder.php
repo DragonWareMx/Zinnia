@@ -14,7 +14,7 @@ class ProductionSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('productions')->insert([
+        \DB::table('productions')->insert([
             'titulo' => 'LA PRUDENCIA',
             
             'descripcion'=>'Duración de la obra: 45 minutos.
@@ -52,7 +52,7 @@ class ProductionSeeder extends Seeder
             Gira por el interior del Estado de Michoacán en el rubro de Difusión de las Artes Escénicas.
             ',
             
-            'fechas'=>'2021-2018',
+            'fecha'=>'2021-2018',
             
             'criticas'=>'',
             
@@ -61,7 +61,7 @@ class ProductionSeeder extends Seeder
             'tipo'=>'producción',
         ]);
 
-        DB::table('productions')->insert([
+        \DB::table('productions')->insert([
             'titulo' => 'SOMBRAS DE LA LENGUA,							
             Leyendas purépechas en teatro de sombras para la población infantil vulnerable
             ',
@@ -88,7 +88,7 @@ class ProductionSeeder extends Seeder
             Fotografía: Procella Romero
             Realización de Títeres y Escenografía: Zinnia Compañía Escénica
             ',
-
+            'pdf'=>'',
             'reconocimientos'=>'PACMYC 2020',
             'fecha'=>'2021-2020',
             'criticas'=>'',
@@ -96,7 +96,7 @@ class ProductionSeeder extends Seeder
             'tipo'=>'producción',
         ]);
 
-        DB::table('productions')->insert([
+        \DB::table('productions')->insert([
             'titulo' => 'LA MUJER QUE MUEVE LA BALSA',
 
             'descripcion'=>'Equipo Creativo
@@ -131,7 +131,7 @@ class ProductionSeeder extends Seeder
             Federico Lozano
             Isabel Benet
             ',
-            
+            'pdf'=>'',
             'reconocimientos'=>'Ganadora de Mejor Texto Dramático, CICLO INCIERTO TBK 2019',
             
             'fecha'=>'2021-2018',
@@ -145,7 +145,7 @@ class ProductionSeeder extends Seeder
             'contacto'=>'https://www.facebook.com/DIRECTOR-GENERAL-EPITAFIOS-LABORATORIO-TEATRAL-1394836570770145'
         ]);
 
-        DB::table('productions')->insert([
+        \DB::table('productions')->insert([
             'titulo' => 'ÉRASE QUE SE ES… EN AFGANISTÁN',
             'descripcion'=>'',
             'sinopsis'=>'Dispositivo escénico en el que Norma Ferreira a través de anécdotas, 
@@ -166,10 +166,10 @@ class ProductionSeeder extends Seeder
             'fecha'=>'2020-2019',
             'criticas'=>'',
             'quote'=>'',
-            'tipo'=>'',
+            'tipo'=>'producción',
         ]);
 
-        DB::table('productions')->insert([
+        \DB::table('productions')->insert([
             'titulo' => 'LA GALLINA TONTA',
             'descripcion'=>'Duración de la obra: 50 min
             Duración de la obra: 13 min. (versión en línea)
@@ -193,7 +193,7 @@ class ProductionSeeder extends Seeder
             Creación sonora: Norma Ferreira
             Video y Fotografía: Norma Ferreira y Owen Breull
             ',
-            
+            'pdf'=>'',
             'reconocimientos'=>'',
             'fecha'=>'',
             'criticas'=>'',

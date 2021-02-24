@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class EventSeeder extends Seeder
 {
@@ -16,7 +17,7 @@ class EventSeeder extends Seeder
         //
         DB::table('events')->insert([
             'titulo'=>'LA PRUDENCIA',
-            'fecha'=>'21-03-2021',
+            'fecha'=>'2021-03-21',
             'hora'=>'18:00',
             'lugar'=>'',
             'tipo'=>'Presentación virtual',
@@ -25,7 +26,7 @@ class EventSeeder extends Seeder
         ]);
         DB::table('events')->insert([
             'titulo'=>'Conversatorio/Desmontaje:  DESMONTAJE DE PROCESOS ARTÍSTICOS Y VIRTUALIDAD/LA PRUDENCIA',
-            'fecha'=>'21-03-2021',
+            'fecha'=>'2021-03-21',
             'hora'=>'19:15',
             'lugar'=>'',
             'tipo'=>'Presentación virtual',
@@ -35,10 +36,10 @@ class EventSeeder extends Seeder
 
         DB::table('events')->insert([
             'titulo'=>'LA PRUDENCIA',
-            'fecha'=>'',
-            'hora'=>'',
+            'fecha'=>'2021-03-21',
+            'hora'=>'19:15',
             'lugar'=>'',
-            'tipo'=>'',
+            'tipo'=>'Presentación virtual',
             'link'=>'https://voyalteatro.com/ ',
             'masinfo'=>'Temporada en Sala Virtual 2021 Voy al Teatro, Jalisco',
         ]);

@@ -34,7 +34,7 @@
             </div>
         </form>
         <div class="uk-text-center font_titles uk-text-secondary uk-margin-small-top" style="font-size: 30px;">
-            PRODUCCIONES</div>
+            PRODUCCIÓN</div>
         <div class="uk-margin-auto uk-text-center uk-width-2-3@m font_vietnam" style="font-size: 14px;">Texto breve
             descriptivo, o informativo acerca de las producciones por zinnia, ejemplo, elaborado con amor, pasión y
             dedicación en cada paso.</div>
@@ -153,17 +153,19 @@
     </div>
 
     <div class="uk-section uk-section-small">
-        <div class="uk-width-1 div-reconocimientos uk-text-center uk-padding">
-            <h3 class="uk-text-center">RECONOCIMIENTOS</h3>
-            <h4 class="uk-text-center">Galardonada a n reconocimientos</h4>
-            <p>*Obra seleccionada para participar en la Muestra Estatal de Teatro Michoacán 2021/ Ganadora de la
-                Convocatoria Sala Virtual 2021 Voy al Teatro, Jalisco/ Obra seleccionada para ser parte del Banco de
-                Proyectos de CREADORES DE PAZ del Centro Occidente/ Proyecto seleccionado en la convocatoria México
-                Encuentro de las Artes Escénicas (ENARTES) FONCA 2020, Obra seleccionada en el Ciclo Teatro de los
-                Estados 2020, Teatro La Capilla, CDMX/ Producción seleccionada en el Programa Cultura de Paz dentro del
-                proyecto Promoción del Teatro en Michoacán 2019/ Proyecto beneficiado por el Programa de Estímulos a la
-                Creación y Desarrollo Artístico de Michoacán (PECDAM 2018) Gira por el interior del Estado de Michoacán
-                en el rubro de Difusión de las Artes Escénicas.</p>
+        <div class="uk-width-1 div-reconocimientos uk-text-center">
+            <div class="uk-container">
+                <h3 class="uk-text-center">RECONOCIMIENTOS</h3>
+                <h4 class="uk-text-center">Galardonada a n reconocimientos</h4>
+                <p>*Obra seleccionada para participar en la Muestra Estatal de Teatro Michoacán 2021/ Ganadora de la
+                    Convocatoria Sala Virtual 2021 Voy al Teatro, Jalisco/ Obra seleccionada para ser parte del Banco de
+                    Proyectos de CREADORES DE PAZ del Centro Occidente/ Proyecto seleccionado en la convocatoria México
+                    Encuentro de las Artes Escénicas (ENARTES) FONCA 2020, Obra seleccionada en el Ciclo Teatro de los
+                    Estados 2020, Teatro La Capilla, CDMX/ Producción seleccionada en el Programa Cultura de Paz dentro del
+                    proyecto Promoción del Teatro en Michoacán 2019/ Proyecto beneficiado por el Programa de Estímulos a la
+                    Creación y Desarrollo Artístico de Michoacán (PECDAM 2018) Gira por el interior del Estado de Michoacán
+                    en el rubro de Difusión de las Artes Escénicas.</p>
+            </div>
         </div>
     </div>
 

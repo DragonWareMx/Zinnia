@@ -24,3 +24,4 @@ Route::get('/lay', function () {
 //PRODUCCIONES
 
 Route::get('/producciones', 'ProductionController@index')->name('producciones');
+Route::get('/produccion/{id}', 'ProductionController@produccion')->name('produccion');

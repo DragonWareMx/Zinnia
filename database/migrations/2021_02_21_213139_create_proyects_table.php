@@ -23,7 +23,7 @@ class CreateProyectsTable extends Migration
             $table->string('subtitulo');
             $table->text('creditos');       //info importante      
             $table->text('masinfo');        //datos técnicos
-            $table->string('pdf', 250);     // url pdf descargable 
+            $table->string('pdf', 250)->nullable();     // url pdf descargable 
             $table->text('txtTitulo2')->nullable();
             $table->text('txtTitulo3')->nullable();
             $table->text('quote')->nullable(); //frase representativa

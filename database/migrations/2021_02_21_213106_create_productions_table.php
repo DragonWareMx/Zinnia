@@ -20,7 +20,7 @@ class CreateProductionsTable extends Migration
             $table->text('descripcion');    //cuerpo, donde viene duración, dirección, reparto y demás datos que consideren importantes
             $table->text('sinopsis');       //resumen de la obra
             $table->text('masinfo');        //datos técnicos
-            $table->string('pdf', 250);     // url pdf descargable 
+            $table->string('pdf', 250)->nullable();     // url pdf descargable 
             $table->text('reconocimientos')->nullable();
             $table->string('fecha',45);
             $table->text('criticas')->nullable();
