@@ -40,8 +40,8 @@
             dedicación en cada paso.</div>
     </div>
 
-    <div class="p_container uk-margin-medium-top uk-margin-medium-bottom" style="height: 526px; width:100%">
-        <div class="uk-container uk-flex">
+    <div class="p_container uk-margin-medium-top uk-margin-medium-bottom" style="min-height: 526px; width:100%;">
+        <div class="uk-container uk-container-xlarge uk-flex uk-flex-wrap">
             <div class="uk-width-1-2@m">
                 <div class="div_images_p uk-flex">
                     <div class="uk-width-1-4 uk-margin-right" style="height:100%;">
@@ -54,7 +54,8 @@
                 </div>
                 <div class="uk-width-1 gal_desc font_vietnam"
                     uk-tooltip="title: Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawd awdawdad awdawd awd awd awdaw dawdawd met, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.d">
-                    {{ Str::limit('Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawd awdawdad aw Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawdawdawd awdawd awdawd awdawd awdawdad awdawd awd awd awdaw dawdawd met,', 150) }}</div>
+                    {{ Str::limit('Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawd awdawdad aw Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawdawdawd awdawd awdawd awdawd awdawdad awdawd awd awd awdaw dawdawd met,', 150) }}
+                </div>
                 <div class="font_vietnam uk-margin-top uk-width-1 uk-text-center"
                     style="font-size: 22px; color:#FFFFFF;">GALERIA DE FOTOS</div>
                 <div class="font_vietnam uk-margin-small-top uk-width-1 uk-text-center"
@@ -62,8 +63,13 @@
             </div>
             <div class="uk-width-1-2@m">
                 <div class="gal_white">
-                    <div class="p_title font_vietnam"  uk-tooltip="title:Sombras de la lenguya aksaksjqiwqduwehuwduhwudhwdhwdhuwudhw" >{{ Str::limit('aa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhd ', 65) }}</div>
-                    <div class="p_desc font_vietnam"  uk-tooltip="title:Aquí va la descripción" >{{ Str::limit('pos descripcion ajwdhakjshdjkasd asjkhdakjshdkjashdjkasd aa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhdaa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhdaa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhdaa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhdaa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhd ', 240) }}</div>
+                    <div class="p_title font_vietnam"
+                        uk-tooltip="title:Sombras de la lenguya aksaksjqiwqduwehuwduhwudhwdhwdhuwudhw">
+                        {{ Str::limit('aa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhd ', 65) }}
+                    </div>
+                    <div class="p_desc font_vietnam" uk-tooltip="title:Aquí va la descripción">
+                        {{ Str::limit('pos descripcion ajwdhakjshdjkasd asjkhdakjshdkjashdjkasd aa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhdaa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhdaa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhdaa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhdaa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhd ', 240) }}
+                    </div>
                     <div class="uk-flex uk-flex-wrap">
                         <div class="font_vietnam p_data uk-width-1-3">
                             <div style="font-weight: bold;">Duración de la obra</div>
@@ -71,28 +77,31 @@
                         </div>
                         <div class="font_vietnam p_data uk-width-1-3">
                             <div style="font-weight: bold;">Género</div>
-                            <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Lorem impsun dolor no se que no se cuanto.</div>
+                            <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Lorem impsun dolor no se que no
+                                se cuanto.</div>
                         </div>
                         <div class="font_vietnam p_data uk-width-1-3">
                             <div style="font-weight: bold;">Público a quien está dirigida</div>
-                            <div class="uk-text-truncate"  uk-tooltip="title:asdasdasd">Familiar, principalmente infantil.</div>
+                            <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Familiar, principalmente
+                                infantil.</div>
                         </div>
                     </div>
                     <div class="font_vietnam p_data uk-width-1">
                         <div style="font-weight: bold;">Dramaturgia</div>
-                        <div class="uk-text-truncate"  uk-tooltip="title:asdasdasd">45 minutos.</div>
+                        <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">45 minutos.</div>
                     </div>
                     <div class="font_vietnam p_data uk-width-1">
                         <div style="font-weight: bold;">Dirección</div>
-                        <div class="uk-text-truncate"  uk-tooltip="title:asdasdasd">Tania Murillo.</div>
+                        <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Tania Murillo.</div>
                     </div>
                     <div class="font_vietnam p_data uk-width-1">
                         <div style="font-weight: bold;">Producción</div>
-                        <div class="uk-text-truncate"  uk-tooltip="title:asdasdasd">Zinnia compañía escénica.</div>
+                        <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Zinnia compañía escénica.</div>
                     </div>
                     <div class="font_vietnam p_data uk-width-1">
                         <div style="font-weight: bold;">Reparto</div>
-                        <div class="uk-text-truncate"  uk-tooltip="title:asdasdasd">Lorem impsun dolor sit amet lorem ipsum dolor sit ametna emaen asaj.</div>
+                        <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Lorem impsun dolor sit amet lorem
+                            ipsum dolor sit ametna emaen asaj.</div>
                     </div>
                 </div>
             </div>
@@ -161,9 +170,12 @@
                     Convocatoria Sala Virtual 2021 Voy al Teatro, Jalisco/ Obra seleccionada para ser parte del Banco de
                     Proyectos de CREADORES DE PAZ del Centro Occidente/ Proyecto seleccionado en la convocatoria México
                     Encuentro de las Artes Escénicas (ENARTES) FONCA 2020, Obra seleccionada en el Ciclo Teatro de los
-                    Estados 2020, Teatro La Capilla, CDMX/ Producción seleccionada en el Programa Cultura de Paz dentro del
-                    proyecto Promoción del Teatro en Michoacán 2019/ Proyecto beneficiado por el Programa de Estímulos a la
-                    Creación y Desarrollo Artístico de Michoacán (PECDAM 2018) Gira por el interior del Estado de Michoacán
+                    Estados 2020, Teatro La Capilla, CDMX/ Producción seleccionada en el Programa Cultura de Paz dentro
+                    del
+                    proyecto Promoción del Teatro en Michoacán 2019/ Proyecto beneficiado por el Programa de Estímulos a
+                    la
+                    Creación y Desarrollo Artístico de Michoacán (PECDAM 2018) Gira por el interior del Estado de
+                    Michoacán
                     en el rubro de Difusión de las Artes Escénicas.</p>
             </div>
         </div>

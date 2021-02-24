@@ -271,12 +271,13 @@
 
 .gal_white{
     width: 95%;
-    height: 524px;
+    min-height: 550px;
     background: #FFFFFF;
     border: 1px solid #D2D2D2;
     box-sizing: border-box;
-    margin-left:20px;
-    margin-top:15px;
+    position: relative;
+    top: 15px;
+    left:15px;
 }
 
 .p_title{
@@ -298,7 +299,7 @@
     color: #000000;
     margin-top:17px;
     padding: 13px;
-    height: 80px;
+    min-height: 80px;
 }
 
 .p_data{
