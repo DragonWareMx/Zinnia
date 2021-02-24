@@ -34,7 +34,7 @@
             </div>
         </form>
         <div class="uk-text-center font_titles uk-text-secondary uk-margin-small-top" style="font-size: 30px;">
-            PRODUCCIÓN</div>
+            {{$tipo}}</div>
         <div class="uk-margin-auto uk-text-center uk-width-2-3@m font_vietnam" style="font-size: 14px;">Texto breve
             descriptivo, o informativo acerca de las producciones por zinnia, ejemplo, elaborado con amor, pasión y
             dedicación en cada paso.</div>
@@ -59,49 +59,14 @@
                 <div class="font_vietnam uk-margin-top uk-width-1 uk-text-center"
                     style="font-size: 22px; color:#FFFFFF;">GALERIA DE FOTOS</div>
                 <div class="font_vietnam uk-margin-small-top uk-width-1 uk-text-center"
-                    style="font-size: 14px;color: #FFFFFF;">15 fotos para ver</div>
+                    style="font-size: 14px;color: #FFFFFF;">{{ count($element->image) }} fotos para ver</div>
             </div>
             <div class="uk-width-1-2@m">
                 <div class="gal_white">
-                    <div class="p_title font_vietnam"
-                        uk-tooltip="title:Sombras de la lenguya aksaksjqiwqduwehuwduhwudhwdhwdhuwudhw">
-                        {{ Str::limit('aa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhd ', 65) }}
-                    </div>
-                    <div class="p_desc font_vietnam" uk-tooltip="title:Aquí va la descripción">
-                        {{ Str::limit('pos descripcion ajwdhakjshdjkasd asjkhdakjshdkjashdjkasd aa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhdaa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhdaa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhdaa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhdaa awjdjawdawudauwduhd aduwhadu waudhawud auwhduahwduwad uahwduahd awudhad auwhdauwdhawd uawdaw awd awd awd awdaw awhduawhd ', 240) }}
-                    </div>
-                    <div class="uk-flex uk-flex-wrap">
-                        <div class="font_vietnam p_data uk-width-1-3">
-                            <div style="font-weight: bold;">Duración de la obra</div>
-                            <div class="uk-text-truncate">45 minutos.</div>
-                        </div>
-                        <div class="font_vietnam p_data uk-width-1-3">
-                            <div style="font-weight: bold;">Género</div>
-                            <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Lorem impsun dolor no se que no
-                                se cuanto.</div>
-                        </div>
-                        <div class="font_vietnam p_data uk-width-1-3">
-                            <div style="font-weight: bold;">Público a quien está dirigida</div>
-                            <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Familiar, principalmente
-                                infantil.</div>
-                        </div>
-                    </div>
-                    <div class="font_vietnam p_data uk-width-1">
-                        <div style="font-weight: bold;">Dramaturgia</div>
-                        <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">45 minutos.</div>
-                    </div>
-                    <div class="font_vietnam p_data uk-width-1">
-                        <div style="font-weight: bold;">Dirección</div>
-                        <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Tania Murillo.</div>
-                    </div>
-                    <div class="font_vietnam p_data uk-width-1">
-                        <div style="font-weight: bold;">Producción</div>
-                        <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Zinnia compañía escénica.</div>
-                    </div>
-                    <div class="font_vietnam p_data uk-width-1">
-                        <div style="font-weight: bold;">Reparto</div>
-                        <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Lorem impsun dolor sit amet lorem
-                            ipsum dolor sit ametna emaen asaj.</div>
+                    <div class="p_title font_vietnam"  uk-tooltip="{{$element->titulo}}" >{{ Str::limit($element->titulo, 65) }}</div>
+                    <div class="p_desc font_vietnam">{{ $element->sinopsis, 240 }}</div>
+                    <div class="more-info uk-width-1" style="border: none; padding-top:0px;">
+                        {!! $element->descripcion !!}
                     </div>
                 </div>
             </div>
@@ -114,17 +79,7 @@
                 <div class="uk-width-1-3@m">
                     <div class="more-info">
                         <h1>MÁS INFORMACIÓN</h1>
-                        <p><strong>EQUIPO CREATIVO</strong></p>
-                        <p><strong>Asistente general: &nbsp</strong>Laura Camacho</p>
-                        <p><strong>Diseño y atrezo de escenografía: &nbsp</strong>Abigail Araoz y Tania Murillo</p>
-                        <p><strong>Realización de escenografía: &nbsp</strong>Raúl Medina Ríos (Gigio) y el Sr. Leonel
-                        </p>
-                        <p><strong>Iluminación:&nbsp</strong>Raúl Medina Ríos (Gigio)</p>
-                        <p><strong>Diseño cartel y edición de video:&nbsp</strong> Tania Murillo</p>
-                        <p><strong>Tipografía base:&nbsp</strong>LAMIA DOP</p>
-                        <p><strong>Fotografía de estudio:&nbsp</strong>Sebastián Portillo-FOTOVIVA</p>
-                        <p><strong>Fotografía escénica: &nbsp</strong>Fausto Jijón</p>
-                        <p><strong>Gestión Cultural: &nbsp</strong>Procella Romero</p>
+                        {!! $element->masinfo !!}
                     </div>
                 </div>
                 <div class="uk-width-expand@m">
@@ -162,23 +117,15 @@
     </div>
 
     <div class="uk-section uk-section-small">
-        <div class="uk-width-1 div-reconocimientos uk-text-center">
-            <div class="uk-container">
-                <h3 class="uk-text-center">RECONOCIMIENTOS</h3>
-                <h4 class="uk-text-center">Galardonada a n reconocimientos</h4>
-                <p>*Obra seleccionada para participar en la Muestra Estatal de Teatro Michoacán 2021/ Ganadora de la
-                    Convocatoria Sala Virtual 2021 Voy al Teatro, Jalisco/ Obra seleccionada para ser parte del Banco de
-                    Proyectos de CREADORES DE PAZ del Centro Occidente/ Proyecto seleccionado en la convocatoria México
-                    Encuentro de las Artes Escénicas (ENARTES) FONCA 2020, Obra seleccionada en el Ciclo Teatro de los
-                    Estados 2020, Teatro La Capilla, CDMX/ Producción seleccionada en el Programa Cultura de Paz dentro
-                    del
-                    proyecto Promoción del Teatro en Michoacán 2019/ Proyecto beneficiado por el Programa de Estímulos a
-                    la
-                    Creación y Desarrollo Artístico de Michoacán (PECDAM 2018) Gira por el interior del Estado de
-                    Michoacán
-                    en el rubro de Difusión de las Artes Escénicas.</p>
+        @if (isset($element->n_reconocimientos) && $element->n_reconocimientos > 0)
+            <div class="uk-width-1 div-reconocimientos uk-text-center">
+                <div class="uk-container uk-container-xlarge">
+                    <h3 class="uk-text-center uk-margin-top">RECONOCIMIENTOS</h3>
+                    <h4 class="uk-text-center">Galardonada a {{ $element->n_reconocimientos }} reconocimientos</h4>
+                    <p>{{$element->reconocimientos}}</p>
+                </div>
             </div>
-        </div>
+        @endif
     </div>
 
     <div class="uk-container  uk-container-xlarge">
@@ -187,30 +134,18 @@
                 <div class="uk-width-3-5@m">
                     <div class="more-info">
                         <h1>CRÍTICAS</h1>
-                        <p>"Una obra impresionante que hace llorar a cualquiera"</p>
-                        <p class="autor">José Agustín Solórzano, <strong>El Universal</strong>.</p>
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquid ex ea commodi consequat."</p>
-                        <p class="autor">José Agustín Solórzano, <strong>El Universal</strong>.</p>
+                        {!! $element->criticas !!}
                     </div>
                 </div>
                 <div class="uk-width-expand@m">
                     <div class="critic-important">
-                        <div class="critic-inside">
+                        <div class="critic-inside font_vietnam">
                             <div
                                 class="uk-width-1 uk-text-left uk-padding uk-padding-remove-bottom uk-margin-small-bottom">
                                 <img src="{{ asset('img/iconos/quote.png') }}" width="50px" height="50px">
                             </div>
                             <div class="uk-width-1 uk-padding uk-padding-remove-top">
-                                <p class="critic-text uk-width-1 uk-text-left">“Crítica importante, lorem ipsum dolor
-                                    sit amet consectetur
-                                    adipiscing
-                                    elit, sed
-                                    eiusmod.”</p>
-                                <p class="critic-autor uk-width-1 uk-text-right">-Lorem ipsum dolor sit amet</p>
-                                <div class="critic-autor uk-width-1 uk-text-right" style="text-decoration: underline">
-                                    Lorem ipsum</div>
+                                {!! $element->quote !!}
                             </div>
                         </div>
                     </div>

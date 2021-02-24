@@ -243,6 +243,7 @@
     position: relative;
     top: 10px;
     left:8px;
+    color: white;
 }
 
 .critic-text{
@@ -297,7 +298,6 @@
     font-size: 14px;
     text-align: justify;
     color: #000000;
-    margin-top:17px;
     padding: 13px;
     min-height: 80px;
 }

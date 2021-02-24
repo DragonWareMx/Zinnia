@@ -20,7 +20,12 @@ class ProductionController extends Controller
         // }
 
         $element = Production::findOrFail($id);
-        $tipo = 'PRODUCCIÓN';
+        if($element->tipo == 'producción'){
+            $tipo = 'PRODUCCIÓN';
+        }
+        else{
+            $tipo = 'COPRODUCCIÓN';
+        }
 
         return view('Producciones.produccion', ['element'=>$element,'tipo'=>$tipo]);
     }
