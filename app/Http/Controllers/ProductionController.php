@@ -7,11 +7,14 @@ use App\Models\Production;
 
 class ProductionController extends Controller
 {
-    public function index(){
-        return view('Producciones.producciones');
+    public function index()
+    {
+        $producciones = Production::get();
+        return view('Producciones.producciones', ['producciones' => $producciones]);
     }
 
-    public function produccion($id){
+    public function produccion($id)
+    {
         // try{
         //     $decryptedId = Crypt::decrypt($id);
         // }
@@ -20,13 +23,12 @@ class ProductionController extends Controller
         // }
 
         $element = Production::findOrFail($id);
-        if($element->tipo == 'producción'){
+        if ($element->tipo == 'producción') {
             $tipo = 'PRODUCCIÓN';
-        }
-        else{
+        } else {
             $tipo = 'COPRODUCCIÓN';
         }
 
-        return view('Producciones.produccion', ['element'=>$element,'tipo'=>$tipo]);
+        return view('Producciones.produccion', ['element' => $element, 'tipo' => $tipo]);
     }
 }

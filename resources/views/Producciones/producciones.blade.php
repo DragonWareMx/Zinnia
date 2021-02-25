@@ -39,5 +39,70 @@
             descriptivo, o informativo acerca de las producciones por zinnia, ejemplo, elaborado con amor, pasión y
             dedicación en cada paso.</div>
     </div>
+
+    @foreach ($producciones as $element)
+    <div class="uk-container uk-container-xlarge uk-padding-remove-right">
+        <div class="p_container uk-margin-medium-top uk-margin-large-bottom" style="min-height: 426px; width:100%;">
+            <div class="uk-container uk-container-xlarge uk-flex uk-flex-wrap">
+                <div class="uk-width-1-2@m">
+                    <div class="div_images_p uk-flex">
+                        <div class="uk-width-1-5 uk-padding-small" style="height:100%;">
+                            <div class="next_btn font_vietnam uk-text-center">15 fotos y 8 videos para ver</div>
+                            <img id="gal_low" class="gal_low" src="{{ asset('/img/fotoZinnia/Procella.png') }}" alt="">
+                        </div>
+                        <div class="uk-width-4-5" id="imagen-seleccionada">
+                            <img id="gal_high" class="gal_high" src="{{ asset('/img/fotoZinnia/Procella.png') }}"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="uk-width-1 gal_desc font_vietnam"
+                        uk-tooltip="title: Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawd awdawdad awdawd awd awd awdaw dawdawd met, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.d">
+                        {{ Str::limit('Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawd awdawdad aw Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawdawdawd awdawd awdawd awdawd awdawdad awdawd awd awd awdaw dawdawd met,', 150) }}
+                    </div>
+                </div>
+                <div class="date_position2 font_vietnam">Fecha de la obra 11.02.2021</div>
+                <div class="uk-width-1-2@m uk-flex">
+                    <div class="gal_white uk-flex uk-flex-wrap" style="min-height: 450px;">
+                        <div class="p_title font_vietnam" uk-tooltip="{{$element->titulo}}">
+                            {{ Str::limit($element->titulo, 65) }}</div>
+                        <div class="p_desc font_vietnam">{{ $element->sinopsis, 240 }}</div>
+                        <div class="more-info uk-width-1 uk-text-break uk-flex uk-flex-wrap"
+                            style="border: none; padding-top:0px;">
+                            <div class="font_vietnam p_data uk-width-1-3">
+                                <div style="font-weight: bold;">Duración de la obra</div>
+                                <div class="uk-text-truncate">45 minutos.</div>
+                            </div>
+                            <div class="font_vietnam p_data uk-width-1-3">
+                                <div style="font-weight: bold;">Género</div>
+                                <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Lorem impsun dolor no se que
+                                    no
+                                    se cuanto.</div>
+                            </div>
+                            <div class="font_vietnam p_data uk-width-1-3">
+                                <div style="font-weight: bold;">Público a quien está dirigida</div>
+                                <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Familiar, principalmente
+                                    infantil.</div>
+                            </div>
+                            <div class="font_vietnam p_data uk-width-1-3">
+                                <div style="font-weight: bold;">Reconocimientos</div>
+                                <div class="uk-text-truncate uk-flex uk-flex-bottom" uk-tooltip="title:asdasdasd">
+                                    <img src="{{ asset('img/iconos/reconocimiento.png') }}" width="25px" height="25px">
+                                    <img src="{{ asset('img/iconos/reconocimiento.png') }}" width="25px" height="25px">
+                                    <img src="{{ asset('img/iconos/reconocimiento.png') }}" width="25px" height="25px">
+                                    5 más ...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-width-1" style="margin-bottom: 0px; margin-top:auto">
+                            <button class="p_downloads" href="#">
+                                <div class="font_titles" style="font-size: 18px;color: #FFFFFF;">MÁS INFORMACIÓN</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endforeach
 </div>
 @endsection
