@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             ProyectSeeder::class,
             UserSeeder::class,
             VideoSeeder::class,
+            PdfSeeder::class,
         ]);
     }
 }

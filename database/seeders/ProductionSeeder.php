@@ -54,9 +54,31 @@ class ProductionSeeder extends Seeder
             
             'fechas'=>'2021-2018',
             
-            'criticas'=>'',
+            'criticas'=>'
+            “Murillo logra que tanto los deliciosos momentos clownescos de sus actrices como las desgarradoras señales de un horror demasiado real, demasiado humano, que habita en el fondo de esta obra, se experimente siempre en un incómodo -demasiado cerca-.”
+            Said Soberanes-Sinestesia Escénica
+            https://sinestesiaescenica.wordpress.com/2018/05/31/la-prudencia-compania-escenica-zinnia/
             
-            'quote'=>'',
+            Estrenan a nivel nacional a cargo de Zinnia Compañía Escénica la obra La Prudencia, que versará sobre la inseguridad que se vive en el país.
+            Luis Felipe Reynos.o-Quadratín
+            https://www.quadratin.com.mx/cultura/estrenaran-en-el-pais-la-obra-sobre-la-inseguridad-la-prudencia/
+            
+            Así, como una comedia enérgica y audaz que se mantiene durante toda la función es que se presentó La Prudencia… Con un estilo fresco pero contundente...
+            Davo Pinks-CXPRESS Cartelera, Teatro, Conciertos, Cultura
+            https://www.cxpress.mx/la-prudencia-en-una-sociedad-atemorizada-por-la-inseguridad/
+            
+            Clara muestra del humor clásico trasladado a un problema social… La energía en el escenario es increíble, TODO el tiempo están a full y eso se agradece enormemente...
+            Me interesa interesarte
+            https://www.instagram.com/p/B790CM5jfBH/?igshid=u7g9fch5h5tj
+            
+            Espléndidamente actuada… Los personajes de Gotbeter, caminan por la cuerda floja de la paranoia y esta cuerda está sostenida en los postes de la comedia.
+            Desextender
+            www.instagram.com/p/B7xQcPQD1dp/?igshid=ngfadd8cw0c9 
+            ',
+            
+            'quote'=>'Clara muestra del humor clásico trasladado a un problema social… La energía en el escenario es increíble, TODO el tiempo están a full y eso se agradece enormemente...
+            Me interesa interesarte
+            https://www.instagram.com/p/B790CM5jfBH/?igshid=u7g9fch5h5tj',
             
             'tipo'=>'producción',
         ]);
