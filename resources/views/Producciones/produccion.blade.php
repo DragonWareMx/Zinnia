@@ -39,7 +39,6 @@
             descriptivo, o informativo acerca de las producciones por zinnia, ejemplo, elaborado con amor, pasión y
             dedicación en cada paso.</div>
     </div>
-
     <div class="p_container uk-margin-medium-top uk-margin-medium-bottom" style="min-height: 526px; width:100%;">
         <div class="uk-container uk-container-xlarge uk-flex uk-flex-wrap">
             <div class="uk-width-1-2@m">
@@ -61,17 +60,54 @@
                 <div class="font_vietnam uk-margin-small-top uk-width-1 uk-text-center"
                     style="font-size: 14px;color: #FFFFFF;">{{ count($element->image) }} fotos para ver</div>
             </div>
-            <div class="uk-width-1-2@m">
+            <div class="date_position2 font_vietnam">Fecha de la obra 11.02.2021</div>
+            <div class="uk-width-1-2@m uk-flex">
                 <div class="gal_white">
-                    <div class="p_title font_vietnam"  uk-tooltip="{{$element->titulo}}" >{{ Str::limit($element->titulo, 65) }}</div>
-                    <div class="p_desc font_vietnam">{{ $element->sinopsis, 240 }}</div>
-                    <div class="more-info uk-width-1 uk-text-break uk-overflow-auto" style="border: none; padding-top:0px;">
-                        {!! $element->descripcion !!}
-                    </div>
+                <div class="p_title font_vietnam"  uk-tooltip="{{$element->titulo}}" >{{ Str::limit($element->titulo, 65) }}</div>
+                <div class="p_desc font_vietnam">{{ $element->sinopsis, 240 }}</div>
+                <div class="more-info uk-width-1 uk-text-break uk-overflow-auto" style="border: none; padding-top:0px;">
+                    {!! $element->descripcion !!}
                 </div>
+                <div class="uk-width-1">
+                    <button class="p_downloads" href="#modal-descargables" uk-toggle>
+                        <div class="font_titles" style="font-size: 18px;color: #FFFFFF;">DESCARGABLES</div>
+                    </button>
+                </div>
+                </div>
+            </div> 
+        </div> 
+    </div>
+
+    <div id="modal-descargables" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-background-secondary">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="font_titles uk-flex uk-flex-center" style="color: white; font-size:24px;">DESCARGABLES</div>
+            {{-- Descargable 1 --}}
+            <div class="p_downloable uk-margin-small-top font_vietnam">
+                <a  class="uk-width-4-5 uk-text-truncate" style="color:white" href="{{asset('/img/fotoZinnia/Procella.png')}}" download class="uk-text-truncate">Increíble descargable pdf número 1.pdf</a>
+                <a  style="color:white;"href="{{asset('/img/fotoZinnia/Procella.png')}}" download uk-icon="download"></a>
+            </div>
+            {{-- Descargable 2 --}}
+            <div class="p_downloable uk-margin-small-top font_vietnam">
+                <a  class="uk-width-4-5 uk-text-truncate"style="color:white"href="{{asset('/img/fotoZinnia/Procella.png')}}" download class="uk-text-truncate">Por favor seleccióneme a mí señor calamardo.pdf</a>
+                <a style="color:white"href="{{asset('/img/fotoZinnia/Procella.png')}}" download uk-icon="download"></a>
+            </div>
+            {{-- Descargable 3 --}}
+            <div class="p_downloable uk-margin-small-top font_vietnam">
+                <a   class="uk-width-4-5 uk-text-truncate"style="color:white"href="{{asset('/img/fotoZinnia/Procella.png')}}" download class="uk-text-truncate">Descargable chungo.pdf</a>
+                <a  style="color:white"href="{{asset('/img/fotoZinnia/Procella.png')}}" download uk-icon="download"></a>
+            </div>
+            {{-- Descargable 4 --}}
+            <div class="p_downloable uk-margin-small-top font_vietnam">
+                <a   class="uk-width-4-5 uk-text-truncate"style="color:white"href="{{asset('/img/fotoZinnia/Procella.png')}}" download class="uk-text-truncate">FotosEvento2.pdf</a>
+                <a style="color:white" href="{{asset('/img/fotoZinnia/Procella.png')}}" download uk-icon="download"></a>
             </div>
         </div>
     </div>
+
+    {{-- PONER AQUI LA FECHA --}}
+    <div class="date_position font_vietnam">Fecha de la obra 11.02.2021</div>
+                
 
     <div class="uk-container  uk-container-xlarge">
         <div class="uk-width-1-1">
