@@ -26,15 +26,20 @@
 @section('content')
 <div class="container">
     <div class="uk-container">
-        <form action="#" method="post">
+        <form action="
+        @switch($tipo)
+            @case('PRODUCCIONES')
+                {{route('producciones')}}
+                @break
+        @endswitch" method="get">
             @csrf
             <div class="uk-flex uk-flex-right uk-margin-top">
-                <input type="text" max="1000" class="searcher" placeholder="Ingrese texto de búsqueda" required>
+                <input name="busqueda" type="text" max="1000" class="searcher" placeholder="Ingrese texto de búsqueda" required>
                 <button type="submit" class="font_titles uk-button uk-button-secondary searcher_button">BUSCAR</button>
             </div>
         </form>
         <div class="uk-text-center font_titles uk-text-secondary uk-margin-small-top" style="font-size: 30px;">
-            PRODUCCIONES</div>
+            {{$tipo}}</div>
         <div class="uk-margin-auto uk-text-center uk-width-2-3@m font_vietnam" style="font-size: 14px;">Texto breve
             descriptivo, o informativo acerca de las producciones por zinnia, ejemplo, elaborado con amor, pasión y
             dedicación en cada paso.</div>
@@ -47,7 +52,17 @@
                 <div class="uk-width-1-2@m">
                     <div class="div_images_p uk-flex">
                         <div class="uk-width-1-5 uk-padding-small" style="height:100%;">
-                            <div class="next_btn font_vietnam uk-text-center">15 fotos y 8 videos para ver</div>
+                            <div class="next_btn font_vietnam uk-text-center">
+                                @if (count($element->image) > 0 && count($element->video) > 0)
+                                    {{ count($element->image) }} @if(count($element->image) > 1)fotos @else foto @endif y {{count($element->video)}} @if(count($element->video) > 1)videos @else video @endif para ver
+                                @elseif(count($element->image) > 0)
+                                    {{ count($element->image) }} @if(count($element->image) > 1)fotos @else foto @endif para ver
+                                @elseif(count($element->video) > 0)
+                                    {{count($element->video)}} @if(count($element->video) > 1)videos @else video @endif para ver
+                                @else
+                                    Sin fotos ni videos para ver
+                                @endif
+                            </div>
                             <img id="gal_low" class="gal_low" src="{{ asset('/img/fotoZinnia/Procella.png') }}" alt="">
                         </div>
                         <div class="uk-width-4-5" id="imagen-seleccionada">
@@ -104,22 +119,11 @@
         </div>
     </div>
     @endforeach
-    <div class="uk-width-1 uk-flex uk-flex-center">
-        <ul class="uk-pagination" uk-margin>
-            <li><a href="#"><span uk-pagination-previous></span></a></li>
-            <li><a href="#">1</a></li>
-            <li class="uk-disabled"><span>...</span></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li class="uk-active"><span>7</span></li>
-            <li><a href="#">8</a></li>
-            <li><a href="#">9</a></li>
-            <li><a href="#">10</a></li>
-            <li class="uk-disabled"><span>...</span></li>
-            <li><a href="#">20</a></li>
-            <li><a href="#"><span uk-pagination-next></span></a></li>
-        </ul>
-    </div>
+
+    @switch($tipo)
+        @case('PRODUCCIONES')
+            {!! $producciones->links() !!}
+            @break
+    @endswitch
 </div>
 @endsection
