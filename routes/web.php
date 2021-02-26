@@ -17,6 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/inicio', function () {
+    return view('inicio');
+});
+
+// QUIENES SOMOS
+Route::get('/quienes-somos', function () {
+    return view('quienesSomos');
+});
+
 Route::get('/lay', function () {
     return view('layout.main');
 });
