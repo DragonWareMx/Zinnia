@@ -97,18 +97,31 @@ class ProductionSeeder extends Seeder
             'fecha'=>'2021-2018',
             
             'criticas'=>'
-            <p>&quot;Una obra impresionante que hace llorar a cualquiera&quot;<br />
-            Jos&eacute; Agust&iacute;n Sol&oacute;rzano,&nbsp;<u><strong>El Universal</strong></u>.</p>
+            <p>&ldquo;Murillo&nbsp;logra&nbsp;que&nbsp;tanto&nbsp;los&nbsp;deliciosos&nbsp;momentos&nbsp;clownescos&nbsp;de&nbsp;sus&nbsp;actrices&nbsp;como&nbsp;las&nbsp;desgarradoras&nbsp;se&ntilde;ales&nbsp;de&nbsp;un&nbsp;horror&nbsp;demasiado&nbsp;real,&nbsp;demasiado&nbsp;humano,&nbsp;que&nbsp;habita&nbsp;en&nbsp;el&nbsp;fondo&nbsp;de&nbsp;esta&nbsp;obra,&nbsp;se&nbsp;experimente&nbsp;siempre&nbsp;en&nbsp;un&nbsp;inc&oacute;modo&nbsp;-demasiado&nbsp;cerca-.&rdquo;</p>
 
-            <p>&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.&quot;<br />
-            Jos&eacute; Agust&iacute;n Sol&oacute;rzano,&nbsp;<u><strong>El Universal</strong></u>.</p>
+<p><a href="https://sinestesiaescenica.wordpress.com/2018/05/31/la-prudencia-compania-escenica-zinnia/">Said&nbsp;Soberanes-Sinestesia&nbsp;Esc&eacute;nica</a></p>
+
+<p>&quot;Estrenan&nbsp;a&nbsp;nivel&nbsp;nacional&nbsp;a&nbsp;cargo&nbsp;de&nbsp;Zinnia&nbsp;Compa&ntilde;&iacute;a&nbsp;Esc&eacute;nica&nbsp;la&nbsp;obra&nbsp;La&nbsp;Prudencia,&nbsp;que&nbsp;versar&aacute;&nbsp;sobre&nbsp;la&nbsp;inseguridad&nbsp;que&nbsp;se&nbsp;vive&nbsp;en&nbsp;el&nbsp;pa&iacute;s.&quot;</p>
+
+<p><a href="https://www.quadratin.com.mx/cultura/estrenaran-en-el-pais-la-obra-sobre-la-inseguridad-la-prudencia/">Luis&nbsp;Felipe&nbsp;Reynos.o-Quadrat&iacute;n</a></p>
+
+<p>&quot;As&iacute;,&nbsp;como&nbsp;una&nbsp;comedia&nbsp;en&eacute;rgica&nbsp;y&nbsp;audaz&nbsp;que&nbsp;se&nbsp;mantiene&nbsp;durante&nbsp;toda&nbsp;la&nbsp;funci&oacute;n&nbsp;es&nbsp;que&nbsp;se&nbsp;present&oacute;&nbsp;La&nbsp;Prudencia&hellip;&nbsp;Con&nbsp;un&nbsp;estilo&nbsp;fresco&nbsp;pero&nbsp;contundente...&quot;</p>
+
+<p><a href="https://www.cxpress.mx/la-prudencia-en-una-sociedad-atemorizada-por-la-inseguridad/">Davo&nbsp;Pinks-CXPRESS&nbsp;Cartelera,&nbsp;Teatro,&nbsp;Conciertos,&nbsp;Cultura</a></p>
+
+<p>&quot;Clara&nbsp;muestra&nbsp;del&nbsp;humor&nbsp;cl&aacute;sico&nbsp;trasladado&nbsp;a&nbsp;un&nbsp;problema&nbsp;social&hellip;&nbsp;La&nbsp;energ&iacute;a&nbsp;en&nbsp;el&nbsp;escenario&nbsp;es&nbsp;incre&iacute;ble,&nbsp;TODO&nbsp;el&nbsp;tiempo&nbsp;est&aacute;n&nbsp;a&nbsp;full&nbsp;y&nbsp;eso&nbsp;se&nbsp;agradece&nbsp;enormemente...&quot;</p>
+
+<p><a href="https://www.instagram.com/p/B790CM5jfBH/?igshid=u7g9fch5h5tj">Me&nbsp;interesa&nbsp;interesarte</a></p>
+
+<p>&quot;Espl&eacute;ndidamente&nbsp;actuada&hellip;&nbsp;Los&nbsp;personajes&nbsp;de&nbsp;Gotbeter,&nbsp;caminan&nbsp;por&nbsp;la&nbsp;cuerda&nbsp;floja&nbsp;de&nbsp;la&nbsp;paranoia&nbsp;y&nbsp;esta&nbsp;cuerda&nbsp;est&aacute;&nbsp;sostenida&nbsp;en&nbsp;los&nbsp;postes&nbsp;de&nbsp;la&nbsp;comedia.&quot;</p>
+
+<p><a href="http://www.instagram.com/p/B7xQcPQD1dp/?igshid=ngfadd8cw0c9">Desextender</a></p>
+
             ',
             
-            'quote'=>'<p><span style="font-size:18px">&ldquo;Cr&iacute;tica importante, lorem ipsum dolor sit amet consectetur adipiscing elit, sed eiusmod.&rdquo;</span></p>
+            'quote'=>'<p>&quot;Clara&nbsp;muestra&nbsp;del&nbsp;humor&nbsp;cl&aacute;sico&nbsp;trasladado&nbsp;a&nbsp;un&nbsp;problema&nbsp;social&hellip;&nbsp;La&nbsp;energ&iacute;a&nbsp;en&nbsp;el&nbsp;escenario&nbsp;es&nbsp;incre&iacute;ble,&nbsp;TODO&nbsp;el&nbsp;tiempo&nbsp;est&aacute;n&nbsp;a&nbsp;full&nbsp;y&nbsp;eso&nbsp;se&nbsp;agradece&nbsp;enormemente...&quot;</p>
 
-            <p style="text-align:right"><span style="font-size:14px">-Lorem ipsum dolor sit amet</span></p>
-            
-            <p style="text-align:right"><span style="font-size:14px"><u>Lorem ipsum</u></span></p>',
+            <p><a href="https://www.instagram.com/p/B790CM5jfBH/?igshid=u7g9fch5h5tj">Me&nbsp;interesa&nbsp;interesarte</a></p>',
             
             'tipo'=>'producción',
         ]);
