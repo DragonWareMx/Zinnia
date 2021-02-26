@@ -31,6 +31,12 @@
             @case('PRODUCCIONES')
                 {{route('producciones')}}
                 @break
+            @case('COPRODUCCIONES')
+                {{route('coproducciones')}}
+                @break
+            @case('PROYECTOS')
+                {{route('proyectos')}}
+                @break
         @endswitch" method="get">
             @csrf
             <div class="uk-flex uk-flex-right uk-margin-top">
@@ -45,7 +51,7 @@
             dedicación en cada paso.</div>
     </div>
 
-    @foreach ($producciones as $element)
+    @foreach ($elements as $element)
     <div class="uk-container uk-container-xlarge uk-padding-remove-right">
         <div class="p_container uk-margin-medium-top uk-margin-large-bottom" style="min-height: 426px; width:100%;">
             <div class="uk-container uk-container-xlarge uk-flex uk-flex-wrap">
@@ -78,8 +84,19 @@
                 <div class="date_position2 font_vietnam">Fecha de la obra 11.02.2021</div>
                 <div class="uk-width-1-2@m uk-flex">
                     <div class="gal_white uk-flex uk-flex-wrap" style="min-height: 450px;">
-                        <div class="p_title font_vietnam" uk-tooltip="{{$element->titulo}}">
-                            {{ Str::limit($element->titulo, 65) }}</div>
+                        <a class="p_title font_vietnam" uk-tooltip="{{$element->titulo}}" href="
+                            @switch($tipo)
+                                @case('PRODUCCIONES')
+                                @case('COPRODUCCIONES')
+                                    {{ route('produccion',['id'=>Crypt::encrypt($element->id)]) }}
+                                    @break
+                                @case('PROYECTOS')
+                                    {{ route('proyecto',['id'=>Crypt::encrypt($element->id)]) }}
+                                    @break
+                            @endswitch
+                        ">
+                            {{ Str::limit($element->titulo, 65) }}
+                        </a>
                         <div class="p_desc font_vietnam">{{ $element->sinopsis, 240 }}</div>
                         <div class="more-info uk-width-1 uk-text-break uk-flex uk-flex-wrap"
                             style="border: none; padding-top:0px;">
@@ -120,10 +137,6 @@
     </div>
     @endforeach
 
-    @switch($tipo)
-        @case('PRODUCCIONES')
-            {!! $producciones->links() !!}
-            @break
-    @endswitch
+    {!! $elements->links() !!}
 </div>
 @endsection

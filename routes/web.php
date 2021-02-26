@@ -33,4 +33,9 @@ Route::get('/lay', function () {
 //PRODUCCIONES
 
 Route::get('/producciones', 'ProductionController@index')->name('producciones');
+Route::get('/coproducciones', 'ProductionController@coproducciones')->name('coproducciones');
 Route::get('/produccion/{id}', 'ProductionController@produccion')->name('produccion');
+
+//PROYECTOS
+Route::get('/proyectos', 'ProjectController@index')->name('proyectos');
+Route::get('/proyecto/{id}', 'ProjectController@proyecto')->name('proyecto');

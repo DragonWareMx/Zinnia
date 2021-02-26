@@ -52,12 +52,12 @@
                         <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <li><a href="{{ route('producciones') }}">Producciones</a></li>
-                                <li><a href="{{ route('producciones') }}">Coproducciones y colaboraciones</a></li>
+                                <li><a href="{{ route('coproducciones') }}">Coproducciones y colaboraciones</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Proyectos</a>
+                        <a href="{{ route('proyectos') }}">Proyectos</a>
                         <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <li class="uk-nav-header">Opciones</li>
@@ -87,13 +87,13 @@
                                         <li class="uk-parent">
                                             <a href="{{ route('producciones') }}">Producciones</a>
                                             <ul class="uk-nav-sub">
-                                                <li><a href="#">Producciones</a></li>
-                                                <li><a href="#">Coproducciones y colaboraciones</a></li>
+                                                <li><a href="{{ route('producciones') }}">Producciones</a></li>
+                                                <li><a href="{{ route('coproducciones') }}">Coproducciones y colaboraciones</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Proyectos</a></li>
+                                <li><a href="{{ route('proyectos') }}">Proyectos</a></li>
                                 <li><a href="#">Próximos eventos</a></li>
                                 <li><a href="#">Quiénes somos</a></li>
                                 <li><a href="#">Contacto</a></li>
