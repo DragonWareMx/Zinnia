@@ -389,6 +389,11 @@
         display:block
     }
 }
+@media(max-width:500px){
+    .gal_disapear{
+        display:none;
+    }
+}
 
 @media(max-width:1200px){
     .date_space{

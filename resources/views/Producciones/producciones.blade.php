@@ -57,8 +57,8 @@
             <div class="date_position3 font_vietnam">Fecha de la obra 11.02.2021</div>
             <div class="uk-container uk-container-xlarge uk-flex uk-flex-wrap">
                 <div class="uk-width-1-2@m">
-                    <div class="div_images_p uk-flex">
-                        <div class="uk-width-1-5 uk-padding-small" style="height:100%;">
+                    <div class="div_images_p uk-flex uk-flex-center">
+                        <div class="uk-width-1-5 uk-padding-small gal_disapear" style="height:100%;">
                             <div class="next_btn font_vietnam uk-text-center" style="height:36px;">
                                 @if (count($element->image) > 0 && count($element->video) > 0)
                                     {{ count($element->image) }} @if(count($element->image) > 1)fotos @else foto @endif y {{count($element->video)}} @if(count($element->video) > 1)videos @else video @endif

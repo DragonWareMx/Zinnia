@@ -42,12 +42,12 @@
     <div class="p_container uk-margin-medium-top uk-margin-medium-bottom" style="min-height: 526px; width:100%;">
         <div class="uk-container uk-container-xlarge uk-flex uk-flex-wrap">
             <div class="uk-width-1-2@m">
-                <div class="div_images_p uk-flex">
-                    <div class="uk-width-1-4 uk-margin-right" style="height:100%;">
+                <div class="div_images_p uk-flex uk-flex-center">
+                    <div class="uk-width-1-4 uk-margin-right gal_disapear" style="height:100%;">
                         <div class="next_btn font_vietnam" onclick="clickImagen();">Siguiente</div>
                         <img id="gal_low" class="gal_low" src="{{ asset('/img/fotoZinnia/Procella.png') }}" alt="">
                     </div>
-                    <div class="uk-width-3-4" id="imagen-seleccionada">
+                    <div class="uk-width-3-4 " id="imagen-seleccionada">
                         <img id="gal_high" class="gal_high" src="{{ asset('/img/fotoZinnia/Procella.png') }}" alt="">
                     </div>
                 </div>
