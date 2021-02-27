@@ -54,19 +54,20 @@
     @foreach ($elements as $element)
     <div class="uk-container uk-container-xlarge uk-padding-remove-right">
         <div class="p_container uk-margin-medium-top uk-margin-large-bottom" style="min-height: 426px; width:100%;">
+            <div class="date_position3 font_vietnam">Fecha de la obra 11.02.2021</div>
             <div class="uk-container uk-container-xlarge uk-flex uk-flex-wrap">
                 <div class="uk-width-1-2@m">
                     <div class="div_images_p uk-flex">
                         <div class="uk-width-1-5 uk-padding-small" style="height:100%;">
-                            <div class="next_btn font_vietnam uk-text-center">
+                            <div class="next_btn font_vietnam uk-text-center" style="height:36px;">
                                 @if (count($element->image) > 0 && count($element->video) > 0)
-                                    {{ count($element->image) }} @if(count($element->image) > 1)fotos @else foto @endif y {{count($element->video)}} @if(count($element->video) > 1)videos @else video @endif para ver
+                                    {{ count($element->image) }} @if(count($element->image) > 1)fotos @else foto @endif y {{count($element->video)}} @if(count($element->video) > 1)videos @else video @endif
                                 @elseif(count($element->image) > 0)
-                                    {{ count($element->image) }} @if(count($element->image) > 1)fotos @else foto @endif para ver
+                                    {{ count($element->image) }} @if(count($element->image) > 1)fotos @else foto @endif
                                 @elseif(count($element->video) > 0)
-                                    {{count($element->video)}} @if(count($element->video) > 1)videos @else video @endif para ver
+                                    {{count($element->video)}} @if(count($element->video) > 1)videos @else video @endif
                                 @else
-                                    Sin fotos ni videos para ver
+                                    Sin fotos ni videos
                                 @endif
                             </div>
                             <img id="gal_low" class="gal_low" src="{{ asset('/img/fotoZinnia/Procella.png') }}" alt="">
@@ -81,8 +82,7 @@
                         {{ Str::limit('Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawd awdawdad aw Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawdawdawd awdawd awdawd awdawd awdawdad awdawd awd awd awdaw dawdawd met,', 150) }}
                     </div>
                 </div>
-                <div class="date_position2 font_vietnam">Fecha de la obra 11.02.2021</div>
-                <div class="uk-width-1-2@m uk-flex">
+                <div class="uk-width-1-2@m uk-flex date_space">
                     <div class="gal_white uk-flex uk-flex-wrap" style="min-height: 450px;">
                         <a class="p_title font_vietnam" uk-tooltip="{{$element->titulo}}" href="
                             @switch($tipo)
@@ -135,6 +135,8 @@
             </div>
         </div>
     </div>
+    {{-- PONER AQUI LA FECHA --}}
+    <div class="date_position font_vietnam">Fecha de la obra 11.02.2021</div>
     @endforeach
 
     {!! $elements->links() !!}

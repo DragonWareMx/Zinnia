@@ -140,7 +140,7 @@
     font-size: 12px;
     font-style: normal;
     cursor: pointer;
-    margin-top:208px;
+    margin-top:195px;
 }
 .gal_low{
     margin-top:14px;
@@ -353,10 +353,23 @@
     display:none;
 }
 
+.date_position3{
+    background:transparent;
+    margin-left:15px;
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 14px;
+    display:none;
+}
+
 .p_downloable{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.date_space{
+    padding-right: 30px;
 }
 
 @media(max-width:666px){
@@ -371,5 +384,20 @@
     }
     .date_position2{
         display:block;
+    }
+    .date_position3{
+        display:block
+    }
+}
+
+@media(max-width:1200px){
+    .date_space{
+        padding-right: 40px;
+    }
+}
+
+@media(max-width:959px){
+    .date_space{
+        padding-right: 30px;
     }
 }

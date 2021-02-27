@@ -168,7 +168,7 @@
         <div class="uk-width-1-1" style="z-index: 100">
             <div class=" uk-grid-match" uk-grid>
                 <div class="uk-width-3-5@m">
-                    <div class="more-info">
+                    <div class="more-info uk-text-break">
                         <h1>CRÍTICAS</h1>
                         {!! $element->criticas !!}
                     </div>
@@ -180,7 +180,7 @@
                                 class="uk-width-1 uk-text-left uk-padding uk-padding-remove-bottom uk-margin-small-bottom">
                                 <img src="{{ asset('img/iconos/quote.png') }}" width="50px" height="50px">
                             </div>
-                            <div class="uk-width-1 uk-padding uk-padding-remove-top">
+                            <div class="uk-width-1 uk-padding uk-padding-remove-top uk-text-break">
                                 {!! $element->quote !!}
                             </div>
                         </div>
