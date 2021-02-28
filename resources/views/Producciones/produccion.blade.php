@@ -1,7 +1,19 @@
 @extends('layout.main')
 
 @section('head')
-<title>ZINNIA - Producciones</title>
+<title>
+    @switch($tipo)
+        @case('PRODUCCIÓN')
+            ZINNIA - Producción
+            @break
+        @case('COPRODUCCIÓN')
+            ZINNIA - Coroducción
+            @break
+        @case('PROYECTO')
+            ZINNIA - Proyecto
+            @break
+    @endswitch
+</title>
 <link href="{{ asset('/css/productions.css') }}" rel="stylesheet">
 <script src="https://www.youtube.com/iframe_api"></script>
 
@@ -26,10 +38,22 @@
 @section('content')
 <div class="container">
     <div class="uk-container">
-        <form action="#" method="post">
+        <form action="
+        @switch($tipo)
+            @case('PRODUCCIÓN')
+                {{route('producciones')}}
+                @break
+            @case('COPRODUCCIÓN')
+                {{route('coproducciones')}}
+                @break
+            @case('PROYECTO')
+                {{route('proyectos')}}
+                @break
+        @endswitch
+        " method="post">
             @csrf
             <div class="uk-flex uk-flex-right uk-margin-top">
-                <input type="text" max="1000" class="searcher" placeholder="Ingrese texto de búsqueda" required>
+                <input name="busqueda" type="text" max="1000" class="searcher" placeholder="Ingrese texto de búsqueda" required>
                 <button type="submit" class="font_titles uk-button uk-button-secondary searcher_button">BUSCAR</button>
             </div>
         </form>
@@ -45,34 +69,75 @@
                 <div class="div_images_p uk-flex uk-flex-center">
                     <div class="uk-width-1-4 uk-margin-right gal_disapear" style="height:100%;">
                         <div class="next_btn font_vietnam" onclick="clickImagen();">Siguiente</div>
-                        <img id="gal_low" class="gal_low" src="{{ asset('/img/fotoZinnia/Procella.png') }}" alt="">
+                        @if (count($element->image) <= 0)
+                            <img id="gal_low" class="gal_low" src="{{ asset('/img/iconos/default.jpg') }}" alt="">
+                        @elseif(count($element->image) == 1)
+                            <img id="gal_low" class="gal_low" src="{{ asset('/img/iconos/default.jpg') }}" alt="">
+                        @else
+                            <img id="gal_low" class="gal_low" src="{{ asset('/img/images/'.$element->image[1]->link) }}" alt="">
+                        @endif
                     </div>
                     <div class="uk-width-3-4 " id="imagen-seleccionada">
-                        <img id="gal_high" class="gal_high" src="{{ asset('/img/fotoZinnia/Procella.png') }}" alt="">
+                        @if (count($element->image) <= 0)
+                            <img id="gal_high" class="gal_high" src="{{ asset('/img/iconos/default.jpg') }}" alt="">
+                        @else
+                            <img id="gal_high" class="gal_high" src="{{ asset('/img/images/'.$element->image[0]->link) }}" alt="">
+                        @endif
                     </div>
                 </div>
-                <div class="uk-width-1 gal_desc font_vietnam"
-                    uk-tooltip="title: Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawd awdawdad awdawd awd awd awdaw dawdawd met, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.d">
-                    {{ Str::limit('Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawd awdawdad aw Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawdawdawd awdawd awdawd awdawd awdawdad awdawd awd awd awdaw dawdawd met,', 150) }}
+                <div class="uk-width-1 gal_desc font_vietnam" id="image-desc">
+                    @if (count($element->image) > 0)
+                        {{ Str::limit($element->image[0]->descripcion, 150) }}
+                    @endif
                 </div>
                 <div class="font_vietnam uk-margin-top uk-width-1 uk-text-center"
                     style="font-size: 22px; color:#FFFFFF;">GALERIA DE FOTOS</div>
                 <div class="font_vietnam uk-margin-small-top uk-width-1 uk-text-center"
-                    style="font-size: 14px;color: #FFFFFF;">{{ count($element->image) }} fotos para ver</div>
+                    style="font-size: 14px;color: #FFFFFF;">{{ count($element->image) }} @if(count($element->image) == 1)foto @else fotos @endif para ver</div>
             </div>
-            <div class="date_position2 font_vietnam">Fecha de la obra 11.02.2021</div>
+            @if ($element->fecha)
+                {{-- PONER AQUI LA FECHA --}}
+                <div class="date_position2 font_vietnam">Fecha de la obra {{ $element->fecha }}</div>
+            @endif
+            @if ($element->estado)
+                {{-- PONER AQUI LA FECHA --}}
+                <div class="date_position2 font_vietnam">{{ $element->estado }}</div>
+            @endif
             <div class="uk-width-1-2@m uk-flex">
                 <div class="gal_white">
-                <div class="p_title font_vietnam"  uk-tooltip="{{$element->titulo}}" >{{ Str::limit($element->titulo, 65) }}</div>
-                <div class="p_desc font_vietnam">{{ $element->sinopsis, 240 }}</div>
-                <div class="more-info uk-width-1 uk-text-break uk-overflow-auto" style="border: none; padding-top:0px;">
-                    {!! $element->descripcion !!}
-                </div>
-                <div class="uk-width-1">
-                    <button class="p_downloads" href="#modal-descargables" uk-toggle>
-                        <div class="font_titles" style="font-size: 18px;color: #FFFFFF;">DESCARGABLES</div>
-                    </button>
-                </div>
+                    <div class="p_title font_vietnam">{{ Str::limit($element->titulo, 100) }}</div>
+                    @switch($tipo)
+                        @case('PRODUCCIÓN')
+                        @case('COPRODUCCIÓN')
+                            <div class="p_desc font_vietnam">{{ $element->sinopsis }}</div>
+                            <div class="more-info uk-width-1 uk-text-break uk-overflow-auto" style="border: none; padding-top:0px;">
+                                {!! $element->maindata !!}
+                                {!! $element->descripcion !!}
+                            </div>
+                            <div class="uk-width-1">
+                                <button class="p_downloads" href="#modal-descargables" uk-toggle>
+                                    <div class="font_titles" style="font-size: 18px;color: #FFFFFF;">DESCARGABLES</div>
+                                </button>
+                            </div>
+                            @break
+                        @case('PROYECTO')
+                        <div class="more-info uk-width-1 uk-text-break uk-overflow-auto"
+                            style="border: none; padding-top:0px;">
+                            {{ $element->subtitulo }}
+                            <br>
+                            <br>
+                            {!! $element->descripcion !!}
+                            <br>
+                            <br>
+                            {!! $element->creditos !!}
+                        </div>
+                            <div class="uk-width-1">
+                                <button class="p_downloads" href="#modal-descargables" uk-toggle>
+                                    <div class="font_titles" style="font-size: 18px;color: #FFFFFF;">DESCARGABLES</div>
+                                </button>
+                            </div>
+                            @break
+                    @endswitch
                 </div>
             </div> 
         </div> 
@@ -105,8 +170,14 @@
         </div>
     </div>
 
-    {{-- PONER AQUI LA FECHA --}}
-    <div class="date_position font_vietnam">Fecha de la obra 11.02.2021</div>
+    @if ($element->fecha)
+        {{-- PONER AQUI LA FECHA --}}
+        <div class="date_position font_vietnam">Fecha de la obra {{ $element->fecha }}</div>
+    @endif
+    @if ($element->estado)
+        {{-- PONER AQUI LA FECHA --}}
+        <div class="date_position font_vietnam">{{ $element->estado }}</div>
+    @endif
                 
 
     <div class="uk-container  uk-container-xlarge">
@@ -162,33 +233,82 @@
                 </div>
             </div>
         @endif
+        @if ($element->titulo2 && $element->txtTitulo2)
+            <div class="uk-width-1 div-reconocimientos uk-text-center">
+                <div class="uk-container uk-container-xlarge">
+                    <h3 class="uk-text-center uk-margin-top">{{ $element->titulo2 }}</h3>
+                    <p>{{$element->txtTitulo2}}</p>
+                </div>
+            </div>
+        @endif
     </div>
 
     <div class="uk-container  uk-container-xlarge">
-        <div class="uk-width-1-1" style="z-index: 100">
-            <div class=" uk-grid-match" uk-grid>
-                <div class="uk-width-3-5@m">
-                    <div class="more-info uk-text-break">
-                        <h1>CRÍTICAS</h1>
-                        {!! $element->criticas !!}
-                    </div>
-                </div>
-                <div class="uk-width-expand@m">
-                    <div class="critic-important">
-                        <div class="critic-inside font_vietnam">
-                            <div
-                                class="uk-width-1 uk-text-left uk-padding uk-padding-remove-bottom uk-margin-small-bottom">
-                                <img src="{{ asset('img/iconos/quote.png') }}" width="50px" height="50px">
-                            </div>
-                            <div class="uk-width-1 uk-padding uk-padding-remove-top uk-text-break">
-                                {!! $element->quote !!}
+        @switch($tipo)
+            @case('PRODUCCIÓN')
+            @case('COPRODUCCIÓN')
+                @if ($element->criticas || $element->quote)
+                <div class="uk-width-1-1" style="z-index: 100">
+                    <div class=" uk-grid-match" uk-grid>
+                        @if ($element->criticas)
+                        <div class="uk-width-3-5@m">
+                            <div class="more-info uk-text-break">
+                                <h1>CRÍTICAS</h1>
+                                {!! $element->criticas !!}
                             </div>
                         </div>
+                        @endif
+                        @if ($element->quote)
+                        <div class="uk-width-expand@m">
+                            <div class="critic-important">
+                                <div class="critic-inside font_vietnam">
+                                    <div
+                                        class="uk-width-1 uk-text-left uk-padding uk-padding-remove-bottom uk-margin-small-bottom">
+                                        <img src="{{ asset('img/iconos/quote.png') }}" width="50px" height="50px">
+                                    </div>
+                                    <div class="uk-width-1 uk-padding uk-padding-remove-top uk-text-break">
+                                        {!! $element->quote !!}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
                     </div>
                 </div>
-            </div>
-
-        </div>
+                @endif
+                @break
+            @case('PROYECTO')
+                @if (($element->titulo3 && $element->txtTitulo3) || $element->quote)
+                <div class="uk-width-1-1" style="z-index: 100">
+                    <div class=" uk-grid-match" uk-grid>
+                        @if ($element->titulo3 && $element->txtTitulo3)
+                        <div class="uk-width-3-5@m">
+                            <div class="more-info uk-text-break">
+                                <h1>{{ $element->titulo3 }}</h1>
+                                {!! $element->txtTitulo3 !!}
+                            </div>
+                        </div>
+                        @endif
+                        @if ($element->quote)
+                        <div class="uk-width-expand@m">
+                            <div class="critic-important">
+                                <div class="critic-inside font_vietnam">
+                                    <div
+                                        class="uk-width-1 uk-text-left uk-padding uk-padding-remove-bottom uk-margin-small-bottom">
+                                        <img src="{{ asset('img/iconos/quote.png') }}" width="50px" height="50px">
+                                    </div>
+                                    <div class="uk-width-1 uk-padding uk-padding-remove-top uk-text-break">
+                                        {!! $element->quote !!}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                    </div>
+                </div>
+                @endif
+                @break
+        @endswitch
     </div>
 
     <div class="uk-section uk-section-small">
@@ -302,22 +422,18 @@
 
 <script>
     //cantidad de imagenes cargadas
-    var imgCount = 2;
+    var imgCount = {{ count($element->image) }};
     var index = 0;
 
     var items = [
-        {
-            src: '{{ asset('/img/fotoZinnia/Procella.png') }}',
-            w: 0,
-            h: 0,
-            desc: "descripcion de ejemplo"
-        },
-        {
-            src: '{{ asset('/img/fotoZinnia/Abril Cira.jpg') }}',
-            w: 0,
-            h: 0,
-            desc: "descripcion de ejemplo"
-        },
+        @foreach ($element->image as $photo)
+            {
+                src: "{{asset('/img/images/'.$photo->link)}}",
+                w: 0,
+                h: 0,
+                title: "{{$photo->decripcion}}"
+            },
+        @endforeach
     ];
 
      //IMAGEN GALERIA
@@ -326,6 +442,7 @@
     //"imagen-seleccionada" es el visualizador de la imagen
     var pre = document.getElementById("gal_high");
     var pre2 = document.getElementById("gal_low");
+    var desc = document.getElementById("image-desc");
 
     //controla cuando se selecciona una imagen
     function clickImagen(){
@@ -335,7 +452,9 @@
         }
         //hace que se muestre la nueva imagen en el visualizador
         pre.src = items[index].src;
-        pre2.src = items[index].src;
+        if(index == imgCount-1 && index < imgCount) pre2.src = items[0].src;
+        else pre2.src = items[index+1].src;
+        desc.innerHTML = items[index].title;
 
         setIndex(index);
     }
@@ -377,7 +496,9 @@
             setIndex(gallery.getCurrentIndex());
             //hace que se muestre la nueva imagen en el visualizador
             pre.src = items[index].src;
-            pre2.src = items[index].src;
+            if(index == imgCount-1 && index < imgCount) pre2.src = items[0].src;
+            else pre2.src = items[index+1].src;
+            desc.innerHTML = items[index].title;
         });
 
         gallery.init();

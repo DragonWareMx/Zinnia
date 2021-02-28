@@ -16,9 +16,9 @@ class CreateProyectsTable extends Migration
         Schema::create('proyects', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('titulo', 250);
-            $table->string('titulo2', 250);
-            $table->string('titulo3', 250);
+            $table->string('titulo', 100);
+            $table->string('titulo2', 100);
+            $table->string('titulo3', 100);
             $table->text('descripcion');    
             $table->string('subtitulo');
             $table->text('creditos');       //info importante      

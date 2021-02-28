@@ -1,7 +1,19 @@
 @extends('layout.main')
 
 @section('head')
-<title>ZINNIA - Producciones</title>
+<title>
+    @switch($tipo)
+        @case('PRODUCCIONES')
+            ZINNIA - Producciones
+            @break
+        @case('COPRODUCCIONES')
+            ZINNIA - Coroducciones
+            @break
+        @case('PROYECTOS')
+            ZINNIA - Proyectos
+            @break
+    @endswitch
+</title>
 <link href="{{ asset('/css/productions.css') }}" rel="stylesheet">
 <script src="https://www.youtube.com/iframe_api"></script>
 
@@ -70,21 +82,31 @@
                                     Sin fotos ni videos
                                 @endif
                             </div>
-                            <img id="gal_low" class="gal_low" src="{{ asset('/img/fotoZinnia/Procella.png') }}" alt="">
+                            @if (count($element->image) <= 0)
+                                <img id="gal_low" class="gal_low" src="{{ asset('/img/iconos/default.jpg') }}" alt="">
+                            @elseif(count($element->image) == 1)
+                                <img id="gal_low" class="gal_low" src="{{ asset('/img/iconos/default.jpg') }}" alt="">
+                            @else
+                                <img id="gal_low" class="gal_low" src="{{ asset('/img/images/'.$element->image[1]->link) }}" alt="">
+                            @endif
                         </div>
                         <div class="uk-width-4-5" id="imagen-seleccionada">
-                            <img id="gal_high" class="gal_high" src="{{ asset('/img/fotoZinnia/Procella.png') }}"
-                                alt="">
+                            @if (count($element->image) <= 0)
+                                <img id="gal_high" class="gal_high" src="{{ asset('/img/iconos/default.jpg') }}" alt="">
+                            @else
+                                <img id="gal_high" class="gal_high" src="{{ asset('/img/images/'.$element->image[0]->link) }}" alt="">
+                            @endif
                         </div>
                     </div>
-                    <div class="uk-width-1 gal_desc font_vietnam"
-                        uk-tooltip="title: Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawd awdawdad awdawd awd awd awdaw dawdawd met, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.d">
-                        {{ Str::limit('Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawd awdawdad aw Descripción de la foto, Lorem ipsum dolor sit aawdawdawd adw dadwa awdawdawdawdawdawd awdawd awdawd awdawd awdawdad awdawd awd awd awdaw dawdawd met,', 150) }}
+                    <div class="uk-width-1 gal_desc font_vietnam">
+                        @if (count($element->image) > 0)
+                            {{ Str::limit($element->image[0]->descripcion, 150) }}
+                        @endif
                     </div>
                 </div>
                 <div class="uk-width-1-2@m uk-flex date_space">
                     <div class="gal_white uk-flex uk-flex-wrap" style="min-height: 450px;">
-                        <a class="p_title font_vietnam" uk-tooltip="{{$element->titulo}}" href="
+                        <a class="p_title font_vietnam" href="
                             @switch($tipo)
                                 @case('PRODUCCIONES')
                                 @case('COPRODUCCIONES')
@@ -94,49 +116,71 @@
                                     {{ route('proyecto',['id'=>Crypt::encrypt($element->id)]) }}
                                     @break
                             @endswitch
-                        ">
-                            {{ Str::limit($element->titulo, 65) }}
+                        " style="text-decoration: none; color: black;">
+                            {{ Str::limit($element->titulo, 100) }}
                         </a>
-                        <div class="p_desc font_vietnam">{{ $element->sinopsis, 240 }}</div>
-                        <div class="more-info uk-width-1 uk-text-break uk-flex uk-flex-wrap"
-                            style="border: none; padding-top:0px;">
-                            <div class="font_vietnam p_data uk-width-1-3">
-                                <div style="font-weight: bold;">Duración de la obra</div>
-                                <div class="uk-text-truncate">45 minutos.</div>
-                            </div>
-                            <div class="font_vietnam p_data uk-width-1-3">
-                                <div style="font-weight: bold;">Género</div>
-                                <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Lorem impsun dolor no se que
-                                    no
-                                    se cuanto.</div>
-                            </div>
-                            <div class="font_vietnam p_data uk-width-1-3">
-                                <div style="font-weight: bold;">Público a quien está dirigida</div>
-                                <div class="uk-text-truncate" uk-tooltip="title:asdasdasd">Familiar, principalmente
-                                    infantil.</div>
-                            </div>
-                            <div class="font_vietnam p_data uk-width-1-3">
-                                <div style="font-weight: bold;">Reconocimientos</div>
-                                <div class="uk-text-truncate uk-flex uk-flex-bottom" uk-tooltip="title:asdasdasd">
-                                    <img src="{{ asset('img/iconos/reconocimiento.png') }}" width="25px" height="25px">
-                                    <img src="{{ asset('img/iconos/reconocimiento.png') }}" width="25px" height="25px">
-                                    <img src="{{ asset('img/iconos/reconocimiento.png') }}" width="25px" height="25px">
-                                    5 más ...
+                        @switch($tipo)
+                            @case('PRODUCCIONES')
+                            @case('COPRODUCCIONES')
+                                <div class="p_desc font_vietnam">{{ $element->sinopsis }}</div>
+                                <div class="more-info uk-width-1 uk-text-break uk-overflow-auto"
+                                    style="border: none; padding-top:0px;">
+                                    {!! $element->maindata !!}
+        
+                                    @if ($element->n_reconocimientos > 0 && $element->reconocimientos)
+                                        <div class="font_vietnam p_data uk-width-1-3">
+                                            <div style="font-weight: bold;">Reconocimientos</div>
+                                            <div class="uk-text-truncate uk-flex uk-flex-bottom">
+                                                @for ($i = 0; $i < $element->n_reconocimientos; $i++)
+                                                    @if ($i == 3)
+                                                        {{ $element->n_reconocimientos-$i }} más ...
+                                                        @break
+                                                    @endif
+                                                    <img src="{{ asset('img/iconos/reconocimiento.png') }}" width="25px" height="25px">
+                                                @endfor
+                                            </div>
+                                        </div>
+                                    @endif
                                 </div>
-                            </div>
-                        </div>
+                                @break
+                            @case('PROYECTOS')
+                                <div class="more-info uk-width-1 uk-text-break uk-overflow-auto"
+                                    style="border: none; padding-top:0px;">
+                                    {{ $element->subtitulo }}
+                                    <br>
+                                    <br>
+                                    {!! $element->descripcion !!}
+                                </div>
+                                @break
+                        @endswitch
                         <div class="uk-width-1" style="margin-bottom: 0px; margin-top:auto">
-                            <button class="p_downloads" href="#">
+                            <a class="p_downloads" href="
+                            @switch($tipo)
+                                @case('PRODUCCIONES')
+                                @case('COPRODUCCIONES')
+                                    {{ route('produccion',['id'=>Crypt::encrypt($element->id)]) }}
+                                    @break
+                                @case('PROYECTOS')
+                                    {{ route('proyecto',['id'=>Crypt::encrypt($element->id)]) }}
+                                    @break
+                            @endswitch
+                            " style="text-decoration: none">
                                 <div class="font_titles" style="font-size: 18px;color: #FFFFFF;">MÁS INFORMACIÓN</div>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    {{-- PONER AQUI LA FECHA --}}
-    <div class="date_position font_vietnam">Fecha de la obra 11.02.2021</div>
+    @if ($element->fecha)
+        {{-- PONER AQUI LA FECHA --}}
+        <div class="date_position font_vietnam">Fecha de la obra {{ $element->fecha }}</div>
+    @endif
+    @if ($element->estado)
+        {{-- PONER AQUI LA FECHA --}}
+        <div class="date_position font_vietnam">{{ $element->estado }}</div>
+    @endif
     @endforeach
 
     {!! $elements->links() !!}

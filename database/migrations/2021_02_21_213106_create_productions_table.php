@@ -16,8 +16,9 @@ class CreateProductionsTable extends Migration
         Schema::create('productions', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('titulo', 150);
+            $table->string('titulo', 100);
             $table->text('descripcion');    //cuerpo, donde viene duración, dirección, reparto y demás datos que consideren importantes
+            $table->text('maindata'); 
             $table->text('sinopsis');       //resumen de la obra
             $table->text('masinfo');        //datos técnicos
             $table->string('pdf', 250)->nullable();     // url pdf descargable 

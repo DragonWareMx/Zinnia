@@ -22,13 +22,14 @@ class ProductionController extends Controller
 
         //realiza la busqueda
         if(isset($request->busqueda)){
-            $elements = $elements->where('titulo','like','%'.$request->busqueda.'%')
-            ->orWhere('descripcion','like','%'.$request->busqueda.'%')
-            ->orWhere('sinopsis','like','%'.$request->busqueda.'%')
-            ->orWhere('masinfo','like','%'.$request->busqueda.'%')
-            ->orWhere('reconocimientos','like','%'.$request->busqueda.'%')
-            ->orWhere('fecha','like','%'.$request->busqueda.'%')
-            ->orWhere('criticas','like','%'.$request->busqueda.'%');
+            $elements = $elements->where('titulo','LIKE','%'.$request->busqueda.'%')
+            ->orWhere('descripcion','LIKE','%'.$request->busqueda.'%')
+            ->orWhere('maindata','LIKE','%'.$request->busqueda.'%')
+            ->orWhere('sinopsis','LIKE','%'.$request->busqueda.'%')
+            ->orWhere('masinfo','LIKE','%'.$request->busqueda.'%')
+            ->orWhere('reconocimientos','LIKE','%'.$request->busqueda.'%')
+            ->orWhere('fecha','LIKE','%'.$request->busqueda.'%')
+            ->orWhere('criticas','LIKE','%'.$request->busqueda.'%');
         }
 
         $elements = $elements->paginate(5)->appends(request()->except('page'));
@@ -52,13 +53,14 @@ class ProductionController extends Controller
 
         //realiza la busqueda
         if(isset($request->busqueda)){
-            $elements = $elements->where('titulo','like','%'.$request->busqueda.'%')
-            ->orWhere('descripcion','like','%'.$request->busqueda.'%')
-            ->orWhere('sinopsis','like','%'.$request->busqueda.'%')
-            ->orWhere('masinfo','like','%'.$request->busqueda.'%')
-            ->orWhere('reconocimientos','like','%'.$request->busqueda.'%')
-            ->orWhere('fecha','like','%'.$request->busqueda.'%')
-            ->orWhere('criticas','like','%'.$request->busqueda.'%');
+            $elements = $elements->where('titulo','LIKE','%'.$request->busqueda.'%')
+            ->orWhere('descripcion','LIKE','%'.$request->busqueda.'%')
+            ->orWhere('maindata','LIKE','%'.$request->busqueda.'%')
+            ->orWhere('sinopsis','LIKE','%'.$request->busqueda.'%')
+            ->orWhere('masinfo','LIKE','%'.$request->busqueda.'%')
+            ->orWhere('reconocimientos','LIKE','%'.$request->busqueda.'%')
+            ->orWhere('fecha','LIKE','%'.$request->busqueda.'%')
+            ->orWhere('criticas','LIKE','%'.$request->busqueda.'%');
         }
 
         $elements = $elements->paginate(5)->appends(request()->except('page'));

@@ -17,7 +17,25 @@ class ProductionSeeder extends Seeder
         \DB::table('productions')->insert([
             'titulo' => 'LA PRUDENCIA',
             
-            'descripcion'=>'<table border="0" cellpadding="1" cellspacing="1" style="width:500px">
+            'descripcion'=>'
+            
+            <p><strong>Dramaturgia</strong></p>
+            
+            <p>Claudio&nbsp;Gotbeter</p>
+            
+            <p><strong>Direcci&oacute;n</strong></p>
+            
+            <p>Tania&nbsp;Murillo</p>
+            
+            <p><strong>Producci&oacute;n</strong></p>
+            
+            <p>Zinnia&nbsp;Compa&ntilde;&iacute;a&nbsp;Esc&eacute;nica</p>
+            
+            <p><strong>Reparto</strong></p>
+            
+            <p>Procella&nbsp;Romero,&nbsp;Landy&nbsp;Medina&nbsp;y&nbsp;Abril&nbsp;Cira.</p>
+            ',
+            'maindata'=>'<table border="0" cellpadding="1" cellspacing="1" style="width:500px">
                 <tbody>
                     <tr>
                         <td>
@@ -38,22 +56,6 @@ class ProductionSeeder extends Seeder
                     </tr>
                 </tbody>
             </table>
-            
-            <p><strong>Dramaturgia</strong></p>
-            
-            <p>Claudio&nbsp;Gotbeter</p>
-            
-            <p><strong>Direcci&oacute;n</strong></p>
-            
-            <p>Tania&nbsp;Murillo</p>
-            
-            <p><strong>Producci&oacute;n</strong></p>
-            
-            <p>Zinnia&nbsp;Compa&ntilde;&iacute;a&nbsp;Esc&eacute;nica</p>
-            
-            <p><strong>Reparto</strong></p>
-            
-            <p>Procella&nbsp;Romero,&nbsp;Landy&nbsp;Medina&nbsp;y&nbsp;Abril&nbsp;Cira.</p>
             ',
             
             'sinopsis'=>'¡Año nuevo vida nueva! decretan Trinidad y Margarita al reunirse para festejar el año nuevo. 
@@ -138,6 +140,11 @@ class ProductionSeeder extends Seeder
             Titiriteras: Procella Romero y Landy Medina
             ',
 
+            'maindata'=>'Duración de la obra: 50 min
+            Público a quién está dirigida: Familiar, principalmente infantil.
+            Dirección: Tania Murillo
+            ',
+
             'sinopsis'=>'Esta puesta en escena se sustenta en acercar principalmente al público infantil a la lengua 
             purépecha, su iconografía y música, a través de un espectáculo de teatro de títeres de sombra, basado en 
             tres leyendas purépechas: Origen del universo purépecha, Hapunda y el Lago y Profecía de la llegada de 
@@ -171,6 +178,12 @@ class ProductionSeeder extends Seeder
             Diseño de escenario multimedial y animaciones: Juan Diego Mejía
             Diseño sonoro: Daniel Pérez Vázquez
             Diseño de producción Argentina: Eleonora Pereyra
+            Asistencia de dirección: Ludwig Berlinea
+            Coproducción México: Epitafios Laboratorio Teatral y Zinnia Compañía Escénica
+            ',
+
+            'maindata'=>'Equipo Creativo
+            Dirección y dramaturgia: Josué Almanza
             Asistencia de dirección: Ludwig Berlinea
             Coproducción México: Epitafios Laboratorio Teatral y Zinnia Compañía Escénica
             ',
@@ -213,6 +226,7 @@ class ProductionSeeder extends Seeder
         \DB::table('productions')->insert([
             'titulo' => 'ÉRASE QUE SE ES… EN AFGANISTÁN',
             'descripcion'=>'',
+            'maindata'=>'',
             'sinopsis'=>'Dispositivo escénico en el que Norma Ferreira a través de anécdotas, 
             música, fotografías, videos y registros sonoros, comparte sus experiencias en Afganistán, 
             donde trabajó como profesora de música durante cinco años. Testimonios, registros audiovisuales 
@@ -242,6 +256,17 @@ class ProductionSeeder extends Seeder
             Idea original y Dirección Artística: Norma Ferreira
             Dirección Escénica y Titiritera: Tania Murillo
             Coproducción: Maleta en Ristra y Zinnia Compañía Escénica
+            ',
+            'descripcion'=>'Duración de la obra: 50 min
+            Duración de la obra: 13 min. (versión en línea)
+            Público a quién está dirigida: Todo tipo
+            Idea original y Dirección Artística: Norma Ferreira
+            Dirección Escénica y Titiritera: Tania Murillo
+            Coproducción: Maleta en Ristra y Zinnia Compañía Escénica
+            ',
+            'maindata'=>'Duración de la obra: 50 min
+            Duración de la obra: 13 min. (versión en línea)
+            Público a quién está dirigida: Todo tipo
             ',
             'sinopsis'=>'Adaptación del cuento del escritor Idris Sha. En un país muy lejano vivía una gallina
              muy tonta que andaba por allí haciendo toc, toc, toc. Nadie en el pueblo sabía lo que la gallina 
