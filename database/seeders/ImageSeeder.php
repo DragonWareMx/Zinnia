@@ -220,5 +220,67 @@ class ImageSeeder extends Seeder
             'descripcion'=>'',
             'production_id'=>'4',
         ]);
+        DB::table('images')->insert([
+            'link' => '13886289_605532339627221_3783659007067330042_n.jpg',
+            'descripcion'=>'',
+            'proyect_id'=>'1',
+        ]);
+        DB::table('images')->insert([
+            'link' => '14324532_623800294467092_5640432602000664904_o.jpg',
+            'descripcion'=>'',
+            'proyect_id'=>'1',
+        ]);
+        DB::table('images')->insert([
+            'link' => '14379599_624344154412706_120796795583453766_o.jpg',
+            'descripcion'=>'',
+            'proyect_id'=>'1',
+        ]);
+        DB::table('images')->insert([
+            'link' => '14524477_630877983759323_2703754558259932702_o.jpg',
+            'descripcion'=>'',
+            'proyect_id'=>'1',
+        ]);
+        DB::table('images')->insert([
+            'link' => '13903295_609346635912458_2709144926610823815_n.jpg',
+            'descripcion'=>'',
+            'proyect_id'=>'1',
+        ]);
+        DB::table('images')->insert([
+            'link' => '13925067_608080566039065_4492183010568809425_n.jpg',
+            'descripcion'=>'',
+            'proyect_id'=>'1',
+        ]);
+        DB::table('images')->insert([
+            'link' => '13906644_608521762661612_1307048138247583387_n.jpg',
+            'descripcion'=>'',
+            'proyect_id'=>'1',
+        ]);
+        DB::table('images')->insert([
+            'link' => '13900311_608521805994941_8206540506265586204_n.jpg',
+            'descripcion'=>'',
+            'proyect_id'=>'1',
+        ]);
+        DB::table('images')->insert([
+            'link' => '13938361_609346689245786_5751593897211626939_n.jpg',
+            'descripcion'=>'',
+            'proyect_id'=>'1',
+        ]);
+        DB::table('images')->insert([
+            'link' => '14021624_609598049220650_2981885948322427594_n.jpg',
+            'descripcion'=>'',
+            'proyect_id'=>'1',
+        ]);
+        
+        DB::table('images')->insert([
+            'link' => '14330098_625755510938237_635355186869108159_n.jpg',
+            'descripcion'=>'',
+            'proyect_id'=>'1',
+        ]);
+        
+        DB::table('images')->insert([
+            'link' => 'cartel.jpg',
+            'descripcion'=>'',
+            'proyect_id'=>'1',
+        ]);
     }
 }
