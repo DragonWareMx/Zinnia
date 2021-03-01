@@ -66,7 +66,14 @@
     @foreach ($elements as $element)
     <div class="uk-container uk-container-xlarge uk-padding-remove-right">
         <div class="p_container uk-margin-medium-top uk-margin-large-bottom" style="min-height: 426px; width:100%;">
-            <div class="date_position3 font_vietnam">Fecha de la obra 11.02.2021</div>
+            @if ($element->fecha)
+                {{-- PONER AQUI LA FECHA --}}
+                <div class="date_position3 font_vietnam">Fecha de la obra {{ $element->fecha }}</div>
+            @endif
+            @if ($element->estado)
+                {{-- PONER AQUI LA FECHA --}}
+                <div class="date_position3 font_vietnam">{{ $element->estado }}</div>
+            @endif
             <div class="uk-container uk-container-xlarge uk-flex uk-flex-wrap">
                 <div class="uk-width-1-2@m">
                     <div class="div_images_p uk-flex uk-flex-center">

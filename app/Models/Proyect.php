@@ -21,7 +21,7 @@ class Proyect extends Model
     {
         return $this->hasMany('App\Models\Video');
     }
-    public function pdf()
+    public function pdfs()
     {
         return $this->hasMany('App\Models\Pdf');
     }

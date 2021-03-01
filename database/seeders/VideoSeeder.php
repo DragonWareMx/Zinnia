@@ -16,50 +16,49 @@ class VideoSeeder extends Seeder
     {
         //
         DB::table('videos')->insert([
-            'link' => 'https://www.youtube.com/watch?v=23-R1E9Bq84 ',
+            'link' => 'https://www.youtube.com/embed/23-R1E9Bq84?ecver=2&enablejsapi=1',
             'descripcion'=>'Demo La mujer que mueve la balsa',
             'production_id'=>'3',
         ]);
      
         DB::table('videos')->insert([
-            'link' => 'https://www.youtube.com/watch?v=5comEmpVLcY ',
+            'link' => 'https://www.youtube.com/embed/5comEmpVLcY?ecver=2&enablejsapi=1',
             'descripcion'=>'Versión en línea',
             'production_id'=>'5',
         ]);
         
         DB::table('videos')->insert([
-            'link' => ' https://www.youtube.com/watch?v=wDQu2WsRoC0&t=14s ',
+            'link' => 'https://www.youtube.com/embed/23-R1E9Bq84?ecver=2&enablejsapi=1',
             'descripcion'=>'Teaser LA PRUDENCIA',
             'production_id'=>'1',
         ]);
 
         DB::table('videos')->insert([
-            'link' => 'https://www.youtube.com/watch?v=OOy1as5n0qE
-            ',
+            'link' => 'https://www.youtube.com/embed/OOy1as5n0qE?ecver=2&enablejsapi=1',
             'descripcion'=>'Video promocional 1',
             'production_id'=>'1',
         ]);
 
         DB::table('videos')->insert([
-            'link' => 'https://www.youtube.com/watch?v=cRYVgl_fldM',
+            'link' => 'https://www.youtube.com/embed/cRYVgl_fldM?ecver=2&enablejsapi=1',
             'descripcion'=>'Video promocional 2',
             'production_id'=>'1',
         ]);
         
         DB::table('videos')->insert([
-            'link' => ' https://www.youtube.com/watch?v=QlAXHm4nG0w',
+            'link' => 'https://www.youtube.com/embed/QlAXHm4nG0w?ecver=2&enablejsapi=1',
             'descripcion'=>'Entrevistas, Cuéntame algo diferente',
             'proyect_id'=>'1',
         ]);
         
         DB::table('videos')->insert([
-            'link' => 'https://www.youtube.com/watch?v=8INVnlutDxs',
+            'link' => 'https://www.youtube.com/embed/8INVnlutDxs?ecver=2&enablejsapi=1',
             'descripcion'=>'Taller 1, Cuéntame algo diferente',
             'proyect_id'=>'1',
         ]);
 
         DB::table('videos')->insert([
-            'link' => ' https://www.youtube.com/watch?v=mk_Z-LK7yhg',
+            'link' => 'https://www.youtube.com/embed/8INVnlutDxs?ecver=2&enablejsapi=1',
             'descripcion'=>'Taller 2, Cuéntame algo diferente',
             'proyect_id'=>'1',
         ]);

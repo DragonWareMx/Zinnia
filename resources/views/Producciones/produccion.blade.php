@@ -114,11 +114,13 @@
                                 {!! $element->maindata !!}
                                 {!! $element->descripcion !!}
                             </div>
-                            <div class="uk-width-1">
-                                <button class="p_downloads" href="#modal-descargables" uk-toggle>
-                                    <div class="font_titles" style="font-size: 18px;color: #FFFFFF;">DESCARGABLES</div>
-                                </button>
-                            </div>
+                            @if ($element->pdfs->count()>0)
+                                <div class="uk-width-1">
+                                    <button class="p_downloads" href="#modal-descargables" uk-toggle>
+                                        <div class="font_titles" style="font-size: 18px;color: #FFFFFF;">DESCARGABLES</div>
+                                    </button>
+                                </div>
+                            @endif
                             @break
                         @case('PROYECTO')
                         <div class="more-info uk-width-1 uk-text-break uk-overflow-auto"
@@ -131,11 +133,13 @@
                             <br>
                             {!! $element->creditos !!}
                         </div>
+                            @if ($element->pdfs->count()>0)
                             <div class="uk-width-1">
                                 <button class="p_downloads" href="#modal-descargables" uk-toggle>
                                     <div class="font_titles" style="font-size: 18px;color: #FFFFFF;">DESCARGABLES</div>
                                 </button>
                             </div>
+                            @endif
                             @break
                     @endswitch
                 </div>
@@ -147,26 +151,13 @@
         <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-background-secondary">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="font_titles uk-flex uk-flex-center" style="color: white; font-size:24px;">DESCARGABLES</div>
-            {{-- Descargable 1 --}}
-            <div class="p_downloable uk-margin-small-top font_vietnam">
-                <a  class="uk-width-4-5 uk-text-truncate" style="color:white" href="{{asset('/img/fotoZinnia/Procella.png')}}" download class="uk-text-truncate">Increíble descargable pdf número 1.pdf</a>
-                <a  style="color:white;"href="{{asset('/img/fotoZinnia/Procella.png')}}" download uk-icon="download"></a>
-            </div>
-            {{-- Descargable 2 --}}
-            <div class="p_downloable uk-margin-small-top font_vietnam">
-                <a  class="uk-width-4-5 uk-text-truncate"style="color:white"href="{{asset('/img/fotoZinnia/Procella.png')}}" download class="uk-text-truncate">Por favor seleccióneme a mí señor calamardo.pdf</a>
-                <a style="color:white"href="{{asset('/img/fotoZinnia/Procella.png')}}" download uk-icon="download"></a>
-            </div>
-            {{-- Descargable 3 --}}
-            <div class="p_downloable uk-margin-small-top font_vietnam">
-                <a   class="uk-width-4-5 uk-text-truncate"style="color:white"href="{{asset('/img/fotoZinnia/Procella.png')}}" download class="uk-text-truncate">Descargable chungo.pdf</a>
-                <a  style="color:white"href="{{asset('/img/fotoZinnia/Procella.png')}}" download uk-icon="download"></a>
-            </div>
-            {{-- Descargable 4 --}}
-            <div class="p_downloable uk-margin-small-top font_vietnam">
-                <a   class="uk-width-4-5 uk-text-truncate"style="color:white"href="{{asset('/img/fotoZinnia/Procella.png')}}" download class="uk-text-truncate">FotosEvento2.pdf</a>
-                <a style="color:white" href="{{asset('/img/fotoZinnia/Procella.png')}}" download uk-icon="download"></a>
-            </div>
+            {{-- PDFS DESCARGABLES --}}
+            @foreach ($element->pdfs as $pdf)
+                <div class="p_downloable uk-margin-small-top font_vietnam">
+                    <a  class="uk-width-4-5 uk-text-truncate" style="color:white" href="{{asset('/img/pdfs/'.$pdf->url)}}" download class="uk-text-truncate">{{$pdf->descripcion}}</a>
+                    <a  style="color:white;"href="{{asset('/img/pdfs/'.$pdf->url)}}" download uk-icon="download"></a>
+                </div>
+            @endforeach
         </div>
     </div>
 
@@ -189,35 +180,29 @@
                         {!! $element->masinfo !!}
                     </div>
                 </div>
-                <div class="uk-width-expand@m">
-                    <div class="video-carousel">
-                        <div class="video-slider">
-                            <!-- SLIDE 1 -->
-                            <div class="slide">
-                                <iframe class="video"
-                                    src="https://www.youtube.com/embed/GEo5bmUKFvI?ecver=2&enablejsapi=1"></iframe>
+                @if ($element->video->count()>0)
+                    <div class="uk-width-expand@m">
+                        <div class="video-carousel">
+                            <div class="video-slider">
+                                {{-- VIDEOS SLIDER --}}
+                                @foreach ($element->video as $video)
+                                    <div class="slide">
+                                        <iframe class="video"
+                                            src="{{$video->link}}"></iframe>
+                                    </div>
+                                @endforeach
+                                <!-- SLIDE 7 -->
+                                {{-- <div class="slide">
+                                    <iframe class="video"
+                                        src="https://www.youtube.com/embed/J3pF2jkQ4vc?ecver=2&enablejsapi=1"></iframe>
+                                </div> --}}
+                                <!-- END OF SLIDES -->
+                                <div class="slide-arrow left"></div>
+                                <div class="slide-arrow right"></div>
                             </div>
-                            <!-- SLIDE 4 -->
-                            <div class="slide">
-                                <iframe class="video"
-                                    src="https://www.youtube.com/embed/846cjX0ZTrk?ecver=2&enablejsapi=1"></iframe>
-                            </div>
-                            <!-- SLIDE 5 -->
-                            <div class="slide">
-                                <iframe class="video"
-                                    src="https://www.youtube.com/embed/gSRFqpheg6Y?ecver=2&enablejsapi=1"></iframe>
-                            </div>
-                            <!-- SLIDE 7 -->
-                            <div class="slide">
-                                <iframe class="video"
-                                    src="https://www.youtube.com/embed/J3pF2jkQ4vc?ecver=2&enablejsapi=1"></iframe>
-                            </div>
-                            <!-- END OF SLIDES -->
-                            <div class="slide-arrow left"></div>
-                            <div class="slide-arrow right"></div>
                         </div>
                     </div>
-                </div>
+                @endif
             </div>
 
         </div>
@@ -312,9 +297,23 @@
     </div>
 
     <div class="uk-section uk-section-small">
-        <div class="uk-container uk-container-xlarge uk-flex uk-flex-right">
-            <button class="uk-button font_titles" style="color: black"> &#x3C; REGRESAR</button>
-        </div>
+        @switch($tipo)
+            @case('PRODUCCIÓN')
+                <div class="uk-container uk-container-xlarge uk-flex uk-flex-right">
+                    <a href="/producciones" class="uk-button uk-background-muted font_titles" style="color: black"> &#x3C; REGRESAR</a>
+                </div>
+                @break
+            @case('COPRODUCCIÓN')
+                <div class="uk-container uk-container-xlarge uk-flex uk-flex-right">
+                    <a href="/coproducciones" class="uk-button uk-background-muted font_titles" style="color: black"> &#x3C; REGRESAR</a>
+                </div>
+                @break
+            @case('PROYECTO')
+                <div class="uk-container uk-container-xlarge uk-flex uk-flex-right">
+                    <a href="/proyectos" class="uk-button uk-background-muted font_titles" style="color: black"> &#x3C; REGRESAR</a>
+                </div>
+                @break
+        @endswitch
     </div>
 </div>
 
