@@ -63,88 +63,98 @@
             descriptivo, o informativo acerca de las producciones por zinnia, ejemplo, elaborado con amor, pasión y
             dedicación en cada paso.</div>
     </div>
-    <div class="p_container uk-margin-medium-top uk-margin-medium-bottom" style="min-height: 526px; width:100%;">
-        <div class="uk-container uk-container-xlarge uk-flex uk-flex-wrap">
-            <div class="uk-width-1-2@m">
-                <div class="div_images_p uk-flex uk-flex-center">
-                    <div class="uk-width-1-4 uk-margin-right gal_disapear" style="height:100%;">
-                        <div class="next_btn font_vietnam" onclick="clickImagen();">Siguiente</div>
-                        @if (count($element->image) <= 0)
-                            <img id="gal_low" class="gal_low" src="{{ asset('/img/iconos/default.jpg') }}" alt="">
-                        @elseif(count($element->image) == 1)
-                            <img id="gal_low" class="gal_low" src="{{ asset('/img/iconos/default.jpg') }}" alt="">
-                        @else
-                            <img id="gal_low" class="gal_low" src="{{ asset('/img/images/'.$element->image[1]->link) }}" alt="">
+    <div style="margin-bottom:150px;">
+        <div class="p_container uk-margin-medium-top uk-margin-medium-bottom" style="min-height: 526px; width:100%;">
+            <div class="uk-container uk-container-xlarge uk-flex uk-flex-wrap">
+                <div class="uk-width-1-2@m">
+                    <div class="div_images_p uk-flex uk-flex-center">
+                        <div class="uk-width-1-4 uk-margin-right gal_disapear" style="height:100%;">
+                            <div class="next_btn font_vietnam" onclick="clickImagen();">Siguiente</div>
+                            @if (count($element->image) <= 0)
+                                <img id="gal_low" class="gal_low" src="{{ asset('/img/iconos/default.jpg') }}" alt="">
+                            @elseif(count($element->image) == 1)
+                                <img id="gal_low" class="gal_low" src="{{ asset('/img/iconos/default.jpg') }}" alt="">
+                            @else
+                                <img id="gal_low" class="gal_low" src="{{ asset('/img/images/'.$element->image[1]->link) }}" alt="">
+                            @endif
+                        </div>
+                        <div class="uk-width-3-4 " id="imagen-seleccionada">
+                            @if (count($element->image) <= 0)
+                                <img id="gal_high" class="gal_high" src="{{ asset('/img/iconos/default.jpg') }}" alt="">
+                            @else
+                                <img id="gal_high" class="gal_high" src="{{ asset('/img/images/'.$element->image[0]->link) }}" alt="">
+                            @endif
+                        </div>
+                    </div>
+                    <div class="uk-width-1 gal_desc font_vietnam" id="image-desc">
+                        @if (count($element->image) > 0)
+                            {{ Str::limit($element->image[0]->descripcion, 150) }}
                         @endif
                     </div>
-                    <div class="uk-width-3-4 " id="imagen-seleccionada">
-                        @if (count($element->image) <= 0)
-                            <img id="gal_high" class="gal_high" src="{{ asset('/img/iconos/default.jpg') }}" alt="">
-                        @else
-                            <img id="gal_high" class="gal_high" src="{{ asset('/img/images/'.$element->image[0]->link) }}" alt="">
-                        @endif
-                    </div>
+                    <div class="font_vietnam uk-margin-top uk-width-1 uk-text-center"
+                        style="font-size: 22px; color:#FFFFFF;">GALERIA DE FOTOS</div>
+                    <div class="font_vietnam uk-margin-small-top uk-width-1 uk-text-center"
+                        style="font-size: 14px;color: #FFFFFF;">{{ count($element->image) }} @if(count($element->image) == 1)foto @else fotos @endif para ver</div>
                 </div>
-                <div class="uk-width-1 gal_desc font_vietnam" id="image-desc">
-                    @if (count($element->image) > 0)
-                        {{ Str::limit($element->image[0]->descripcion, 150) }}
-                    @endif
-                </div>
-                <div class="font_vietnam uk-margin-top uk-width-1 uk-text-center"
-                    style="font-size: 22px; color:#FFFFFF;">GALERIA DE FOTOS</div>
-                <div class="font_vietnam uk-margin-small-top uk-width-1 uk-text-center"
-                    style="font-size: 14px;color: #FFFFFF;">{{ count($element->image) }} @if(count($element->image) == 1)foto @else fotos @endif para ver</div>
-            </div>
-            @if ($element->fecha)
-                {{-- PONER AQUI LA FECHA --}}
-                <div class="date_position2 font_vietnam">Fecha de la obra {{ $element->fecha }}</div>
-            @endif
-            @if ($element->estado)
-                {{-- PONER AQUI LA FECHA --}}
-                <div class="date_position2 font_vietnam">{{ $element->estado }}</div>
-            @endif
-            <div class="uk-width-1-2@m uk-flex">
-                <div class="gal_white">
-                    <div class="p_title font_vietnam">{{ Str::limit($element->titulo, 100) }}</div>
-                    @switch($tipo)
-                        @case('PRODUCCIÓN')
-                        @case('COPRODUCCIÓN')
-                            <div class="p_desc font_vietnam">{{ $element->sinopsis }}</div>
-                            <div class="more-info uk-width-1 uk-text-break uk-overflow-auto" style="border: none; padding-top:0px;">
-                                {!! $element->maindata !!}
+                @if ($element->fecha)
+                    {{-- PONER AQUI LA FECHA --}}
+                    <div class="date_position2 font_vietnam">Fecha de la obra {{ $element->fecha }}</div>
+                @endif
+                @if ($element->estado)
+                    {{-- PONER AQUI LA FECHA --}}
+                    <div class="date_position2 font_vietnam">{{ $element->estado }}</div>
+                @endif
+                <div class="uk-width-1-2@m uk-flex">
+                    <div class="gal_white">
+                        <div class="p_title font_vietnam">{{ Str::limit($element->titulo, 100) }}</div>
+                        @switch($tipo)
+                            @case('PRODUCCIÓN')
+                            @case('COPRODUCCIÓN')
+                                <div class="p_desc font_vietnam">{{ $element->sinopsis }}</div>
+                                <div class="more-info uk-width-1 uk-text-break uk-overflow-auto" style="border: none; padding-top:0px;">
+                                    {!! $element->maindata !!}
+                                    {!! $element->descripcion !!}
+                                </div>
+                                @if ($element->pdfs->count()>0)
+                                    <div class="uk-width-1">
+                                        <button class="p_downloads" href="#modal-descargables" uk-toggle>
+                                            <div class="font_titles" style="font-size: 18px;color: #FFFFFF;">DESCARGABLES</div>
+                                        </button>
+                                    </div>
+                                @endif
+                                @break
+                            @case('PROYECTO')
+                            <div class="more-info uk-width-1 uk-text-break uk-overflow-auto"
+                                style="border: none; padding-top:0px;">
+                                {{ $element->subtitulo }}
+                                <br>
+                                <br>
                                 {!! $element->descripcion !!}
+                                <br>
+                                <br>
+                                {!! $element->creditos !!}
                             </div>
-                            @if ($element->pdfs->count()>0)
+                                @if ($element->pdfs->count()>0)
                                 <div class="uk-width-1">
                                     <button class="p_downloads" href="#modal-descargables" uk-toggle>
                                         <div class="font_titles" style="font-size: 18px;color: #FFFFFF;">DESCARGABLES</div>
                                     </button>
                                 </div>
-                            @endif
-                            @break
-                        @case('PROYECTO')
-                        <div class="more-info uk-width-1 uk-text-break uk-overflow-auto"
-                            style="border: none; padding-top:0px;">
-                            {{ $element->subtitulo }}
-                            <br>
-                            <br>
-                            {!! $element->descripcion !!}
-                            <br>
-                            <br>
-                            {!! $element->creditos !!}
-                        </div>
-                            @if ($element->pdfs->count()>0)
-                            <div class="uk-width-1">
-                                <button class="p_downloads" href="#modal-descargables" uk-toggle>
-                                    <div class="font_titles" style="font-size: 18px;color: #FFFFFF;">DESCARGABLES</div>
-                                </button>
-                            </div>
-                            @endif
-                            @break
-                    @endswitch
-                </div>
-            </div> 
-        </div> 
+                                @endif
+                                @break
+                        @endswitch
+                    </div>
+                </div> 
+            </div>
+            @if ($element->fecha)
+                {{-- PONER AQUI LA FECHA --}}
+                <div class="date_position font_vietnam">Fecha de la obra {{ $element->fecha }}</div>
+            @endif
+            @if ($element->estado)
+                {{-- PONER AQUI LA FECHA --}}
+                <div class="date_position font_vietnam">{{ $element->estado }}</div>
+            @endif 
+        </div>
     </div>
 
     <div id="modal-descargables" class="uk-flex-top" uk-modal>
@@ -160,16 +170,6 @@
             @endforeach
         </div>
     </div>
-
-    @if ($element->fecha)
-        {{-- PONER AQUI LA FECHA --}}
-        <div class="date_position font_vietnam">Fecha de la obra {{ $element->fecha }}</div>
-    @endif
-    @if ($element->estado)
-        {{-- PONER AQUI LA FECHA --}}
-        <div class="date_position font_vietnam">{{ $element->estado }}</div>
-    @endif
-                
 
     <div class="uk-container  uk-container-xlarge">
         <div class="uk-width-1-1">
@@ -197,8 +197,10 @@
                                         src="https://www.youtube.com/embed/J3pF2jkQ4vc?ecver=2&enablejsapi=1"></iframe>
                                 </div> --}}
                                 <!-- END OF SLIDES -->
-                                <div class="slide-arrow left"></div>
-                                <div class="slide-arrow right"></div>
+                                @if ($element->video->count()!=1)
+                                    <div class="slide-arrow left"></div>
+                                    <div class="slide-arrow right"></div>
+                                @endif
                             </div>
                         </div>
                     </div>

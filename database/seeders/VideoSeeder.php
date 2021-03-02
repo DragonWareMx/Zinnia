@@ -28,7 +28,7 @@ class VideoSeeder extends Seeder
         ]);
         
         DB::table('videos')->insert([
-            'link' => 'https://www.youtube.com/embed/23-R1E9Bq84?ecver=2&enablejsapi=1',
+            'link' => 'https://www.youtube.com/embed/wDQu2WsRoC0?ecver=2&enablejsapi=1',
             'descripcion'=>'Teaser LA PRUDENCIA',
             'production_id'=>'1',
         ]);
@@ -58,7 +58,7 @@ class VideoSeeder extends Seeder
         ]);
 
         DB::table('videos')->insert([
-            'link' => 'https://www.youtube.com/embed/8INVnlutDxs?ecver=2&enablejsapi=1',
+            'link' => 'https://www.youtube.com/embed/mk_Z-LK7yhg?ecver=2&enablejsapi=1',
             'descripcion'=>'Taller 2, Cuéntame algo diferente',
             'proyect_id'=>'1',
         ]);
