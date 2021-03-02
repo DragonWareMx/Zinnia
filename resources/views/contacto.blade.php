@@ -2,9 +2,9 @@
 
 @section('head')
     <title>ZINNIA - Contacto</title>
-
     <!-- CSS de Material Design -->
     <link rel="stylesheet" href="{{asset('css/material_design.css')}}" />
+    
     <link href="{{ asset('/css/contacto.css') }}" rel="stylesheet">
 @endsection
 

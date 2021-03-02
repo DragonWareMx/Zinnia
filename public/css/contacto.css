@@ -71,3 +71,55 @@ p {
     transition: all ease-in-out 0.25s;
     background-color: transparent !important;
 } 
+.searcher{
+    width: 430px;
+    height: 36px;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
+    font-family: Be Vietnam;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    color: #B8B8B8;
+    padding-left:17px;
+    outline: none;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.font_titles{
+    font-family: Shadows Into Light;
+    font-style: normal;
+    font-weight: normal;
+}
+.searcher_button{
+    height: 36px;
+}
+.title_event {
+    font-family: Be Vietnam !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+.masinfo {
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin-left: 60%;
+}
+:hover .masinfo {
+    cursor: pointer;
+}
+.txtInfo {
+    font-family: Be Vietnam;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
