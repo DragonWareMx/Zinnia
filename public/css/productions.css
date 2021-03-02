@@ -335,12 +335,13 @@
     width:210px;
     margin-top:-340px;
     margin-bottom:340px;
+    transform:rotate(90deg);
     margin-left:auto;
     margin-right:-70px;
-    transform:rotate(90deg);
     color: #FFFFFF;
     font-weight: 300;
     font-size: 14px;
+    background-color: #1C1C1C;
 }
 
 .date_position2{

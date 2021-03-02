@@ -115,8 +115,7 @@
     </div>
 
 
-    <footer class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid
-        style="margin-top: 300px">
+    <footer class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid >
         <div>
             <div class="uk-padding-small uk-flex uk-flex-left@m uk-flex-center uk-flex-middle">
                 <a class="uk-logo" href="#">

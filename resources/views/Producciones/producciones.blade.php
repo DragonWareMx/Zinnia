@@ -64,7 +64,7 @@
     </div>
 
     @foreach ($elements as $element)
-    <div class="uk-container uk-container-xlarge uk-padding-remove-right">
+    <div class="uk-container uk-container-xlarge uk-padding-remove-right" style="margin-bottom:50px;">
         <div class="p_container uk-margin-medium-top uk-margin-large-bottom" style="min-height: 426px; width:100%;">
             @if ($element->fecha)
                 {{-- PONER AQUI LA FECHA --}}
@@ -178,16 +178,16 @@
                     </div>
                 </div>
             </div>
+            @if ($element->fecha)
+                {{-- PONER AQUI LA FECHA --}}
+                <div class="date_position font_vietnam">Fecha de la obra {{ $element->fecha }}</div>
+            @endif
+            @if ($element->estado)
+                {{-- PONER AQUI LA FECHA --}}
+                <div class="date_position font_vietnam">{{ $element->estado }}</div>
+            @endif
         </div>
     </div>
-    @if ($element->fecha)
-        {{-- PONER AQUI LA FECHA --}}
-        <div class="date_position font_vietnam">Fecha de la obra {{ $element->fecha }}</div>
-    @endif
-    @if ($element->estado)
-        {{-- PONER AQUI LA FECHA --}}
-        <div class="date_position font_vietnam">{{ $element->estado }}</div>
-    @endif
     @endforeach
 
     {!! $elements->links() !!}
