@@ -1,0 +1,73 @@
+h1 {
+    font-family: Shadows Into Light !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 48px;
+    color: #FFFFFF !important;
+}
+h3 {
+    font-family: Shadows Into Light !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+.btn {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+    height: auto;
+    color:white;
+    font-family: Shadows Into Light !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
+p {
+    font-family: Be Vietnam !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.critic-important{
+    background: #DEDEDE;
+}
+
+.critic-inside{
+    background: white;
+    border: 1px solid #D2D2D2;
+    width: 90%;
+    height: 100%;
+    position: relative;
+    top: 10px;
+    left:10px;
+    color: white;
+}
+.font_vietnam{
+    font-family: Be Vietnam;
+    color:black;
+}
+.title_form {
+    font-family: Shadows Into Light !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 39px;
+    color: #000000;
+}
+.omrs-input-group input{
+    
+    transition: all ease-in-out 0.25s;
+    background-color: transparent !important;
+}
+
+.omrs-input-group input:hover, .omrs-input-group input:focus{
+    border: solid 1px #000000 !important;
+    transition: all ease-in-out 0.25s;
+    background-color: transparent !important;
+} 

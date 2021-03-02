@@ -30,6 +30,16 @@ Route::get('/lay', function () {
     return view('layout.main');
 });
 
+// CONTACTO
+Route::get('/contacto', function () {
+    return view('contacto');
+})->name('contacto');
+
+//EVENTOS
+Route::get('/eventos', function () {
+    return view('eventos');
+})->name('eventos');
+
 //PRODUCCIONES
 
 Route::get('/producciones', 'ProductionController@index')->name('producciones');

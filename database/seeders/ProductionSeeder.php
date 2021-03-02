@@ -129,11 +129,10 @@ class ProductionSeeder extends Seeder
         ]);
 
         \DB::table('productions')->insert([
-            'titulo' => 'SOMBRAS DE LA LENGUA,							
-            Leyendas purépechas en teatro de sombras para la población infantil vulnerable
-            ',
+            'titulo' => 'SOMBRAS DE LA LENGUA',
 
-            'descripcion'=>'Duración de la obra: 50 min
+            'descripcion'=>'
+            Duración de la obra: 50 min
             Público a quién está dirigida: Familiar, principalmente infantil.
             Dirección: Tania Murillo
             Producción: Zinnia Compañía Escénica

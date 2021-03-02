@@ -68,9 +68,9 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="#">Próximos eventos</a></li>
+                    <li class="nav-item"><a href="{{route('eventos')}}">Próximos eventos</a></li>
                     <li class="nav-item"><a href="#">Quiénes somos</a></li>
-                    <li class="nav-item"><a href="#">Contacto</a></li>
+                    <li class="nav-item"><a href="{{route('contacto')}}">Contacto</a></li>
 
                 </ul>
             </div>
@@ -94,9 +94,9 @@
                                     </ul>
                                 </li>
                                 <li><a href="{{ route('proyectos') }}">Proyectos</a></li>
-                                <li><a href="#">Próximos eventos</a></li>
+                                <li><a href="{{route('eventos')}}">Próximos eventos</a></li>
                                 <li><a href="#">Quiénes somos</a></li>
-                                <li><a href="#">Contacto</a></li>
+                                <li><a href="{{route('contacto')}}">Contacto</a></li>
                             </ul>
                         </div>
                     </li>
