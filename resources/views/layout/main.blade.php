@@ -88,7 +88,8 @@
                                             <a href="{{ route('producciones') }}">Producciones</a>
                                             <ul class="uk-nav-sub">
                                                 <li><a href="{{ route('producciones') }}">Producciones</a></li>
-                                                <li><a href="{{ route('coproducciones') }}">Coproducciones y colaboraciones</a></li>
+                                                <li><a href="{{ route('coproducciones') }}">Coproducciones y
+                                                        colaboraciones</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -114,11 +115,13 @@
     </div>
 
 
-    <footer class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid style="margin-top: 300px">
+    <footer class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid
+        style="margin-top: 300px">
         <div>
             <div class="uk-padding-small uk-flex uk-flex-left@m uk-flex-center uk-flex-middle">
                 <a class="uk-logo" href="#">
                     <img src="{{ asset('img/LOGOS/LogoHorizontal2.png') }}" height="75px" width="166.54px">
+                    <img src="{{asset('img/LOGOS/SecretariaCultura_FoncaBN.png')}}" width="360px">
                 </a>
             </div>
         </div>
