@@ -174,12 +174,14 @@
     <div class="uk-container  uk-container-xlarge">
         <div class="uk-width-1-1">
             <div class=" uk-grid-match" uk-grid>
-                <div class="uk-width-1-3@m">
-                    <div class="more-info uk-text-break">
-                        <h1>MÁS INFORMACIÓN</h1>
-                        {!! $element->masinfo !!}
+                @if ($element->masinfo)
+                    <div class="uk-width-1-3@m">
+                        <div class="more-info uk-text-break">
+                            <h1>MÁS INFORMACIÓN</h1>
+                            {!! $element->masinfo !!}
+                        </div>
                     </div>
-                </div>
+                @endif
                 @if ($element->video->count()>0)
                     <div class="uk-width-expand@m">
                         <div class="video-carousel">
