@@ -115,12 +115,20 @@
     </div>
 
 
-    <footer class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid >
+    <footer
+        class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@s uk-text-center uk-flex-wrap-reverse"
+        uk-grid>
         <div>
-            <div class="uk-padding-small uk-flex uk-flex-left@m uk-flex-center uk-flex-middle">
+            <div class="uk-padding-small uk-flex uk-flex-left@m uk-flex-center uk-flex-middle uk-flex-wrap">
                 <a class="uk-logo" href="#">
                     <img src="{{ asset('img/LOGOS/LogoHorizontal2.png') }}" height="75px" width="166.54px">
-                    <img src="{{asset('img/LOGOS/SecretariaCultura_FoncaBN.png')}}" width="360px">
+                </a>
+                <a href="" class="uk-flex uk-flex-left@m uk-flex-center uk-flex-middle uk-margin-small-top"
+                    style="text-decoration: none; color: #D2D2D2; width:100%">
+                    <div class="texto-dragonware uk-flex uk-flex-middle">
+                        Desarrollado por DragonWare.
+                        <img src="{{ asset('img/ico/dragonBlanco.png') }}" width="23px" height="16px">
+                    </div>
                 </a>
             </div>
         </div>
@@ -137,11 +145,13 @@
             </div>
         </div>
         <div>
-            <div class="uk-padding uk-light uk-flex uk-flex-middle uk-flex-right@m uk-flex-center">
-                <div class="texto-dragonware uk-flex uk-flex-middle">
-                    Desarrollado por DragonWare.
-                    <img src="{{ asset('img/ico/dragonBlanco.png') }}" width="23px" height="16px">
-                </div>
+            <div class="uk-padding-small uk-light uk-flex uk-flex-middle uk-flex-right@m uk-flex-center uk-flex-wrap">
+                <div class="texto-center uk-margin-small-top" style="font-style: italic; color: #D2D2D2">"Esta página
+                    web es apoyado
+                    por
+                    el Sistema de Apoyos
+                    a la Creación y Proyectos Culturales (Fonca)."</div>
+                <img src="{{asset('img/LOGOS/SecretariaCultura_FoncaBN.png')}}" class="uk-margin-auto" width="360px">
             </div>
         </div>
     </footer>
