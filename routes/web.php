@@ -24,12 +24,26 @@ Route::get('/inicio', function () {
 // QUIENES SOMOS
 Route::get('/quienes-somos', function () {
     return view('quienesSomos');
-});
+})->name('quienes-somos');
 
 Route::get('/lay', function () {
     return view('layout.main');
 });
 
+// CONTACTO
+Route::get('/contacto', function () {
+    return view('contacto');
+})->name('contacto');
+
+//EVENTOS
+Route::get('/eventos', 'eventos@index')->name('eventos');
+
 //PRODUCCIONES
 
 Route::get('/producciones', 'ProductionController@index')->name('producciones');
+Route::get('/coproducciones', 'ProductionController@coproducciones')->name('coproducciones');
+Route::get('/produccion/{id}', 'ProductionController@produccion')->name('produccion');
+
+//PROYECTOS
+Route::get('/proyectos', 'ProjectController@index')->name('proyectos');
+Route::get('/proyecto/{id}', 'ProjectController@proyecto')->name('proyecto');

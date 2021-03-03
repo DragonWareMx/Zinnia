@@ -14,32 +14,74 @@ class ProductionSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('productions')->insert([
+        \DB::table('productions')->insert([
             'titulo' => 'LA PRUDENCIA',
             
-            'descripcion'=>'Duración de la obra: 45 minutos.
-            Género: Comedia negra.
-            Público a quién está dirigida: Adolescentes y adultos.
-            Dramaturgia: Claudio Gotbeter
-            Dirección: Tania Murillo
-            Producción: Zinnia Compañía Escénica
-            Reparto: Procella Romero, Landy Medina y Abril Cira.
+            'descripcion'=>'
+            
+            <p><strong>Dramaturgia</strong></p>
+            
+            <p>Claudio&nbsp;Gotbeter</p>
+            
+            <p><strong>Direcci&oacute;n</strong></p>
+            
+            <p>Tania&nbsp;Murillo</p>
+            
+            <p><strong>Producci&oacute;n</strong></p>
+            
+            <p>Zinnia&nbsp;Compa&ntilde;&iacute;a&nbsp;Esc&eacute;nica</p>
+            
+            <p><strong>Reparto</strong></p>
+            
+            <p>Procella&nbsp;Romero,&nbsp;Landy&nbsp;Medina&nbsp;y&nbsp;Abril&nbsp;Cira.</p>
+            ',
+            'maindata'=>'<table border="0" cellpadding="1" cellspacing="1" style="width:500px">
+                <tbody>
+                    <tr>
+                        <td>
+                        <p><strong>Duraci&oacute;n&nbsp;de&nbsp;la&nbsp;obra</strong></p>
+            
+                        <p>45&nbsp;minutos.</p>
+                        </td>
+                        <td>
+                        <p><strong>G&eacute;nero</strong></p>
+            
+                        <p>Comedia&nbsp;negra.</p>
+                        </td>
+                        <td>
+                        <p><strong>P&uacute;blico&nbsp;a&nbsp;qui&eacute;n&nbsp;est&aacute;&nbsp;dirigida</strong></p>
+            
+                        <p>Adolescentes&nbsp;y&nbsp;adultos.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
             ',
             
             'sinopsis'=>'¡Año nuevo vida nueva! decretan Trinidad y Margarita al reunirse para festejar el año nuevo. 
             A pesar de sentirse enfermas de todo un poco, brindan y desean entusiasmadas que este año sea mejor que 
             el anterior. Alguien toca a la puerta, ¿quién será? dudan, se angustian, ¿abro? El miedo y la paranoia 
             por la inseguridad que vivimos no les deja más remedio que recurrir a… La prudencia.',
-            'masinfo'=>'Equipo Creativo
-            Asistente General: Laura Camacho
-            Diseño y atrezo de escenografía: Abigail Araoz y Tania Murillo
-            Realización de escenografía: Raúl Medina Ríos (Gigio) y el Sr. Leonel
-            Iluminación: Raúl Medina Ríos (Gigio)
-            Diseño cartel y edición de video: Tania Murillo
-            Tipografía base: LAMIA DOP
-            Fotografía de estudio: Sebastián Portillo-FOTOVIVA
-            Fotografía escénica: Fausto Jijón
-            Gestión Cultural: Procella Romero
+            
+            'masinfo'=>'<p><strong>EQUIPO CREATIVO</strong></p>
+
+            <p><strong>Asistente&nbsp;General:</strong>&nbsp;Laura&nbsp;Camacho</p>
+            
+            <p><strong>Dise&ntilde;o&nbsp;y&nbsp;atrezo&nbsp;de&nbsp;escenograf&iacute;a:</strong>&nbsp;Abigail&nbsp;Araoz&nbsp;y&nbsp;Tania&nbsp;Murillo</p>
+            
+            <p><strong>Realizaci&oacute;n&nbsp;de&nbsp;escenograf&iacute;a:</strong>&nbsp;Ra&uacute;l&nbsp;Medina&nbsp;R&iacute;os&nbsp;(Gigio)&nbsp;y&nbsp;el&nbsp;Sr.&nbsp;Leonel</p>
+            
+            <p><strong>Iluminaci&oacute;n:</strong>&nbsp;Ra&uacute;l&nbsp;Medina&nbsp;R&iacute;os&nbsp;(Gigio)</p>
+            
+            <p><strong>Dise&ntilde;o&nbsp;cartel&nbsp;y&nbsp;edici&oacute;n&nbsp;de&nbsp;video:</strong>&nbsp;Tania&nbsp;Murillo</p>
+            
+            <p><strong>Tipograf&iacute;a&nbsp;base:</strong>&nbsp;LAMIA&nbsp;DOP</p>
+            
+            <p><strong>Fotograf&iacute;a&nbsp;de&nbsp;estudio:</strong>&nbsp;Sebasti&aacute;n&nbsp;Portillo-FOTOVIVA</p>
+            
+            <p><strong>Fotograf&iacute;a&nbsp;esc&eacute;nica:</strong>&nbsp;Fausto&nbsp;Jij&oacute;n</p>
+            
+            <p><strong>Gesti&oacute;n&nbsp;Cultural:</strong>&nbsp;Procella&nbsp;Romero</p>
             ',
             
             'reconocimientos'=>'Obra seleccionada para participar en la Muestra Estatal de Teatro Michoacán 2021/ 
@@ -51,26 +93,55 @@ class ProductionSeeder extends Seeder
             por el Programa de Estímulos a la Creación y Desarrollo Artístico de Michoacán (PECDAM 2018) 
             Gira por el interior del Estado de Michoacán en el rubro de Difusión de las Artes Escénicas.
             ',
+
+            'n_reconocimientos'=>6,
             
-            'fechas'=>'2021-2018',
+            'fecha'=>'2021-2018',
             
-            'criticas'=>'',
+            'criticas'=>'
+            <p>&ldquo;Murillo&nbsp;logra&nbsp;que&nbsp;tanto&nbsp;los&nbsp;deliciosos&nbsp;momentos&nbsp;clownescos&nbsp;de&nbsp;sus&nbsp;actrices&nbsp;como&nbsp;las&nbsp;desgarradoras&nbsp;se&ntilde;ales&nbsp;de&nbsp;un&nbsp;horror&nbsp;demasiado&nbsp;real,&nbsp;demasiado&nbsp;humano,&nbsp;que&nbsp;habita&nbsp;en&nbsp;el&nbsp;fondo&nbsp;de&nbsp;esta&nbsp;obra,&nbsp;se&nbsp;experimente&nbsp;siempre&nbsp;en&nbsp;un&nbsp;inc&oacute;modo&nbsp;-demasiado&nbsp;cerca-.&rdquo;</p>
+
+<p><a href="https://sinestesiaescenica.wordpress.com/2018/05/31/la-prudencia-compania-escenica-zinnia/">Said&nbsp;Soberanes-Sinestesia&nbsp;Esc&eacute;nica</a></p>
+
+<p>&quot;Estrenan&nbsp;a&nbsp;nivel&nbsp;nacional&nbsp;a&nbsp;cargo&nbsp;de&nbsp;Zinnia&nbsp;Compa&ntilde;&iacute;a&nbsp;Esc&eacute;nica&nbsp;la&nbsp;obra&nbsp;La&nbsp;Prudencia,&nbsp;que&nbsp;versar&aacute;&nbsp;sobre&nbsp;la&nbsp;inseguridad&nbsp;que&nbsp;se&nbsp;vive&nbsp;en&nbsp;el&nbsp;pa&iacute;s.&quot;</p>
+
+<p><a href="https://www.quadratin.com.mx/cultura/estrenaran-en-el-pais-la-obra-sobre-la-inseguridad-la-prudencia/">Luis&nbsp;Felipe&nbsp;Reynos.o-Quadrat&iacute;n</a></p>
+
+<p>&quot;As&iacute;,&nbsp;como&nbsp;una&nbsp;comedia&nbsp;en&eacute;rgica&nbsp;y&nbsp;audaz&nbsp;que&nbsp;se&nbsp;mantiene&nbsp;durante&nbsp;toda&nbsp;la&nbsp;funci&oacute;n&nbsp;es&nbsp;que&nbsp;se&nbsp;present&oacute;&nbsp;La&nbsp;Prudencia&hellip;&nbsp;Con&nbsp;un&nbsp;estilo&nbsp;fresco&nbsp;pero&nbsp;contundente...&quot;</p>
+
+<p><a href="https://www.cxpress.mx/la-prudencia-en-una-sociedad-atemorizada-por-la-inseguridad/">Davo&nbsp;Pinks-CXPRESS&nbsp;Cartelera,&nbsp;Teatro,&nbsp;Conciertos,&nbsp;Cultura</a></p>
+
+<p>&quot;Clara&nbsp;muestra&nbsp;del&nbsp;humor&nbsp;cl&aacute;sico&nbsp;trasladado&nbsp;a&nbsp;un&nbsp;problema&nbsp;social&hellip;&nbsp;La&nbsp;energ&iacute;a&nbsp;en&nbsp;el&nbsp;escenario&nbsp;es&nbsp;incre&iacute;ble,&nbsp;TODO&nbsp;el&nbsp;tiempo&nbsp;est&aacute;n&nbsp;a&nbsp;full&nbsp;y&nbsp;eso&nbsp;se&nbsp;agradece&nbsp;enormemente...&quot;</p>
+
+<p><a href="https://www.instagram.com/p/B790CM5jfBH/?igshid=u7g9fch5h5tj">Me&nbsp;interesa&nbsp;interesarte</a></p>
+
+<p>&quot;Espl&eacute;ndidamente&nbsp;actuada&hellip;&nbsp;Los&nbsp;personajes&nbsp;de&nbsp;Gotbeter,&nbsp;caminan&nbsp;por&nbsp;la&nbsp;cuerda&nbsp;floja&nbsp;de&nbsp;la&nbsp;paranoia&nbsp;y&nbsp;esta&nbsp;cuerda&nbsp;est&aacute;&nbsp;sostenida&nbsp;en&nbsp;los&nbsp;postes&nbsp;de&nbsp;la&nbsp;comedia.&quot;</p>
+
+<p><a href="http://www.instagram.com/p/B7xQcPQD1dp/?igshid=ngfadd8cw0c9">Desextender</a></p>
+
+            ',
             
-            'quote'=>'',
+            'quote'=>'<p>&quot;Clara&nbsp;muestra&nbsp;del&nbsp;humor&nbsp;cl&aacute;sico&nbsp;trasladado&nbsp;a&nbsp;un&nbsp;problema&nbsp;social&hellip;&nbsp;La&nbsp;energ&iacute;a&nbsp;en&nbsp;el&nbsp;escenario&nbsp;es&nbsp;incre&iacute;ble,&nbsp;TODO&nbsp;el&nbsp;tiempo&nbsp;est&aacute;n&nbsp;a&nbsp;full&nbsp;y&nbsp;eso&nbsp;se&nbsp;agradece&nbsp;enormemente...&quot;</p>
+
+            <p><a href="https://www.instagram.com/p/B790CM5jfBH/?igshid=u7g9fch5h5tj">Me&nbsp;interesa&nbsp;interesarte</a></p>',
             
             'tipo'=>'producción',
         ]);
 
-        DB::table('productions')->insert([
-            'titulo' => 'SOMBRAS DE LA LENGUA,							
-            Leyendas purépechas en teatro de sombras para la población infantil vulnerable
-            ',
+        \DB::table('productions')->insert([
+            'titulo' => 'SOMBRAS DE LA LENGUA',
 
-            'descripcion'=>'Duración de la obra: 50 min
+            'descripcion'=>'
+            Duración de la obra: 50 min
             Público a quién está dirigida: Familiar, principalmente infantil.
             Dirección: Tania Murillo
             Producción: Zinnia Compañía Escénica
             Titiriteras: Procella Romero y Landy Medina
+            ',
+
+            'maindata'=>'Duración de la obra: 50 min
+            Público a quién está dirigida: Familiar, principalmente infantil.
+            Dirección: Tania Murillo
             ',
 
             'sinopsis'=>'Esta puesta en escena se sustenta en acercar principalmente al público infantil a la lengua 
@@ -88,7 +159,7 @@ class ProductionSeeder extends Seeder
             Fotografía: Procella Romero
             Realización de Títeres y Escenografía: Zinnia Compañía Escénica
             ',
-
+            'pdf'=>'',
             'reconocimientos'=>'PACMYC 2020',
             'fecha'=>'2021-2020',
             'criticas'=>'',
@@ -96,7 +167,7 @@ class ProductionSeeder extends Seeder
             'tipo'=>'producción',
         ]);
 
-        DB::table('productions')->insert([
+        \DB::table('productions')->insert([
             'titulo' => 'LA MUJER QUE MUEVE LA BALSA',
 
             'descripcion'=>'Equipo Creativo
@@ -106,6 +177,12 @@ class ProductionSeeder extends Seeder
             Diseño de escenario multimedial y animaciones: Juan Diego Mejía
             Diseño sonoro: Daniel Pérez Vázquez
             Diseño de producción Argentina: Eleonora Pereyra
+            Asistencia de dirección: Ludwig Berlinea
+            Coproducción México: Epitafios Laboratorio Teatral y Zinnia Compañía Escénica
+            ',
+
+            'maindata'=>'Equipo Creativo
+            Dirección y dramaturgia: Josué Almanza
             Asistencia de dirección: Ludwig Berlinea
             Coproducción México: Epitafios Laboratorio Teatral y Zinnia Compañía Escénica
             ',
@@ -131,7 +208,7 @@ class ProductionSeeder extends Seeder
             Federico Lozano
             Isabel Benet
             ',
-            
+            'pdf'=>'',
             'reconocimientos'=>'Ganadora de Mejor Texto Dramático, CICLO INCIERTO TBK 2019',
             
             'fecha'=>'2021-2018',
@@ -145,9 +222,10 @@ class ProductionSeeder extends Seeder
             'contacto'=>'https://www.facebook.com/DIRECTOR-GENERAL-EPITAFIOS-LABORATORIO-TEATRAL-1394836570770145'
         ]);
 
-        DB::table('productions')->insert([
+        \DB::table('productions')->insert([
             'titulo' => 'ÉRASE QUE SE ES… EN AFGANISTÁN',
             'descripcion'=>'',
+            'maindata'=>'',
             'sinopsis'=>'Dispositivo escénico en el que Norma Ferreira a través de anécdotas, 
             música, fotografías, videos y registros sonoros, comparte sus experiencias en Afganistán, 
             donde trabajó como profesora de música durante cinco años. Testimonios, registros audiovisuales 
@@ -166,10 +244,10 @@ class ProductionSeeder extends Seeder
             'fecha'=>'2020-2019',
             'criticas'=>'',
             'quote'=>'',
-            'tipo'=>'',
+            'tipo'=>'producción',
         ]);
 
-        DB::table('productions')->insert([
+        \DB::table('productions')->insert([
             'titulo' => 'LA GALLINA TONTA',
             'descripcion'=>'Duración de la obra: 50 min
             Duración de la obra: 13 min. (versión en línea)
@@ -177,6 +255,17 @@ class ProductionSeeder extends Seeder
             Idea original y Dirección Artística: Norma Ferreira
             Dirección Escénica y Titiritera: Tania Murillo
             Coproducción: Maleta en Ristra y Zinnia Compañía Escénica
+            ',
+            'descripcion'=>'Duración de la obra: 50 min
+            Duración de la obra: 13 min. (versión en línea)
+            Público a quién está dirigida: Todo tipo
+            Idea original y Dirección Artística: Norma Ferreira
+            Dirección Escénica y Titiritera: Tania Murillo
+            Coproducción: Maleta en Ristra y Zinnia Compañía Escénica
+            ',
+            'maindata'=>'Duración de la obra: 50 min
+            Duración de la obra: 13 min. (versión en línea)
+            Público a quién está dirigida: Todo tipo
             ',
             'sinopsis'=>'Adaptación del cuento del escritor Idris Sha. En un país muy lejano vivía una gallina
              muy tonta que andaba por allí haciendo toc, toc, toc. Nadie en el pueblo sabía lo que la gallina 
@@ -193,7 +282,7 @@ class ProductionSeeder extends Seeder
             Creación sonora: Norma Ferreira
             Video y Fotografía: Norma Ferreira y Owen Breull
             ',
-            
+            'pdf'=>'',
             'reconocimientos'=>'',
             'fecha'=>'',
             'criticas'=>'',

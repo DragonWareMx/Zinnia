@@ -52,12 +52,12 @@
                         <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <li><a href="{{ route('producciones') }}">Producciones</a></li>
-                                <li><a href="{{ route('producciones') }}">Coproducciones y colaboraciones</a></li>
+                                <li><a href="{{ route('coproducciones') }}">Coproducciones y colaboraciones</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Proyectos</a>
+                        <a href="{{ route('proyectos') }}">Proyectos</a>
                         <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <li class="uk-nav-header">Opciones</li>
@@ -68,9 +68,9 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="#">Próximos eventos</a></li>
-                    <li class="nav-item"><a href="/quienes-somos">Quiénes somos</a></li>
-                    <li class="nav-item"><a href="#">Contacto</a></li>
+                    <li class="nav-item"><a href="{{route('eventos')}}">Próximos eventos</a></li>
+                    <li class="nav-item"><a href="{{route('quienes-somos')}}">Quiénes somos</a></li>
+                    <li class="nav-item"><a href="{{route('contacto')}}">Contacto</a></li>
 
                 </ul>
             </div>
@@ -87,16 +87,17 @@
                                         <li class="uk-parent">
                                             <a href="{{ route('producciones') }}">Producciones</a>
                                             <ul class="uk-nav-sub">
-                                                <li><a href="#">Producciones</a></li>
-                                                <li><a href="#">Coproducciones y colaboraciones</a></li>
+                                                <li><a href="{{ route('producciones') }}">Producciones</a></li>
+                                                <li><a href="{{ route('coproducciones') }}">Coproducciones y
+                                                        colaboraciones</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Proyectos</a></li>
-                                <li><a href="#">Próximos eventos</a></li>
-                                <li><a href="/quienes-somos">Quiénes somos</a></li>
-                                <li><a href="#">Contacto</a></li>
+                                <li><a href="{{ route('proyectos') }}">Proyectos</a></li>
+                                <li><a href="{{route('eventos')}}">Próximos eventos</a></li>
+                                <li><a href="{{route('quienes-somos')}}">Quiénes somos</a></li>
+                                <li><a href="{{route('contacto')}}">Contacto</a></li>
                             </ul>
                         </div>
                     </li>
@@ -114,11 +115,20 @@
     </div>
 
 
-    <footer class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid>
+    <footer
+        class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@s uk-text-center uk-flex-wrap-reverse"
+        uk-grid>
         <div>
-            <div class="uk-padding-small uk-flex uk-flex-left@m uk-flex-center uk-flex-middle">
+            <div class="uk-padding-small uk-flex uk-flex-left@m uk-flex-center uk-flex-middle uk-flex-wrap">
                 <a class="uk-logo" href="#">
                     <img src="{{ asset('img/LOGOS/LogoHorizontal2.png') }}" height="75px" width="166.54px">
+                </a>
+                <a href="" class="uk-flex uk-flex-left@m uk-flex-center uk-flex-middle uk-margin-small-top"
+                    style="text-decoration: none; color: #D2D2D2; width:100%">
+                    <div class="texto-dragonware uk-flex uk-flex-middle">
+                        Desarrollado por DragonWare.
+                        <img src="{{ asset('img/ico/dragonBlanco.png') }}" width="23px" height="16px">
+                    </div>
                 </a>
             </div>
         </div>
@@ -135,11 +145,13 @@
             </div>
         </div>
         <div>
-            <div class="uk-padding uk-light uk-flex uk-flex-middle uk-flex-right@m uk-flex-center">
-                <div class="texto-dragonware uk-flex uk-flex-middle">
-                    Desarrollado por DragonWare.
-                    <img src="{{ asset('img/ico/dragonBlanco.png') }}" width="23px" height="16px">
-                </div>
+            <div class="uk-padding-small uk-light uk-flex uk-flex-middle uk-flex-right@m uk-flex-center uk-flex-wrap">
+                <div class="texto-center uk-margin-small-top" style="font-style: italic; color: #D2D2D2">"Esta página
+                    web es apoyado
+                    por
+                    el Sistema de Apoyos
+                    a la Creación y Proyectos Culturales (Fonca)."</div>
+                <img src="{{asset('img/LOGOS/SecretariaCultura_FoncaBN.png')}}" class="uk-margin-auto" width="360px">
             </div>
         </div>
     </footer>

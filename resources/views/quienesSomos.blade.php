@@ -122,7 +122,7 @@
                     <div class="uk-width-1-1 card-rol">Asistencia General</div>
                     <div class="div-iconos uk-margin-small-top">
                         <a href="https://www.facebook.com/lahadamar6" uk-icon="icon: facebook; ratio: 1.5" class="uk-link-text" target="_blank"></a>
-                        <a href="#" uk-icon="icon: instagram; ratio: 1.5" class="uk-link-text" target="_blank"></a>
+                        <a href="https://www.instagram.com/lauxcamacho/" uk-icon="icon: instagram; ratio: 1.5" class="uk-link-text" target="_blank"></a>
                     </div>
                 </div>
 
