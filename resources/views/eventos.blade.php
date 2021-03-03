@@ -21,29 +21,43 @@
                 <button type="submit" class="font_titles uk-button uk-button-secondary searcher_button">BUSCAR</button>
             </div>
         </form> --}}
-        <h1>EVENTOS</h1>
-        <div id="imgDiv" class="event uk-width-1-4 uk-padding-small" style="background-color: #1C1C1C;">
-            <div class="uk-background-contain uk-background-muted uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url({{asset('img/images/ProximamenteSalavirtual.PNG')}}); background-color:black">>
-                <div id="info" class="uk-text-center uk-position-absolute " style="margin-top:">
-                    <p class="txtInfo">Titulo</p>
-                    <p class="txtInfo">Evento</p>
-                    <p class="txtInfo">Hora</p>
+        <h1>PRÓXIMOS EVENTOS</h1>
+        <div class="uk-flex">
+            @foreach ($eventos as $evento)
+            <div id="{{$evento->id}}" onmouseover="moreInfo(this.id)" onmouseout="normal(this.id)" onclick="goLink('{{$evento->link}}')" class="uk-width-1-3 uk-padding-small uk-margin-right div_img" style="background-color: #1C1C1C;">
+                <img src="{{asset('img/images/'.$evento->image[0]->link)}}" style="max-height: 500px; margin-bottom:10px">
+                <div id="infoA{{$evento->id}}" class="uk-animation-fade">
+                    <p class="title_event">{{$evento->titulo}}</p>
+                    <p>FECHA: {{$evento->fecha}} </p>
+                    <p>HORA: {{$evento->hora}}</p>
+                    <p>TIPO: {{$evento->tipo}}</p>
                 </div>
-            </div>
-            <p class="title_event">TÍTULO</p>
-            <p>Link: </p>
-            <p>Fecha: </p>
-            <p class="masinfo" onclick="moreInfo()">Más información</p>
+                <div id="infoB{{$evento->id}}" style="display:none" class="uk-animation-scale-up">
+                    <p class="title_event">Más información:</p>
+                    <p>{{$evento->masinfo}}</p>
+                </div>    
+            </div>   
+            @endforeach
         </div>
     </div>
 </div>
 
 <script>
-    function moreInfo(){
-        contenedor=document.getElementById("imgDiv");
-        img =document.getElementById("img");
+    function moreInfo(ide){
+        contenedor=document.getElementById(ide);        
         contenedor.style.backgroundColor = "rgb(255,255,255,0.3)";
-        img.style.opacity = "0.6";
+        document.getElementById('infoA'+ide).style.display = 'none';
+        document.getElementById('infoB'+ide).style.display = 'block';
+
+    }
+    function normal(ide){
+        contenedor=document.getElementById(ide);        
+        contenedor.style.backgroundColor = "#1C1C1C";
+        document.getElementById('infoA'+ide).style.display = 'block';
+        document.getElementById('infoB'+ide).style.display = 'none';
+    }
+    function goLink(link){
+        window.open(link, '_blank');
     }
 </script>
 @endsection

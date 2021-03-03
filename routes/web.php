@@ -36,9 +36,7 @@ Route::get('/contacto', function () {
 })->name('contacto');
 
 //EVENTOS
-Route::get('/eventos', function () {
-    return view('eventos');
-})->name('eventos');
+Route::get('/eventos', 'eventos@index')->name('eventos');
 
 //PRODUCCIONES
 

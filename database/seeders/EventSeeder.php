@@ -36,7 +36,7 @@ class EventSeeder extends Seeder
 
         DB::table('events')->insert([
             'titulo'=>'LA PRUDENCIA',
-            'fecha'=>'2021-03-21',
+            'fecha'=>'',
             'hora'=>'19:15',
             'lugar'=>'',
             'tipo'=>'Presentación virtual',

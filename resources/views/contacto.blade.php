@@ -37,7 +37,7 @@
     </div>
 </div>
 
-<div class="critic-important uk-margin-top" style="margin-right:30%; margin-left:30%">
+<div class="critic-important uk-margin-top" style="margin-right:30%; margin-left:30%; margin-bottom:30px">
     <div class="critic-inside uk-padding">
         <p class="title_form">¿NECESITAS SABER MÁS?</p>
         <p class="font_vietnam">Enviános un mensaje y nos comunicaremos contigo lo más pronto posible</p>

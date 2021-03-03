@@ -123,3 +123,6 @@ p {
     line-height: 23px;
     color: #FFFFFF;
 }
+:hover .div_img {
+    cursor: pointer;
+}
