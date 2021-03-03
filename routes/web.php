@@ -24,7 +24,7 @@ Route::get('/inicio', function () {
 // QUIENES SOMOS
 Route::get('/quienes-somos', function () {
     return view('quienesSomos');
-});
+})->name('quienes-somos');
 
 Route::get('/lay', function () {
     return view('layout.main');
