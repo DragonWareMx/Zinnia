@@ -69,7 +69,7 @@
                         </div>
                     </li>
                     <li class="nav-item"><a href="#">Próximos eventos</a></li>
-                    <li class="nav-item"><a href="#">Quiénes somos</a></li>
+                    <li class="nav-item"><a href="/quienes-somos">Quiénes somos</a></li>
                     <li class="nav-item"><a href="#">Contacto</a></li>
 
                 </ul>
@@ -95,7 +95,7 @@
                                 </li>
                                 <li><a href="#">Proyectos</a></li>
                                 <li><a href="#">Próximos eventos</a></li>
-                                <li><a href="#">Quiénes somos</a></li>
+                                <li><a href="/quienes-somos">Quiénes somos</a></li>
                                 <li><a href="#">Contacto</a></li>
                             </ul>
                         </div>
