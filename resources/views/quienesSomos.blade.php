@@ -81,10 +81,10 @@
             <div class="uk-width-1-1 uk-flex uk-flex-wrap uk-flex-center uk-padding-small">
                 
                 <div class="card uk-flex uk-flex-wrap uk-flex-center uk-padding uk-text-center uk-margin-large-right" style="color:white" uk-parallax="opacity: 0,1; y: -20,0; scale: 1.2,1; viewport: 0.5;">
-                    <a href="{{asset('img/fotoZinnia/cv/CVTaniaMurillo.pdf')}}" download="CVTaniaMurillo.pdf" uk-tooltip="Clic para más info" class="uk-width-1-1">
+                    <a href="{{asset('img/cv/CVTaniaMurillo.pdf')}}" download="CVTaniaMurillo.pdf" uk-tooltip="Clic para más info" class="uk-width-1-1">
                         <img src="{{asset('img/fotoZinnia/TaniaMurillo.jpg')}}" style="width:100px; height:100px; border-radius:100%; object-fit: cover;">
                     </a>
-                    <a href="{{asset('img/fotoZinnia/cv/CVTaniaMurillo.pdf')}}" download="CVTaniaMurillo.pdf" class="uk-link-reset" uk-tooltip="Clic para más info">
+                    <a href="{{asset('img/cv/CVTaniaMurillo.pdf')}}" download="CVTaniaMurillo.pdf" class="uk-link-reset" uk-tooltip="Clic para más info">
                         <div class="uk-width-1-1 card-nombre"><b>TANIA MURILLO TOVAR</b></div>
                     </a>
                     <div class="uk-width-1-1 card-rol">Concepto y Dirección Escénica</div>
@@ -96,10 +96,10 @@
                 </div>
 
                 <div class="card uk-flex uk-flex-wrap uk-flex-center uk-padding uk-text-center" style="color:white" uk-parallax="opacity: 0,1; y: -20,0; scale: 1.2,1; viewport: 0.5;">
-                    <a href="{{asset('img/fotoZinnia/cv/CVProcella.pdf')}}" download="CVProcella.pdf" uk-tooltip="Clic para más info" class="uk-width-1-1">
+                    <a href="{{asset('img/cv/CVProcella.pdf')}}" download="CVProcella.pdf" uk-tooltip="Clic para más info" class="uk-width-1-1">
                         <img src="{{asset('img/fotoZinnia/Procella.png')}}" style="width:100px; height:100px; border-radius:100%; object-fit: cover;">
                     </a>
-                    <a href="{{asset('img/fotoZinnia/cv/CVProcella.pdf')}}" download="CVProcella.pdf" class="uk-link-reset" uk-tooltip="Clic para más info">
+                    <a href="{{asset('img/cv/CVProcella.pdf')}}" download="CVProcella.pdf" class="uk-link-reset" uk-tooltip="Clic para más info">
                         <div class="uk-width-1-1 card-nombre"><b>PROCELLA ROMERO ZEPEDA</b></div>
                     </a>
                     <div class="uk-width-1-1 card-rol">Actriz y Gestora Cultural</div>
@@ -113,10 +113,10 @@
             <div class="uk-width-1-1 uk-flex uk-flex-wrap uk-flex-center uk-padding-small">
                 
                 <div class="card uk-flex uk-flex-wrap uk-flex-center uk-padding uk-text-center" style="color:white" uk-parallax="opacity: 0,1; y: -20,0; scale: 1.2,1; viewport: 0.5;">
-                    <a href="{{asset('img/fotoZinnia/cv/CVLauraCamacho.pdf')}}" download="LauraCamacho.pdf" uk-tooltip="Clic para más info" class="uk-width-1-1">
+                    <a href="{{asset('img/cv/CVLauraCamacho.pdf')}}" download="LauraCamacho.pdf" uk-tooltip="Clic para más info" class="uk-width-1-1">
                         <img src="{{asset('img/fotoZinnia/LauraCamacho.jpg')}}" style="width:100px; height:100px; border-radius:100%; object-fit: cover;">
                     </a>
-                    <a href="{{asset('img/fotoZinnia/cv/CVLauraCamacho.pdf')}}" download="CVLauraCamacho.pdf" class="uk-link-reset" uk-tooltip="Clic para más info">
+                    <a href="{{asset('img/cv/CVLauraCamacho.pdf')}}" download="CVLauraCamacho.pdf" class="uk-link-reset" uk-tooltip="Clic para más info">
                         <div class="uk-width-1-1 card-nombre"><b>LAURA CAMACHO APARICIO</b></div>
                     </a>
                     <div class="uk-width-1-1 card-rol">Asistencia General</div>
@@ -127,10 +127,10 @@
                 </div>
 
                 <div class="card uk-flex uk-flex-wrap uk-flex-center uk-padding uk-text-center uk-margin-large-right uk-margin-large-left" style="color:white" uk-parallax="opacity: 0,1; y: -20,0; scale: 1.2,1; viewport: 0.5;">
-                    <a href="{{asset('img/fotoZinnia/cv/CVLandyMedina.pdf')}}" download="LandyMedina.pdf" uk-tooltip="Clic para más info" class="uk-width-1-1">
+                    <a href="{{asset('img/cv/CVLandyMedina.pdf')}}" download="LandyMedina.pdf" uk-tooltip="Clic para más info" class="uk-width-1-1">
                         <img src="{{asset('img/fotoZinnia/LandyMedina.jpg')}}" style="width:100px; height:100px; border-radius:100%; object-fit: cover;">
                     </a>
-                    <a href="{{asset('img/fotoZinnia/cv/CVLandyMedina.pdf')}}" download="CVLandyMedina.pdf" class="uk-link-reset" uk-tooltip="Clic para más info">
+                    <a href="{{asset('img/cv/CVLandyMedina.pdf')}}" download="CVLandyMedina.pdf" class="uk-link-reset" uk-tooltip="Clic para más info">
                         <div class="uk-width-1-1 card-nombre"><b>LANDY MEDINA GALAZ</b></div>
                     </a>
                     <div class="uk-width-1-1 card-rol">Actriz</div>
@@ -141,10 +141,10 @@
                 </div>
 
                 <div class="card uk-flex uk-flex-wrap uk-flex-center uk-padding uk-text-center" style="color:white" uk-parallax="opacity: 0,1; y: -20,0; scale: 1.2,1; viewport: 0.5;">
-                    <a href="{{asset('img/fotoZinnia/cv/CVAbrilCira.pdf')}}" download="CVAbrilCira.pdf" uk-tooltip="Clic para más info" class="uk-width-1-1">
+                    <a href="{{asset('img/cv/CVAbrilCira.pdf')}}" download="CVAbrilCira.pdf" uk-tooltip="Clic para más info" class="uk-width-1-1">
                         <img src="{{asset('img/fotoZinnia/AbrilCira.jpg')}}" style="width:100px; height:100px; border-radius:100%; object-fit: cover;">
                     </a>
-                    <a href="{{asset('img/fotoZinnia/cv/CVAbrilCira.pdf')}}" download="CVAbrilCira.pdf" class="uk-link-reset" uk-tooltip="Clic para más info">
+                    <a href="{{asset('img/cv/CVAbrilCira.pdf')}}" download="CVAbrilCira.pdf" class="uk-link-reset" uk-tooltip="Clic para más info">
                         <div class="uk-width-1-1 card-nombre"><b>ABRIL CIRA PÉREZ VÉLEZ</b></div>
                     </a>
                     <div class="uk-width-1-1 card-rol">Actriz</div>
