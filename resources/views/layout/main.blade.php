@@ -39,7 +39,7 @@
     <div class="sticky">
         <nav class="uk-navbar-container main-navbar menu-desktop" uk-navbar="mode: click" style="">
             <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="#">
+                <a class="uk-navbar-item uk-logo" href="/inicio">
                     <img src="{{ asset('img/LOGOS/logocolor_only.png') }}" width="89px" height="89px">
                     <img src="{{ asset('img/LOGOS/logocolor_text.png') }}" height="57px" width="102.45px"
                         class="uk-margin-small-left">
@@ -48,7 +48,7 @@
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
                     <li class="nav-item">
-                        <a href="#">Producciones</a>
+                        <a href="#">Producciones</a> 
                         <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <li><a href="{{ route('producciones') }}">Producciones</a></li>
@@ -58,7 +58,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('proyectos') }}">Proyectos</a>
-                        <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
+                        {{-- <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <li class="uk-nav-header">Opciones</li>
                                 <li><a href="#">Editar</a></li>
@@ -66,7 +66,7 @@
                                 <li><a href="#">Bloquear</a></li>
                                 <li><a href="#">Cerrar sesión</a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </li>
                     <li class="nav-item"><a href="{{route('eventos')}}">Próximos eventos</a></li>
                     <li class="nav-item"><a href="{{route('quienes-somos')}}">Quiénes somos</a></li>
@@ -104,7 +104,7 @@
                 </ul>
             </div>
             <div class="uk-navbar-center">
-                <a class="uk-navbar-item uk-logo" href="#">
+                <a class="uk-navbar-item uk-logo" href="/inicio">
                     <img src="{{ asset('img/LOGOS/logocolor_text.png') }}" height="57px" width="102.45px"
                         class="uk-margin-small-left">
                 </a>
