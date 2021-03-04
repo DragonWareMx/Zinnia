@@ -9,6 +9,14 @@
     .img-logo-blanco{
         margin-top: -600px !important;
     }
+    .div-404{
+        margin-top: -600px !important;
+    }
+}
+@media(max-width:1300px){
+    .div-404{
+        margin-top: -600px !important;
+    }
 }
 @media(max-width:800px){
     .img-logo-blanco img{

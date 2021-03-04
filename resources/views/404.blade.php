@@ -151,17 +151,18 @@
 
     <!-- ***** Preloader End ***** -->
 
-
     <div class="container uk-padding-remove">
         <video autoplay="autoplay" loop="loop" class="video_fondo" preload="auto" muted>
             <source src="{{asset('img/fondoAurora.mp4')}}" type="video/mp4">
         </video>
-        <div class="uk-width-1-1 uk-text-center uk-position-absolute img-logo-blanco" style="margin-top:-550px">
-            <img src="{{asset('img/LOGOS/logoblanco.png')}}"  style="width:25%; max-width:333px; max-height:466px">  
+        <div class="uk-width-1-1 uk-text-center uk-position-absolute div-404 uk-animation-toggle" style="margin-top:-450px">
+            <div class="" style="color:white; font-size:25px; font-family: Shadows Into Light">ERROR</div>
+            <div class="uk-animation-scale-up" style="color:white; font-size:120px; font-family: Be Vietnam; font-weight:500">404</div>
+            <div class="" style="color:white; font-size:20px; font-family: Be Vietnam; font-weight:200">Oops! Parece que estás perdido...</div>
         </div>
     </div>
     <div class="sticky">
-        <nav class="uk-navbar-container main-navbar menu-desktop" uk-navbar="mode: click" style="background-color:transparent !important; border:0px !important;" >
+        <nav class="uk-navbar-container main-navbar menu-desktop" uk-navbar="mode: click" style="background-color:transparent !important; border:0px !important;">
             <div class="uk-navbar-center">
                 <ul class="uk-navbar-nav">
                     <li class="nav-item nav-item-white" >
@@ -175,6 +176,15 @@
                     </li>
                     <li class="nav-item nav-item-white">
                         <a href="{{ route('proyectos') }}">Proyectos</a>
+                        {{-- <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-nav-header">Opciones</li>
+                                <li><a href="#">Editar</a></li>
+                                <li class="uk-nav-header">Acciones</li>
+                                <li><a href="#">Bloquear</a></li>
+                                <li><a href="#">Cerrar sesión</a></li>
+                            </ul>
+                        </div> --}}
                     </li>
                     <li class="nav-item nav-item-white"><a href="{{route('eventos')}}">Próximos eventos</a></li>
                     <li class="nav-item nav-item-white"><a href="{{route('quienes-somos')}}">Quiénes somos</a></li>
@@ -265,17 +275,5 @@
     </footer> 
 
 </body>
-{{-- <script>
-    $(function() {
-    $(window).on("scroll", function() {
-        if($(window).scrollTop() > 5) {
-            alert(aaa);
-            $(".header").addClass("active");
-        } else {
-            //remove the background property so it comes transparent again (defined in your css)
-           $(".header").removeClass("active");
-        }
-    });
-});
-</script> --}}
+
 </html>
