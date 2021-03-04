@@ -28,7 +28,7 @@ class ProfileSeeder extends Seeder
             'foto' => 'Procella.png',
             'nombre'=>'PROCELLA ROMERO ZEPEDA',
             'rol'=>'Actriz y Gestora Cultural',
-            'cv'=>'CVProcella2021.pdf',
+            'cv'=>'CVProcella.pdf',
             'insta'=>'https://www.instagram.com/procellarz/',
             'fb'=>'https://www.facebook.com/procella',
             'tw'=>'https://twitter.com/ProcellaRomero?s=09',
