@@ -5,7 +5,7 @@
     <!-- CSS de Material Design -->
     <link rel="stylesheet" href="{{asset('css/material_design.css')}}" />
     
-    <link href="{{ asset('/css/contacto.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/eventos.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -25,10 +25,28 @@
             </div>
         </form> --}}
         <h1>PRÓXIMOS EVENTOS</h1>
-        <div id="columnResp" class="uk-flex">
+        <div id="basic" class="uk-flex">
             @foreach ($eventos as $evento)
             <div id="{{$evento->id}}" onmouseover="moreInfo(this.id)" onmouseout="normal(this.id)" onclick="goLink('{{$evento->link}}')" 
-                class="uk-width-1-3 uk-width-1-1@s uk-padding-small uk-margin-right uk-margin-bottom div_img" style="background-color: #1C1C1C;">
+                class="uk-width-1-3 uk-padding-small uk-margin-right uk-margin-bottom div_img" style="background-color: #1C1C1C;">
+                <img class="img_event" src="{{asset('img/images/'.$evento->image[0]->link)}}" style="max-height: 500px; margin-bottom:10px">
+                <div id="infoA{{$evento->id}}" class="uk-animation-fade">
+                    <p class="title_event">{{$evento->titulo}}</p>
+                    <p class="txt_responsive">FECHA: {{$evento->fecha}} </p>
+                    <p class="txt_responsive">HORA: {{$evento->hora}}</p>
+                    <p class="txt_responsive">TIPO: {{$evento->tipo}}</p>
+                </div>
+                <div id="infoB{{$evento->id}}" style="display:none" class="uk-animation-scale-up">
+                    <p class="title_event">Más información:</p>
+                    <p>{{$evento->masinfo}}</p>
+                </div>    
+            </div>   
+            @endforeach
+        </div>
+        <div id="hidden" class="" style="display:none">
+            @foreach ($eventos as $evento)
+            <div id="{{$evento->id}}" onmouseover="moreInfo(this.id)" onmouseout="normal(this.id)" onclick="goLink('{{$evento->link}}')" 
+                class="uk-padding-small uk-margin-large-left uk-margin-large-right uk-margin-bottom div_img" style="background-color: #1C1C1C;">
                 <img class="img_event" src="{{asset('img/images/'.$evento->image[0]->link)}}" style="max-height: 500px; margin-bottom:10px">
                 <div id="infoA{{$evento->id}}" class="uk-animation-fade">
                     <p class="title_event">{{$evento->titulo}}</p>

@@ -185,7 +185,7 @@ p {
     .container{
         background: url("/img/aurora4.jpg") no-repeat  !important;
         background-size: cover;
-        height: 830px !important;
+        height: 1800px !important;
     }
     .contenedor{
         margin-top: 20% !important;
@@ -194,9 +194,15 @@ p {
         display: none !important;
     }
     .img_event {
-        max-height: 200px !important;
+        max-height: 300px !important;
     }
-    
+    #hidden {
+        display:grid !important;
+        align-content: center !important;
+    }
+    #basic {
+        display: none !important;
+    }
 }
 @media(max-width:600px){
     .contenedor{
