@@ -228,7 +228,7 @@
                     <h4 class="uk-text-center">Galardonada a {{ $element->n_reconocimientos }} @if ($element->n_reconocimientos == 1)
                         reconocimiento
                     @else reconocimientos @endif</h4>
-                    <p>{{$element->reconocimientos}}</p>
+                    <p class="uk-text-center">{{$element->reconocimientos}}</p>
                 </div>
             </div>
         @endif
@@ -236,7 +236,7 @@
             <div class="uk-width-1 div-reconocimientos uk-text-center">
                 <div class="uk-container uk-container-xlarge">
                     <h3 class="uk-text-center uk-margin-top">{{ $element->titulo2 }}</h3>
-                    <p>{{$element->txtTitulo2}}</p>
+                    <p class="uk-text-center">{{$element->txtTitulo2}}</p>
                 </div>
             </div>
         @endif
