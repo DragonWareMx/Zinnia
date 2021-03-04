@@ -1,13 +1,17 @@
 .video_fondo{
-    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
 }
-@media(max-width:1050px){
-    /* .video_fondo{
-        height:500px;   
-    } */
+@media(min-width:1366px){
+    .img-logo-blanco{
+        margin-top: -600px !important;
+    }
+}
+@media(max-width:800px){
+    .img-logo-blanco img{
+        width:40% !important;
+    }
 }

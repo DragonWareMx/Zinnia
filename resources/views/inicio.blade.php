@@ -1,18 +1,161 @@
-@extends('layout.main')
+<!DOCTYPE html>
+<html lang="es">
 
-@section('head')
-    <title>ZINNIA - Producciones</title>
-    <link href="{{ asset('/css/welcome.css') }}" rel="stylesheet">
-@endsection
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{{ asset('img/LOGOS/logocolor_only.png') }}">
+    <title>ZINNIA - Inicio</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" />
 
-@section('content')
-<div class="container uk-padding-remove ">
-    <video autoplay="autoplay" loop="loop" class="uk-width-1-1 video_fondo" muted preload="auto" volume="0" style="object-fit: cover;">
-        <source src="{{asset('img/fondoAurora.mp4')}}" type="video/mp4">
-    </video>
-    <div class="uk-width-1-1 uk-text-center uk-position-absolute" style="margin-top:-38%">
-        <img src="{{asset('img/LOGOS/logoblanco.png')}}" class="" style="width:20%;">    
-    </div>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit-icons.min.js"></script>
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ asset('js/menu.js') }}"></script>
+
     
-</div>
-@endsection
+</head>
+
+<body>
+    <div class="container uk-padding-remove">
+        <video autoplay="autoplay" loop="loop" class="video_fondo" preload="auto" muted>
+            <source src="{{asset('img/fondoAurora.mp4')}}" type="video/mp4">
+        </video>
+        <div class="uk-width-1-1 uk-text-center uk-position-absolute img-logo-blanco" style="margin-top:-600px">
+            <img src="{{asset('img/LOGOS/logoblanco.png')}}"  style="width:25%; max-width:333px; max-height:466px">  
+        </div>
+    </div>
+    <div class="sticky">
+        <nav class="uk-navbar-container main-navbar menu-desktop" uk-navbar="mode: click" style="background-color:transparent !important; border:0px !important;">
+            <div class="uk-navbar-center">
+                <ul class="uk-navbar-nav">
+                    <li class="nav-item nav-item-white">
+                        <a href="#">Producciones</a>
+                        <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
+                            <ul class="uk-nav uk-navbar-dropdown-nav" style="">
+                                <li><a href="{{ route('producciones') }}">Producciones</a></li>
+                                <li><a href="{{ route('coproducciones') }}">Coproducciones y colaboraciones</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('proyectos') }}">Proyectos</a>
+                        <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-nav-header">Opciones</li>
+                                <li><a href="#">Editar</a></li>
+                                <li class="uk-nav-header">Acciones</li>
+                                <li><a href="#">Bloquear</a></li>
+                                <li><a href="#">Cerrar sesión</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="{{route('eventos')}}">Próximos eventos</a></li>
+                    <li class="nav-item"><a href="{{route('quienes-somos')}}">Quiénes somos</a></li>
+                    <li class="nav-item"><a href="{{route('contacto')}}">Contacto</a></li>
+
+                </ul>
+            </div>
+        </nav>
+        <nav class="uk-navbar-container main-navbar menu-phone" uk-navbar="mode: click" style="z-index: 981; background-color:transparent !important; border:0px !important ">
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="#" uk-navbar-toggle-icon></a>
+                        <div class="uk-navbar-dropdown" uk-dropdown="pos: bottom-left; mode: click; offset: 13;" style="background-color: black !important">
+                            <ul class="uk-nav uk-navbar-dropdown-nav nav-item" style="margin: 0px">
+                                <li>
+                                    <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+                                        <li class="uk-parent">
+                                            <a href="{{ route('producciones') }}">Producciones</a>
+                                            <ul class="uk-nav-sub">
+                                                <li><a href="{{ route('producciones') }}">Producciones</a></li>
+                                                <li><a href="{{ route('coproducciones') }}">Coproducciones y
+                                                        colaboraciones</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{ route('proyectos') }}">Proyectos</a></li>
+                                <li><a href="{{route('eventos')}}">Próximos eventos</a></li>
+                                <li><a href="{{route('quienes-somos')}}">Quiénes somos</a></li>
+                                <li><a href="{{route('contacto')}}">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-navbar-center">
+                <a class="uk-navbar-item uk-logo" href="/inicio">
+                    <img src="{{ asset('img/LOGOS/logocolor_text_white.png') }}" height="57px" width="102.45px"
+                        class="uk-margin-small-left">
+                </a>
+            </div>
+        </nav>
+
+        <div class="uk-navbar-dropbar"></div>
+    </div>
+
+
+    <footer
+        class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@s uk-text-center uk-flex-wrap-reverse"
+        uk-grid>
+        <div>
+            <div class="uk-padding-small uk-flex uk-flex-left@m uk-flex-center uk-flex-middle uk-flex-wrap">
+                <a class="uk-logo" href="#">
+                    <img src="{{ asset('img/LOGOS/LogoHorizontal2.png') }}" height="75px" width="166.54px">
+                </a>
+                <a href="https://dragonware.com.mx/" target="_blank" class="uk-flex uk-flex-left@m uk-flex-center uk-flex-middle uk-margin-small-top"
+                    style="text-decoration: none; color: #D2D2D2; width:100%">
+                    <div class="texto-dragonware uk-flex uk-flex-middle">
+                        Desarrollado por DragonWare.
+                        <img src="{{ asset('img/ico/dragonBlanco.png') }}" width="23px" height="16px">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="uk-padding-small uk-light uk-flex uk-flex-center uk-flex-wrap">
+                <div class="uk-width-3-5 uk-flex-between uk-flex">
+                    <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                    <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+                    <a href="#"><i class="fa fa-envelope fa-2x"></i></a>
+                </div>
+                <div class="texto-center uk-margin-small-top">Mujeres y madres en la escena Michoacana.</div>
+                <div class="texto-center  uk-margin-small-top">Copyright © 2021 Zinnia.</div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-padding-small uk-light uk-flex uk-flex-middle uk-flex-right@m uk-flex-center uk-flex-wrap">
+                <div class="texto-center uk-margin-small-top" style="font-style: italic; color: #D2D2D2">"Esta página
+                    web es apoyado
+                    por
+                    el Sistema de Apoyos
+                    a la Creación y Proyectos Culturales (Fonca)."</div>
+                <img src="{{asset('img/LOGOS/SecretariaCultura_FoncaBN.png')}}" class="uk-margin-auto" width="360px">
+            </div>
+        </div>
+    </footer> 
+
+</body>
+
+</html>
