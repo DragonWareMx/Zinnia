@@ -25,7 +25,10 @@ class ProfileSeeder extends Seeder
             'foto' => '',
             'nombre'=>'PROCELLA ROMERO ZEPEDA',
             'rol'=>'Actriz y Gestora Cultural',
-            'cv'=>'',
+            'cv'=>'CVProcella.pdf',
+            'insta'=>'https://www.instagram.com/procellarz/',
+            'fb'=>'https://www.facebook.com/procella',
+            'tw'=>'https://twitter.com/ProcellaRomero?s=09',
         ]);
         
         DB::table('profiles')->insert([
