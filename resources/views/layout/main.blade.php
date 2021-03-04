@@ -30,15 +30,129 @@
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ asset('js/menu.js') }}"></script>
-
     @yield('head')
 </head>
 
 <body>
+    <!-- ***** Preloader Start ***** -->
+    <style>
+        /* 
+---------------------------------------------
+preloader
+--------------------------------------------- 
+*/
+        #preloader {
+        overflow: hidden;
+        background-image: linear-gradient(145deg, #000000 0%, #181818 100%);
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: fixed;
+        z-index: 9999;
+        color: #fff;
+        }
+
+        #preloader .jumper {
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        position: absolute;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        }
+
+        #preloader .jumper > div {
+        background-color: #fff;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        position: absolute;
+        opacity: 0;
+        width: 50px;
+        height: 50px;
+        -webkit-animation: jumper 1s 0s linear infinite;
+        animation: jumper 1s 0s linear infinite;
+        }
+
+        #preloader .jumper > div:nth-child(2) {
+        -webkit-animation-delay: 0.33333s;
+        animation-delay: 0.33333s;
+        }
+
+        #preloader .jumper > div:nth-child(3) {
+        -webkit-animation-delay: 0.66666s;
+        animation-delay: 0.66666s;
+        }
+
+        @-webkit-keyframes jumper {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        5% {
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 0;
+        }
+        }
+
+        @keyframes jumper {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        5% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+        }
+        </style>
+        <script>
+        // Page loading animation
+        $(window).on('load', function () {
+        if ($('.cover').length) {
+            $('.cover').parallax({
+                imageSrc: $('.cover').data('image'),
+                zIndex: '1'
+            });
+        }
+
+        $("#preloader").animate({
+            'opacity': '0'
+        }, 600, function () {
+            setTimeout(function () {
+                $("#preloader").css("visibility", "hidden").fadeOut();
+            }, 300);
+        });
+        });
+        </script>
+        <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        </div>
+
+<!-- ***** Preloader End ***** -->
+    @yield('content')
     <div class="sticky">
         <nav class="uk-navbar-container main-navbar menu-desktop" uk-navbar="mode: click" style="">
             <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="#">
+                <a class="uk-navbar-item uk-logo" href="/inicio">
                     <img src="{{ asset('img/LOGOS/logocolor_only.png') }}" width="89px" height="89px">
                     <img src="{{ asset('img/LOGOS/logocolor_text.png') }}" height="57px" width="102.45px"
                         class="uk-margin-small-left">
@@ -47,29 +161,20 @@
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
                     <li class="nav-item">
-                        <a href="#">Producciones</a>
+                        <a href="#">Producciones</a> 
                         <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <li><a href="{{ route('producciones') }}">Producciones</a></li>
-                                <li><a href="{{ route('producciones') }}">Coproducciones y colaboraciones</a></li>
+                                <li><a href="{{ route('coproducciones') }}">Coproducciones y colaboraciones</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Proyectos</a>
-                        <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
-                            <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li class="uk-nav-header">Opciones</li>
-                                <li><a href="#">Editar</a></li>
-                                <li class="uk-nav-header">Acciones</li>
-                                <li><a href="#">Bloquear</a></li>
-                                <li><a href="#">Cerrar sesión</a></li>
-                            </ul>
-                        </div>
+                        <a href="{{ route('proyectos') }}">Proyectos</a>
                     </li>
-                    <li class="nav-item"><a href="#">Próximos eventos</a></li>
-                    <li class="nav-item"><a href="#">Quiénes somos</a></li>
-                    <li class="nav-item"><a href="#">Contacto</a></li>
+                    <li class="nav-item"><a href="{{route('eventos')}}">Próximos eventos</a></li>
+                    <li class="nav-item"><a href="{{route('quienes-somos')}}">Quiénes somos</a></li>
+                    <li class="nav-item"><a href="{{route('contacto')}}">Contacto</a></li>
 
                 </ul>
             </div>
@@ -86,23 +191,24 @@
                                         <li class="uk-parent">
                                             <a href="{{ route('producciones') }}">Producciones</a>
                                             <ul class="uk-nav-sub">
-                                                <li><a href="#">Producciones</a></li>
-                                                <li><a href="#">Coproducciones y colaboraciones</a></li>
+                                                <li><a href="{{ route('producciones') }}">Producciones</a></li>
+                                                <li><a href="{{ route('coproducciones') }}">Coproducciones y
+                                                        colaboraciones</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Proyectos</a></li>
-                                <li><a href="#">Próximos eventos</a></li>
-                                <li><a href="#">Quiénes somos</a></li>
-                                <li><a href="#">Contacto</a></li>
+                                <li><a href="{{ route('proyectos') }}">Proyectos</a></li>
+                                <li><a href="{{route('eventos')}}">Próximos eventos</a></li>
+                                <li><a href="{{route('quienes-somos')}}">Quiénes somos</a></li>
+                                <li><a href="{{route('contacto')}}">Contacto</a></li>
                             </ul>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="uk-navbar-center">
-                <a class="uk-navbar-item uk-logo" href="#">
+                <a class="uk-navbar-item uk-logo" href="/inicio">
                     <img src="{{ asset('img/LOGOS/logocolor_text.png') }}" height="57px" width="102.45px"
                         class="uk-margin-small-left">
                 </a>
@@ -112,34 +218,49 @@
         <div class="uk-navbar-dropbar"></div>
     </div>
 
-    @yield('content')
 
-    <footer class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid>
+    <footer
+        class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@m uk-text-center uk-flex-wrap-reverse"
+        uk-grid>
         <div>
-            <div class="uk-padding-small uk-flex uk-flex-left@m uk-flex-center uk-flex-middle">
-                <a class="uk-logo" href="#">
-                    <img src="{{ asset('img/LOGOS/LogoHorizontal2.png') }}" height="75px" width="166.54px">
+            <div class="uk-padding-small uk-flex uk-flex-left@m uk-flex-center uk-flex-middle uk-flex-wrap">
+                <a class="uk-logo" href="/inicio">
+                    <img src="{{ asset('img/LOGOS/LogoHorizontal2.png') }}" height="60px" width="133.23px">
+                </a>
+                <a href="http://www.dragonware.com.mx" target="_blank"
+                    class="uk-flex uk-flex-left@m uk-flex-center uk-flex-middle uk-margin-small-top"
+                    style="text-decoration: none; color: #D2D2D2; width:100%">
+                    <div class="texto-dragonware uk-flex uk-flex-middle">
+                        Desarrollado por DragonWare.
+                        <img src="{{ asset('img/ico/dragonBlanco.png') }}" width="23px" height="16px">
+                    </div>
                 </a>
             </div>
         </div>
         <div>
             <div class="uk-padding-small uk-light uk-flex uk-flex-center uk-flex-wrap">
                 <div class="uk-width-3-5 uk-flex-between uk-flex">
-                    <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
-                    <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
-                    <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
-                    <a href="#"><i class="fa fa-envelope fa-2x"></i></a>
+                    <a href="https://twitter.com/ZEscenica?s=09" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                    <a href="https://www.facebook.com/zinnia.comp.escenica/" target="_blank"><i
+                            class="fa fa-facebook fa-2x"></i></a>
+                    <a href="https://www.instagram.com/zinniacompania/" target="_blank"><i
+                            class="fa fa-instagram fa-2x"></i></a>
+                    <a href="mailto:zinnia.escenica@gmail.com"><i class="fa fa-envelope fa-2x"></i></a>
                 </div>
                 <div class="texto-center uk-margin-small-top">Mujeres y madres en la escena Michoacana.</div>
                 <div class="texto-center  uk-margin-small-top">Copyright © 2021 Zinnia.</div>
             </div>
         </div>
         <div>
-            <div class="uk-padding uk-light uk-flex uk-flex-middle uk-flex-right@m uk-flex-center">
-                <div class="texto-dragonware uk-flex uk-flex-middle">
-                    Desarrollado por DragonWare.
-                    <img src="{{ asset('img/ico/dragonBlanco.png') }}" width="23px" height="16px">
-                </div>
+            <div class="uk-padding-small uk-light uk-flex uk-flex-middle uk-flex-right@m uk-flex-center uk-flex-wrap">
+                <div class="texto-center uk-margin-small-top"
+                    style="font-size: 16px;font-style: italic; color: #D2D2D2">
+                    "Esta página
+                    web es apoyado
+                    por
+                    el Sistema de Apoyos
+                    a la Creación y Proyectos Culturales (Fonca)."</div>
+                <img src="{{asset('img/LOGOS/SecretariaCultura_FoncaBN.png')}}" class="uk-margin-auto" width="400px">
             </div>
         </div>
     </footer>

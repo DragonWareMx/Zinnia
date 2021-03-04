@@ -23,6 +23,10 @@ html, body
     color: black !important;
 }
 
+.nav-item-white, .nav-item-white a{
+    color:white !important;
+}
+
 .hide{
     display: none;
 }
@@ -44,6 +48,7 @@ html, body
 .container{
     min-height: calc(100% - 240px);
     padding-top: 120px;
+    z-index: 300;
 }
 
 /* Aqui empiezan los estilos  del footer */

@@ -1,0 +1,220 @@
+h1 {
+    font-family: Shadows Into Light !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 48px;
+    color: #FFFFFF !important;
+}
+h3 {
+    font-family: Shadows Into Light !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+.btn {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+    height: auto;
+    color:white;
+    font-family: Shadows Into Light !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
+p {
+    font-family: Be Vietnam !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.critic-important{
+    background: #DEDEDE;
+}
+
+.critic-inside{
+    background: white;
+    border: 1px solid #D2D2D2;
+    width: 90%;
+    height: 100%;
+    position: relative;
+    top: 10px;
+    left:10px;
+    color: white;
+}
+.font_vietnam{
+    font-family: Be Vietnam;
+    color:black;
+}
+.title_form {
+    font-family: Shadows Into Light !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 39px;
+    color: #000000;
+}
+.omrs-input-group input{
+
+    transition: all ease-in-out 0.25s;
+    background-color: transparent !important;
+}
+
+.omrs-input-group input:hover, .omrs-input-group input:focus{
+    border: solid 1px #000000 !important;
+    transition: all ease-in-out 0.25s;
+    background-color: transparent !important;
+}
+.searcher{
+    width: 430px;
+    height: 36px;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
+    font-family: Be Vietnam;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    color: #B8B8B8;
+    padding-left:17px;
+    outline: none;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.font_titles{
+    font-family: Shadows Into Light;
+    font-style: normal;
+    font-weight: normal;
+}
+.searcher_button{
+    height: 36px;
+}
+.title_event {
+    font-family: Be Vietnam !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+.masinfo {
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin-left: 60%;
+}
+:hover .masinfo {
+    cursor: pointer;
+}
+.txtInfo {
+    font-family: Be Vietnam;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+:hover .div_img {
+    cursor: pointer;
+}
+
+@media(max-width:1670px){
+    .img_event {
+        max-height: 400px !important;
+    }
+}
+
+@media(max-width:1450px){
+    .contenedor{
+        margin-top:-60% !important;
+    }
+    .video-fondo-perfiles-r{
+        display: block !important;
+        height: 1000px !important;
+    }
+    .video-fondo-perfiles{
+        display: none !important;
+    }
+}
+@media(max-width:1250px){
+    .contenedor{
+        margin-top:-70% !important;
+    }
+}
+
+@media(max-width:1100px){
+    .contenedor{
+        margin-top:-80% !important;
+    }
+
+}
+
+@media(max-width:900px){
+    .contenedor{
+        margin-top:-90% !important;
+    }
+    .form {
+        margin-right:20% !important;
+        margin-left:20% !important;
+    }
+    .txt_responsive {
+        font-size: 10px;
+    }
+    .title_event {
+        font-size: 12px;
+    }
+    .img_event {
+        max-height: 300px !important;
+    }
+}
+@media(max-width:800px){
+    .contenedor{
+        margin-top:-100% !important;
+    }
+}
+@media(max-width:757px){
+    .container{
+        background: url("/img/aurora4.jpg") no-repeat  !important;
+        background-size: cover;
+        height: 830px !important;
+    }
+    .contenedor{
+        margin-top: 20% !important;
+    }
+    .video-fondo-perfiles-r{
+        display: none !important;
+    }
+    .img_event {
+        max-height: 200px !important;
+    }
+}
+@media(max-width:600px){
+    .contenedor{
+        margin-top: 22% !important;
+    }
+    .form {
+        margin-right:10% !important;
+        margin-left:10% !important;
+    }
+}
+@media(max-width:450px){
+    .contenedor{
+        margin-top: 35% !important;
+    }
+    .form {
+        margin-right:5% !important;
+        margin-left:5% !important;
+    }
+    .critic-inside {
+        width: 82%;
+    }
+}
