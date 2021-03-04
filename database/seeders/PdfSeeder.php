@@ -15,18 +15,23 @@ class PdfSeeder extends Seeder
     {
         //
         \DB::table('pdfs')->insert([
-            'url' => 'Carpeta-LaPrudencia2021.pdf',
+            'url' => 'Carpeta-La-Prudencia-ENARTES.pdf',
             'descripcion'=>'Carpeta La Prudencia',
             'production_id'=>'1',
         ]);
         \DB::table('pdfs')->insert([
-            'url' => 'DOSSIER-La Prudencia2021.pdf',
+            'url' => 'DOSSIER-LA-PRUDENCIA-ENARTES.pdf',
             'descripcion'=>'Dossier La Prudencia',
             'production_id'=>'1',
         ]);
         \DB::table('pdfs')->insert([
-            'url' => 'Ficha-Técnica-RiderLaPrudencia.pdf',
+            'url' => 'Ficha-Técnica-Rider-La-Prudencia.pdf',
             'descripcion'=>'Rider La Prudencia',
+            'production_id'=>'1',
+        ]);
+        \DB::table('pdfs')->insert([
+            'url' => 'DOSSIER-INGLES-LA-PRUDENCIA-ENARTES.pdf',
+            'descripcion'=>'Dossier La Prudencia (Inglés)',
             'production_id'=>'1',
         ]);
     }
