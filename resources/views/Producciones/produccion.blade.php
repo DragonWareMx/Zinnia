@@ -59,9 +59,17 @@
         </form>
         <div class="uk-text-center font_titles uk-text-secondary uk-margin-small-top" style="font-size: 30px;">
             {{$tipo}}</div>
-        <div class="uk-margin-auto uk-text-center uk-width-2-3@m font_vietnam" style="font-size: 14px;">Texto breve
-            descriptivo, o informativo acerca de las producciones por zinnia, ejemplo, elaborado con amor, pasión y
-            dedicación en cada paso.</div>
+        <div class="uk-margin-auto uk-text-center uk-width-2-3@m font_vietnam" style="font-size: 14px;">
+            @switch($tipo)
+                @case('PRODUCCIÓN')
+                @case('COPRODUCCIÓN')
+                "El universo teatral no tiene límites que los de la imaginación humana" Henri Gouhier
+                    @break
+                @case('PROYECTO')
+                "En algún lugar, algo increíble está esperando a ser descubierto" Carl Sagan
+                    @break
+            @endswitch
+        </div>
     </div>
     <div style="margin-bottom:150px;">
         <div class="p_container uk-margin-medium-top uk-margin-medium-bottom" style="min-height: 526px; width:100%;">
@@ -217,7 +225,9 @@
             <div class="uk-width-1 div-reconocimientos uk-text-center">
                 <div class="uk-container uk-container-xlarge">
                     <h3 class="uk-text-center uk-margin-top">RECONOCIMIENTOS</h3>
-                    <h4 class="uk-text-center">Galardonada a {{ $element->n_reconocimientos }} reconocimientos</h4>
+                    <h4 class="uk-text-center">Galardonada a {{ $element->n_reconocimientos }} @if ($element->n_reconocimientos == 1)
+                        reconocimiento
+                    @else reconocimientos @endif</h4>
                     <p>{{$element->reconocimientos}}</p>
                 </div>
             </div>

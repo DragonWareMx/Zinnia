@@ -58,9 +58,17 @@
         </form>
         <div class="uk-text-center font_titles uk-text-secondary uk-margin-small-top" style="font-size: 30px;">
             {{$tipo}}</div>
-        <div class="uk-margin-auto uk-text-center uk-width-2-3@m font_vietnam" style="font-size: 14px;">Texto breve
-            descriptivo, o informativo acerca de las producciones por zinnia, ejemplo, elaborado con amor, pasión y
-            dedicación en cada paso.</div>
+        <div class="uk-margin-auto uk-text-center uk-width-2-3@m font_vietnam" style="font-size: 14px;">
+            @switch($tipo)
+                @case('PRODUCCIONES')
+                @case('COPRODUCCIONES')
+                "El universo teatral no tiene límites que los de la imaginación humana" Henri Gouhier
+                    @break
+                @case('PROYECTOS')
+                "En algún lugar, algo increíble está esperando a ser descubierto" Carl Sagan
+                    @break
+            @endswitch
+        </div>
     </div>
 
     @foreach ($elements as $element)
