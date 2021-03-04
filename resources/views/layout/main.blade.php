@@ -30,16 +30,129 @@
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ asset('js/menu.js') }}"></script>
-
     @yield('head')
 </head>
 
 <body>
+    <!-- ***** Preloader Start ***** -->
+    <style>
+        /* 
+---------------------------------------------
+preloader
+--------------------------------------------- 
+*/
+        #preloader {
+        overflow: hidden;
+        background-image: linear-gradient(145deg, #000000 0%, #181818 100%);
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: fixed;
+        z-index: 9999;
+        color: #fff;
+        }
+
+        #preloader .jumper {
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        position: absolute;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        }
+
+        #preloader .jumper > div {
+        background-color: #fff;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        position: absolute;
+        opacity: 0;
+        width: 50px;
+        height: 50px;
+        -webkit-animation: jumper 1s 0s linear infinite;
+        animation: jumper 1s 0s linear infinite;
+        }
+
+        #preloader .jumper > div:nth-child(2) {
+        -webkit-animation-delay: 0.33333s;
+        animation-delay: 0.33333s;
+        }
+
+        #preloader .jumper > div:nth-child(3) {
+        -webkit-animation-delay: 0.66666s;
+        animation-delay: 0.66666s;
+        }
+
+        @-webkit-keyframes jumper {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        5% {
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 0;
+        }
+        }
+
+        @keyframes jumper {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        5% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+        }
+        </style>
+        <script>
+        // Page loading animation
+        $(window).on('load', function () {
+        if ($('.cover').length) {
+            $('.cover').parallax({
+                imageSrc: $('.cover').data('image'),
+                zIndex: '1'
+            });
+        }
+
+        $("#preloader").animate({
+            'opacity': '0'
+        }, 600, function () {
+            setTimeout(function () {
+                $("#preloader").css("visibility", "hidden").fadeOut();
+            }, 300);
+        });
+        });
+        </script>
+        <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        </div>
+
+<!-- ***** Preloader End ***** -->
     @yield('content')
     <div class="sticky">
         <nav class="uk-navbar-container main-navbar menu-desktop" uk-navbar="mode: click" style="">
             <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="#">
+                <a class="uk-navbar-item uk-logo" href="/inicio">
                     <img src="{{ asset('img/LOGOS/logocolor_only.png') }}" width="89px" height="89px">
                     <img src="{{ asset('img/LOGOS/logocolor_text.png') }}" height="57px" width="102.45px"
                         class="uk-margin-small-left">
@@ -48,7 +161,7 @@
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
                     <li class="nav-item">
-                        <a href="#">Producciones</a>
+                        <a href="#">Producciones</a> 
                         <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <li><a href="{{ route('producciones') }}">Producciones</a></li>
@@ -58,15 +171,6 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('proyectos') }}">Proyectos</a>
-                        <div uk-dropdown="pos: bottom-left; mode: click; offset: -17;">
-                            <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li class="uk-nav-header">Opciones</li>
-                                <li><a href="#">Editar</a></li>
-                                <li class="uk-nav-header">Acciones</li>
-                                <li><a href="#">Bloquear</a></li>
-                                <li><a href="#">Cerrar sesión</a></li>
-                            </ul>
-                        </div>
                     </li>
                     <li class="nav-item"><a href="{{route('eventos')}}">Próximos eventos</a></li>
                     <li class="nav-item"><a href="{{route('quienes-somos')}}">Quiénes somos</a></li>
@@ -104,7 +208,7 @@
                 </ul>
             </div>
             <div class="uk-navbar-center">
-                <a class="uk-navbar-item uk-logo" href="#">
+                <a class="uk-navbar-item uk-logo" href="/inicio">
                     <img src="{{ asset('img/LOGOS/logocolor_text.png') }}" height="57px" width="102.45px"
                         class="uk-margin-small-left">
                 </a>

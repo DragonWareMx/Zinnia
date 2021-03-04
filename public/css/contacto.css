@@ -61,7 +61,7 @@ p {
     color: #000000;
 }
 .omrs-input-group input{
-    
+
     transition: all ease-in-out 0.25s;
     background-color: transparent !important;
 }
@@ -70,7 +70,7 @@ p {
     border: solid 1px #000000 !important;
     transition: all ease-in-out 0.25s;
     background-color: transparent !important;
-} 
+}
 .searcher{
     width: 430px;
     height: 36px;
@@ -155,7 +155,7 @@ p {
     .contenedor{
         margin-top:-80% !important;
     }
-   
+
 }
 
 @media(max-width:900px){
@@ -164,12 +164,12 @@ p {
     }
     .form {
         margin-right:20% !important;
-        margin-left:20% !important; 
+        margin-left:20% !important;
     }
     .txt_responsive {
         font-size: 10px;
     }
-    .title_event { 
+    .title_event {
         font-size: 12px;
     }
     .img_event {
@@ -203,7 +203,7 @@ p {
     }
     .form {
         margin-right:10% !important;
-        margin-left:10% !important; 
+        margin-left:10% !important;
     }
 }
 @media(max-width:450px){
@@ -212,7 +212,7 @@ p {
     }
     .form {
         margin-right:5% !important;
-        margin-left:5% !important; 
+        margin-left:5% !important;
     }
     .critic-inside {
         width: 82%;
