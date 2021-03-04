@@ -17,7 +17,7 @@ class CreateImagesTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('link',100);
-            $table->text('descripcion');
+            $table->string('descripcion',200);
             $table->unsignedBigInteger('production_id')->nullable();
             $table->unsignedBigInteger('proyect_id')->nullable();
             $table->unsignedBigInteger('event_id')->nullable();

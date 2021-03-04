@@ -88,7 +88,7 @@
                     </div>
                     <div class="uk-width-1 gal_desc font_vietnam" id="image-desc">
                         @if (count($element->image) > 0)
-                            {{ Str::limit($element->image[0]->descripcion, 150) }}
+                            {{ $element->image[0]->descripcion }}
                         @endif
                     </div>
                     <div class="font_vietnam uk-margin-top uk-width-1 uk-text-center"
@@ -434,7 +434,7 @@
                 src: "{{asset('/img/images/'.$photo->link)}}",
                 w: 0,
                 h: 0,
-                title: "{{$photo->decripcion}}"
+                title: "{{$photo->descripcion}}"
             },
         @endforeach
     ];
