@@ -10,10 +10,13 @@
 
 @section('content')
 <div class="container uk-padding-remove">
-    <video autoplay="autoplay" loop="loop" class="uk-width-1-1" muted preload="auto" volume="0" style="">
+    <video autoplay="autoplay" loop="loop" class="uk-width-1-1 video-fondo-perfiles" muted preload="auto" volume="0" style="">
         <source src="{{asset('img/fondoAurora.mp4')}}" type="video/mp4">
     </video>
-    <div class="uk-width-1-1 uk-text-center uk-position-absolute" style="margin-top:-48%; width:90%; height:100%; margin-left:5%">
+    <video autoplay="autoplay" loop="loop" class="uk-width-1-1 video-fondo-perfiles-r" muted preload="auto" volume="0" style=" object-fit: cover; display:none">
+        <source src="{{asset('img/fondovrt.mp4')}}" type="video/mp4">
+    </video>
+    <div class="uk-width-1-1 uk-text-center uk-position-absolute contenedor" style="margin-top:-48%; width:90%; height:100%; margin-left:5%">
         <h1>CONTACTO</h1>  
         <div class="uk-padding" style="border: 1px solid #D2D2D2;">
             <img src="{{ asset('img/LOGOS/logoblanco.png') }}" height="198px" width="142px">
@@ -37,7 +40,7 @@
     </div>
 </div>
 
-<div class="critic-important uk-margin-top" style="margin-right:30%; margin-left:30%; margin-bottom:30px">
+<div class="critic-important uk-margin-top form" style="margin-right:30%; margin-left:30%; margin-bottom:30px">
     <div class="critic-inside uk-padding">
         <p class="title_form">¿NECESITAS SABER MÁS?</p>
         <p class="font_vietnam">Enviános un mensaje y nos comunicaremos contigo lo más pronto posible</p>

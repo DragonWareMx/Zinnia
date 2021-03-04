@@ -126,3 +126,95 @@ p {
 :hover .div_img {
     cursor: pointer;
 }
+
+@media(max-width:1670px){
+    .img_event {
+        max-height: 400px !important;
+    }
+}
+
+@media(max-width:1450px){
+    .contenedor{
+        margin-top:-60% !important;
+    }
+    .video-fondo-perfiles-r{
+        display: block !important;
+        height: 1000px !important;
+    }
+    .video-fondo-perfiles{
+        display: none !important;
+    }
+}
+@media(max-width:1250px){
+    .contenedor{
+        margin-top:-70% !important;
+    }
+}
+
+@media(max-width:1100px){
+    .contenedor{
+        margin-top:-80% !important;
+    }
+   
+}
+
+@media(max-width:900px){
+    .contenedor{
+        margin-top:-90% !important;
+    }
+    .form {
+        margin-right:20% !important;
+        margin-left:20% !important; 
+    }
+    .txt_responsive {
+        font-size: 10px;
+    }
+    .title_event { 
+        font-size: 12px;
+    }
+    .img_event {
+        max-height: 300px !important;
+    }
+}
+@media(max-width:800px){
+    .contenedor{
+        margin-top:-100% !important;
+    }
+}
+@media(max-width:757px){
+    .container{
+        background: url("/img/aurora4.jpg") no-repeat  !important;
+        background-size: cover;
+        height: 830px !important;
+    }
+    .contenedor{
+        margin-top: 20% !important;
+    }
+    .video-fondo-perfiles-r{
+        display: none !important;
+    }
+    .img_event {
+        max-height: 200px !important;
+    }
+}
+@media(max-width:600px){
+    .contenedor{
+        margin-top: 22% !important;
+    }
+    .form {
+        margin-right:10% !important;
+        margin-left:10% !important; 
+    }
+}
+@media(max-width:450px){
+    .contenedor{
+        margin-top: 35% !important;
+    }
+    .form {
+        margin-right:5% !important;
+        margin-left:5% !important; 
+    }
+    .critic-inside {
+        width: 82%;
+    }
+}
