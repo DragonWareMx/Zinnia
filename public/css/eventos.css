@@ -224,4 +224,10 @@ p {
     .critic-inside {
         width: 82%;
     }
+    
+}
+@media(max-width:375px){
+    .container{
+        height: 1700px !important;
+    }
 }
