@@ -17,14 +17,13 @@ class CreateEventsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('titulo',250);
-            $table->date('fecha')->nullable();
-            $table->time('hora')->nullable();
-            $table->string('lugar',250)->nullable();
-            $table->string('tipo',250)->nullable();//virtual, presencial... etc
-            $table->string('link',250)->nullable();
-            $table->string('cartel',250)->nullable(); 
-            $table->text('masinfo')->nullable(); 
-            $table->unsignedDecimal('costo')->nullable();
+            $table->date('fecha');
+            $table->time('hora');
+            $table->string('lugar',250)->nullable;
+            $table->string('tipo',250)->nullable;//virtual, presencial... etc
+            $table->string('link',250)->nullable;
+            $table->string('cartel',250)->nullable; 
+            $table->text('masinfo')->nullable; 
         });
     }
 

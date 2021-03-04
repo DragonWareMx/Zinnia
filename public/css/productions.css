@@ -140,7 +140,7 @@
     font-size: 12px;
     font-style: normal;
     cursor: pointer;
-    margin-top:195px;
+    margin-top:208px;
 }
 .gal_low{
     margin-top:14px;
@@ -164,9 +164,7 @@
     text-align: right;
     font-size: 14px;
     color: #FFFFFF;
-    text-overflow: ellipsis;
-    white-space: normal;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .div-reconocimientos{
@@ -243,7 +241,6 @@
     position: relative;
     top: 10px;
     left:8px;
-    color: white;
 }
 
 .critic-text{
@@ -268,142 +265,4 @@
     letter-spacing: 0em;
     text-align: left;
     color: #FFFFFF;
-}
-
-.gal_white{
-    width: 95%;
-    min-height: 550px;
-    background: #FFFFFF;
-    border: 1px solid #D2D2D2;
-    box-sizing: border-box;
-    position: relative;
-    top: 15px;
-    left:15px;
-}
-
-.p_title{
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 29px;
-    text-transform: uppercase;
-    color: #000000;
-    height: 51px;
-    padding: 13px;
-    text-overflow: ellipsis;
-    white-space: normal;
-    overflow: hidden;
-}
-
-.p_desc{
-    font-size: 14px;
-    text-align: justify;
-    color: #000000;
-    padding: 13px;
-    min-height: 80px;
-}
-
-.p_data{
-    color: #000000;
-    font-size: 12px;
-    padding-left: 13px;
-    margin-top:10px;
-}
-
-.p_downloads{
-    background: #000000;
-    width: 156px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    border: none;
-    cursor: pointer;
-    transition: ease-in 0.1s;
-    outline:none;
-}
-.p_downloads:hover{
-    width: 160px;
-    margin-right: 18px;
-    transition: ease-in 0.1s;
-}
-
-.date_position{
-    background:transparent;
-    width:210px;
-    margin-top:-340px;
-    margin-bottom:340px;
-    transform:rotate(90deg);
-    margin-left:auto;
-    margin-right:-70px;
-    color: #FFFFFF;
-    font-weight: 300;
-    font-size: 14px;
-    background-color: #1C1C1C;
-}
-
-.date_position2{
-    background:transparent;
-    margin-left:auto;
-    margin-right:0px;
-    color: #FFFFFF;
-    font-weight: 300;
-    font-size: 14px;
-    display:none;
-}
-
-.date_position3{
-    background:transparent;
-    margin-left:15px;
-    color: #FFFFFF;
-    font-weight: 300;
-    font-size: 14px;
-    display:none;
-}
-
-.p_downloable{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.date_space{
-    padding-right: 30px;
-}
-
-@media(max-width:666px){
-    .date_position{
-        margin-right:-90px;
-    }
-}
-
-@media(max-width:539px){
-    .date_position{
-        display:none;
-    }
-    .date_position2{
-        display:block;
-    }
-    .date_position3{
-        display:block
-    }
-}
-@media(max-width:500px){
-    .gal_disapear{
-        display:none;
-    }
-}
-
-@media(max-width:1200px){
-    .date_space{
-        padding-right: 40px;
-    }
-}
-
-@media(max-width:959px){
-    .date_space{
-        padding-right: 30px;
-    }
 }

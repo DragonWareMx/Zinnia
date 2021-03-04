@@ -21,7 +21,7 @@ class Production extends Model
     {
         return $this->hasMany('App\Models\Video');
     }
-    public function pdfs()
+    public function pdf()
     {
         return $this->hasMany('App\Models\Pdf');
     }
