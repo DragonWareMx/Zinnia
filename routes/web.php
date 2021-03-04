@@ -21,10 +21,14 @@ Route::get('/inicio', function () {
     return view('inicio');
 });
 
+Route::get('/404', function () {
+    return view('404');
+});
+
 // QUIENES SOMOS
 Route::get('/quienes-somos', function () {
     return view('quienesSomos');
-});
+})->name('quienes-somos');
 
 Route::get('/lay', function () {
     return view('layout.main');
@@ -36,9 +40,7 @@ Route::get('/contacto', function () {
 })->name('contacto');
 
 //EVENTOS
-Route::get('/eventos', function () {
-    return view('eventos');
-})->name('eventos');
+Route::get('/eventos', 'eventos@index')->name('eventos');
 
 //PRODUCCIONES
 

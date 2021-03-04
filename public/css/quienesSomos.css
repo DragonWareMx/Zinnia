@@ -40,10 +40,64 @@
     line-height: 25px;
     text-align: justify;
 }
+.div-img-responsive2{
+    display: none;
+}
+.card{
+    width: 289px;
+    height: 180px;
+    transition: all ease-in-out 0.25s;
+}
+.card:hover, .card:focus, .card:active{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .26);
+    transition: all ease-in-out 0.25s;
+}
+.card-nombre, .card-rol{
+    font-family: Be Vietnam;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+.card-rol{
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+}
+.video2{
+    display:none !important;
+}
 
 
-/* RESPONSIVE */
+/* RESPONSIVE */ 
+@media(max-width:1306px){
+    .card{
+        margin: 0px 0px 0px 0px !important;
+    }
+}
+@media(max-width:1110px){
+    .video-fondo-perfiles-r{
+        display: block !important;
+        height: 1000px !important;
+    }
+    .div-info-perfiles{
+        margin-top:-90% !important;
+    }
+    .video-fondo-perfiles{
+        display: none !important;
+    }
+}
+@media(max-width:1050px){
+    .div-info-perfiles{
+        margin-top:-96% !important;
+    }
+}
 @media(max-width:1000px){
+    .div-info-perfiles{
+        margin-top:-100% !important;
+    }
     .div_portada{
         background: url("/img/fotoZinnia/Grupal.png") no-repeat ;
         background-size:         cover;
@@ -52,6 +106,11 @@
     }
     .txt-slogan{
         height: auto !important;
+    }
+}
+@media(max-width:950px){
+    .div-info-perfiles{
+        margin-top:-105% !important;
     }
 }
 @media(max-width:960px){
@@ -72,11 +131,39 @@
         width: 30% !important;
     }
     .img2{
-        margin-top:15px !important;
-        margin-left:0px !important;
-        position: inherit !important;
-        float: right;
-        width: 30% !important;
+        display: none;
+    }
+    .div-img-responsive2{
+        display:flex;
+    }
+}
+@media(max-width:900px){
+    .div-info-perfiles{
+        margin-top:-110% !important;
+    }
+}
+@media(max-width:850px){
+    .div-info-perfiles{
+        margin-top:-118% !important;
+    }
+}
+@media(max-width:800px){
+    .div-info-perfiles{
+        margin-top:-128% !important;
+    }
+}
+@media(max-width:757px){
+    .div-info-perfiles{
+        position: initial !important;
+        margin-top: 0px !important;
+        background: url("/img/aurora4.jpg") no-repeat  !important;
+        background-size:         cover;
+        /* background-position: center center; */
+        height: max-content !important;
+        /* height: 1800px !important; */
+    }
+    .video-fondo-perfiles-r{
+        display: none !important;
     }
 }
 @media(max-width:600px){
@@ -87,4 +174,14 @@
         font-size: 15px;
         text-align: center;
     }
+    .div-img-responsive2 img{
+        width: 100% !important;
+    }
+    .card-nombre{
+        font-size: 16px;
+    }
+    .card-rol{
+        font-size: 14px;
+    }
+
 }
