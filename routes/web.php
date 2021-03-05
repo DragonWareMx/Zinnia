@@ -21,9 +21,9 @@ Route::get('/inicio', function () {
     return view('inicio');
 });
 
-Route::get('/404', function () {
-    return view('404');
-});
+// Route::get('/404', function () {
+//     return view('404');
+// });
 
 // QUIENES SOMOS
 Route::get('/quienes-somos', function () {

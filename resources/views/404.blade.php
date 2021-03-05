@@ -234,14 +234,15 @@
 
 
     <footer
-        class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@s uk-text-center uk-flex-wrap-reverse"
+        class="main-footer uk-grid-colapse uk-grid-match uk-child-width-expand@m uk-text-center uk-flex-wrap-reverse"
         uk-grid>
         <div>
             <div class="uk-padding-small uk-flex uk-flex-left@m uk-flex-center uk-flex-middle uk-flex-wrap">
-                <a class="uk-logo" href="#">
-                    <img src="{{ asset('img/LOGOS/LogoHorizontal2.png') }}" height="75px" width="166.54px">
+                <a class="uk-logo" href="/inicio">
+                    <img src="{{ asset('img/LOGOS/LogoHorizontal2.png') }}" height="60px" width="133.23px">
                 </a>
-                <a href="https://dragonware.com.mx/" target="_blank" class="uk-flex uk-flex-left@m uk-flex-center uk-flex-middle uk-margin-small-top"
+                <a href="http://www.dragonware.com.mx" target="_blank"
+                    class="uk-flex uk-flex-left@m uk-flex-center uk-flex-middle uk-margin-small-top"
                     style="text-decoration: none; color: #D2D2D2; width:100%">
                     <div class="texto-dragonware uk-flex uk-flex-middle">
                         Desarrollado por DragonWare.
@@ -253,10 +254,12 @@
         <div>
             <div class="uk-padding-small uk-light uk-flex uk-flex-center uk-flex-wrap">
                 <div class="uk-width-3-5 uk-flex-between uk-flex">
-                    <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
-                    <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
-                    <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
-                    <a href="#"><i class="fa fa-envelope fa-2x"></i></a>
+                    <a href="https://twitter.com/ZEscenica?s=09" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                    <a href="https://www.facebook.com/zinnia.comp.escenica/" target="_blank"><i
+                            class="fa fa-facebook fa-2x"></i></a>
+                    <a href="https://www.instagram.com/zinniacompania/" target="_blank"><i
+                            class="fa fa-instagram fa-2x"></i></a>
+                    <a href="mailto:zinnia.escenica@gmail.com"><i class="fa fa-envelope fa-2x"></i></a>
                 </div>
                 <div class="texto-center uk-margin-small-top">Mujeres y madres en la escena Michoacana.</div>
                 <div class="texto-center  uk-margin-small-top">Copyright © 2021 Zinnia.</div>
@@ -264,12 +267,14 @@
         </div>
         <div>
             <div class="uk-padding-small uk-light uk-flex uk-flex-middle uk-flex-right@m uk-flex-center uk-flex-wrap">
-                <div class="texto-center uk-margin-small-top" style="font-style: italic; color: #D2D2D2">"Esta página
+                <div class="texto-center uk-margin-small-top"
+                    style="font-size: 16px;font-style: italic; color: #D2D2D2">
+                    "Esta página
                     web es apoyado
                     por
                     el Sistema de Apoyos
                     a la Creación y Proyectos Culturales (Fonca)."</div>
-                <img src="{{asset('img/LOGOS/SecretariaCultura_FoncaBN.png')}}" class="uk-margin-auto" width="360px">
+                <img src="{{asset('img/LOGOS/SecretariaCultura_FoncaBN.png')}}" class="uk-margin-auto" width="400px">
             </div>
         </div>
     </footer> 
