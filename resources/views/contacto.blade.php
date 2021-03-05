@@ -11,7 +11,7 @@
 @section('content')
 <div class="container uk-padding-remove">
     <video autoplay="autoplay" loop="loop" class="video-fondo-perfiles uk-width-1-1" muted preload="auto">
-        <source src="{{asset('img/fondoAurora.mp4')}}" type="video/mp4">
+        <source src="{{asset('img/fondoAuroraMAX.mp4')}}" type="video/mp4">
     </video>
     <div class="uk-width-1-1 uk-text-center uk-position-absolute contenedor"
         style="margin-top:-48%; width:90%; height:100%; margin-left:5%">
