@@ -10,12 +10,12 @@
 
 @section('content')
 <div class="container uk-padding-remove">
-    <video autoplay="autoplay" loop="loop" class=" video-fondo-perfiles" muted preload="auto">
+    <video autoplay="autoplay" loop="loop" class="video-fondo-perfiles" muted preload="auto">
         <source src="{{asset('img/fondoAurora.mp4')}}" type="video/mp4">
     </video>
-    <video autoplay="autoplay" loop="loop" class="uk-width-1-1 video-fondo-perfiles-r" muted preload="auto" volume="0"
-        style=" object-fit: cover; display:none">
-        <source src="{{asset('img/fondovrt.mp4')}}" type="video/mp4">
+    <video autoplay="autoplay" loop="loop" class="video-fondo-perfiles-r" muted preload="auto" volume="0"
+        style="">
+        <source src="{{asset('img/fondoAurora.mp4')}}" type="video/mp4">
     </video>
     <div class="uk-width-1-1 uk-text-center uk-position-absolute contenedor"
         style="margin-top:-48%; width:90%; height:100%; margin-left:5%">
