@@ -34,5 +34,11 @@ class PdfSeeder extends Seeder
             'descripcion'=>'Dossier La Prudencia (Inglés)',
             'production_id'=>'1',
         ]);
+        \DB::table('pdfs')->insert([
+            'url' => 'mujerBalsaGestion.pdf',
+            'descripcion'=>'Carpeta de gestión "La mujer que mueve la balsa"',
+            'production_id'=>'3',
+        ]);
+
     }
 }
