@@ -42,6 +42,8 @@
 }
 .div-img-responsive2{
     display: none;
+    max-width: 800px;
+    max-height: 400px;
 }
 .card{
     width: 289px;
