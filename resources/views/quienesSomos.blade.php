@@ -22,9 +22,8 @@
     <div class="uk-width-1-1 uk-flex uk-flex-wrap">
         <div class="uk-width-1-3@m uk-padding-small" style="color:black">
             <p class="text-title uk-margin-left uk-margin-small-bottom">LA COMPAÑÍA</p>
-            <div class="uk-width-3-4 uk-margin-left text-descripcion">ZINNIA es una compañía de teatro independiente con sede en Morelia, Michoacán, 
-                integrada por mujeres y madres profesionistas dedicadas a la creación, producción y gestión 
-                de proyectos escénicos artísticos.
+            <div class="uk-width-3-4 uk-margin-left text-descripcion">ZINNIA es una compañía de teatro independiente con sede en Morelia, Michoacán, integrada por mujeres 
+                y madres profesionistas dedicadas a la creación, producción y gestión de proyectos escénicos artísticos.
             </div>
             <div class="uk-width-3-4 uk-margin-left uk-margin-small-top uk-flex uk-flex-right div-logo-company">
                 <img src="{{asset('img/LOGOS/logoblancoynegro.png')}}" style="width:50%" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">
@@ -34,11 +33,11 @@
         <div class="uk-width-2-3@m uk-padding div_historia" style="background-color:#1C1C1C; color:white">
             <p class="text-title uk-margin-top uk-margin-small-bottom">HISTORIA</p>
             <div class="text-descripcion">
-                Zinnia Compañía Escénica. Mujeres y madres en la escena michoacana, se crea en junio de 2015 bajo la dirección de Tania Murillo. Inició 
-                su actividad artística con el proyecto “Cuéntame algo diferente, Taller de arte para niños y jóvenes con discapacidad” ganador de la beca 
-                México Cultura para la Armonía 2015, Morelia Mich., el cual se desarrolló en diferentes sedes durante 2017 y actualmente sigue vigente. 
-                La compañía se consolida con la integración de Procella Romero en la gestión cultural y en la actuación, así como con la participación de 
-                compañeras artistas invitadas para los diferentes proyectos.
+                Zinnia Compañía Escénica, inicia su camino en junio de 2015 bajo la dirección de Tania Murillo, con el proyecto “Cuéntame algo diferente, Taller de arte 
+                para niños y jóvenes con discapacidad” entre otro proyectos y colaboraciones, pero es hasta hasta finales de 2017 que aparece la imagen de la compañía y 
+                termina de consolidarse. En 2018 se integra Procella Romero, en principio como actriz y posteriormente en colaboración dentro de la gestión cultural, algunas 
+                coordinaciones y en el área creativa con la producción de títeres. Durante este tiempo se han ido integrando varias compañeras artistas invitadas para distintos 
+                proyectos y han potenciado el nivel de la compañía con su talento y entrega.  
             </div>
         </div>
     </div>
@@ -47,8 +46,9 @@
         <div class="uk-width-1-1 uk-padding-small" style="color:black">
             <p class="text-title uk-margin-top uk-margin-small-bottom uk-margin-left">VISIÓN</p>
             <div class="text-descripcion uk-width-2-5@m uk-margin-left">
-                Buscamos consolidarnos en un futuro cercano como una empresa cultural con alta calidad social y artística, que sea referente del quehacer escénico 
-                estatal y nacional, para lograr proyectar a nivel internacional la labor artística de las mujeres mexicanas.
+                Buscamos consolidarnos en un futuro cercano como empresa cultural, cada día con una mejor calidad artística, potenciando nuestro compromiso social, aportando 
+                a nuestra comunidad a través del arte para colaborar a resarcir el tejido social.  Buscando proyectar a nivel nacional e internacional la labor artística de 
+                mujeres y madres mexicanas.
             </div>
         </div>
         <div class="uk-width-1-1 uk-padding-small" style="background-color:#1C1C1C; color:white">
@@ -56,10 +56,10 @@
             <div class="uk-width-1-1 uk-flex uk-flex-wrap">
                 <div class="text-descripcion uk-margin-left uk-margin-small-bottom uk-width-1-2@s">
                     Somos un equipo conformado por artistas profesionales comprometidas con su entorno social, egresadas de distintas universidades nacionales de la 
-                    Licenciatura en Teatro o Arte Dramático (Universidad de las Américas Puebla, Casa del Teatro, Universidad Michoacana de San Nicolás de Hidalgo). 
-                    Nuestro objetivo es crear, producir y gestionar proyectos escénicos multidisciplinarios que desde el quehacer artístico promuevan espacios de diálogo 
-                    y reflexión, retomando las temáticas que atañen a nuestro contexto. Zinnia es la primera flor cultivada en el espacio y como metáfora la compañía busca 
-                    generar un espacio de crecimiento en donde las y los artistas encuentren la libertad de crear lo inimaginable, para después compartirlo.  
+                    Licenciatura en Teatro o Arte Dramático. Nuestro objetivo es crear, producir y gestionar proyectos escénicos multidisciplinarios que desde el quehacer 
+                    artístico promuevan espacios de diálogo y reflexión, retomando las temáticas que atañen a nuestro contexto. Zinnia es una flor, la primera cultivada en 
+                    el espacio; y como metáfora buscamos sembrar una semilla, generar un espacio de exploración artística  en donde las y los artistas encuentren la libertad 
+                    de crear lo inimaginable, para después, compartirlo.  
                 </div>
                 <img src="{{asset('img/fotoZinnia/foto2.1.png')}}" class="uk-width-2-5@s uk-position-absolute img2" style="margin-top:-15%; margin-left:55%; max-width:615px; max-height:400px" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">
                 <div class="uk-flex uk-flex-right uk-width-1-1 div-img-responsive2 uk-margin-top uk-margin-bottom">
@@ -77,7 +77,7 @@
             <source src="{{asset('img/fondovrt.mp4')}}" type="video/mp4">
         </video>
         <div class="div-info-perfiles uk-position-absolute uk-width-1-1 uk-padding-small" style="margin-top:-56.25%; ">
-            <p class="text-title uk-margin-top uk-margin-small-bottom uk-margin-left " style="color:white">MISIÓN</p>
+            <p class="text-title uk-margin-top uk-margin-small-bottom uk-margin-left " style="color:white">PERFILES</p>
             <div class="uk-width-1-1 uk-flex uk-flex-wrap uk-flex-center uk-padding-small">
                 
                 <div class="card uk-flex uk-flex-wrap uk-flex-center uk-padding uk-text-center uk-margin-large-right" style="color:white" uk-parallax="opacity: 0,1; y: -20,0; scale: 1.2,1; viewport: 0.5;">
