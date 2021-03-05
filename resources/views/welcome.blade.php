@@ -6,6 +6,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        {{-- linea para que salga miniatura de sitio al compartirlo --}}
+        <link rel="image_src" href="{{ asset ('img/LOGOS/logocolor_only.png')}}" /> 
         <link rel="icon" href="{{ asset('img/LOGOS/logocolor_only.png') }}">
         <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" />
@@ -139,10 +141,10 @@
             </div>
 
             <div class="uk-margin-small-top uk-text-center uk-flex uk-flex-column uk-flex-center" style="font-style: italic; color: #D2D2D2">"Esta página
-                web es apoyado
+                web es apoyada
                 por 
                 el Sistema de<br> Apoyos
-                a la Creación y Proyectos Culturales (Fonca)."
+                a la Creación y Proyectos Culturales (Fonca)"
                 <img src="{{asset('img/LOGOS/SecretariaCultura_FoncaBN.png')}}" class="uk-margin-auto" width="360px">
             </div>
             

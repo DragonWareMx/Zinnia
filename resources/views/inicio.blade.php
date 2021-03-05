@@ -9,6 +9,8 @@
     <title>ZINNIA - Inicio</title>
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" />
+    {{-- linea para que salga miniatura de sitio al compartirlo --}}
+    <link rel="image_src" href="{{ asset ('img/LOGOS/logocolor_only.png')}}" /> 
 
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
@@ -260,10 +262,10 @@
                 <div class="texto-center uk-margin-small-top"
                     style="font-size: 16px;font-style: italic; color: #D2D2D2">
                     "Esta página
-                    web es apoyado
+                    web es apoyada
                     por
                     el Sistema de Apoyos
-                    a la Creación y Proyectos Culturales (Fonca)."</div>
+                    a la Creación y Proyectos Culturales (Fonca)"</div>
                 <img src="{{asset('img/LOGOS/SecretariaCultura_FoncaBN.png')}}" class="uk-margin-auto" width="400px">
             </div>
         </div>

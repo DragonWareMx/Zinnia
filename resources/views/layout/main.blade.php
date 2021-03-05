@@ -258,10 +258,10 @@ preloader
                 <div class="texto-center uk-margin-small-top"
                     style="font-size: 16px;font-style: italic; color: #D2D2D2">
                     "Esta página
-                    web es apoyado
+                    web es apoyada
                     por
                     el Sistema de Apoyos
-                    a la Creación y Proyectos Culturales (Fonca)."</div>
+                    a la Creación y Proyectos Culturales (Fonca)"</div>
                 <img src="{{asset('img/LOGOS/SecretariaCultura_FoncaBN.png')}}" class="uk-margin-auto" width="400px">
             </div>
         </div>
