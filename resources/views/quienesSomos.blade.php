@@ -97,7 +97,7 @@
 
                 <div class="card uk-flex uk-flex-wrap uk-flex-center uk-padding uk-text-center" style="color:white" uk-parallax="opacity: 0,1; y: -20,0; scale: 1.2,1; viewport: 0.5;">
                     <a href="{{asset('img/cv/CVProcella.pdf')}}" download="CVProcella.pdf" uk-tooltip="Clic para más info" class="uk-width-1-1">
-                        <img src="{{asset('img/fotoZinnia/Procella.png')}}" style="width:100px; height:100px; border-radius:100%; object-fit: cover;">
+                        <img src="{{asset('img/fotoZinnia/Procella.jpg')}}" style="width:100px; height:100px; border-radius:100%; object-fit: cover;">
                     </a>
                     <a href="{{asset('img/cv/CVProcella.pdf')}}" download="CVProcella.pdf" class="uk-link-reset" uk-tooltip="Clic para más info">
                         <div class="uk-width-1-1 card-nombre"><b>PROCELLA ROMERO ZEPEDA</b></div>
