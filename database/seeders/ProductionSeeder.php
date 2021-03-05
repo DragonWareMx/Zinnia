@@ -305,48 +305,15 @@ class ProductionSeeder extends Seeder
         \DB::table('productions')->insert([
             'titulo' => 'ÉRASE QUE SE ES… EN AFGANISTÁN',
             'descripcion'=>'',
-            'maindata'=>'',
-            'sinopsis'=>'Dispositivo escénico en el que Norma Ferreira a través de anécdotas, 
-            música, fotografías, videos y registros sonoros, comparte sus experiencias en Afganistán, 
-            donde trabajó como profesora de música durante cinco años. Testimonios, registros audiovisuales 
-            y sonoros se entretejen con cuentos tradicionales afganos, narrados visualmente con un teatro de 
-            sombras hecho con un retroproyector. El centro del dispositivo escénico es la pantalla de proyección 
-            en la cual personajes mágicos se yuxtaponen a paisajes existentes, creando un universo visual híbrido 
-            entre lo real y lo imaginario. El espectáculo abre una ventana que nos muestra otra perspectiva de 
-            Afganistán, distinta a la que vemos en las noticias y nos adentra a la gran riqueza cultural que 
-            tiene ese país.
-            ',
-            'masinfo'=>'',
-            'pdf'=>'',
-            'reconocimientos'=>'Programa “Contigo en la Distancia: Movimiento de Arte en Casa” 2020, 
-            Secretaria de Cultura Federal.
-            ',
-            'n_reconocimientos'=>1,
-            'fecha'=>'2020-2019',
-            'criticas'=>'',
-            'quote'=>'',
-            'tipo'=>'producción',
-        ]);
-
-        \DB::table('productions')->insert([
-            'titulo' => 'LA GALLINA TONTA',
-            'descripcion'=>'
-            <p><strong>Idea&nbsp;original&nbsp;y&nbsp;Direcci&oacute;n&nbsp;Art&iacute;stica</strong></p>
-
-            <p>Norma&nbsp;Ferreira</p>
-
-            <p><strong>Direcci&oacute;n&nbsp;Esc&eacute;nica&nbsp;y&nbsp;Titiritera</strong></p>
-
-            <p>Tania&nbsp;Murillo</p>
-
-            <p><strong>Coproducci&oacute;n</strong></p>
-
-            <p>Maleta&nbsp;en&nbsp;Ristra&nbsp;y&nbsp;Zinnia&nbsp;Compa&ntilde;&iacute;a&nbsp;Esc&eacute;nica</p>
-            ',
             'maindata'=>'
             <table border="0" cellpadding="1" cellspacing="1" style="width:500px">
                 <tbody>
                     <tr>
+                        <td>
+                        <p><strong>Cuento&nbsp;&nbsp;</strong></p>
+
+                        <p>La&nbsp;gallina&nbsp;tonta</p>
+                        </td>
                         <td>
                         <p><strong>Duraci&oacute;n&nbsp;de&nbsp;la&nbsp;obra</strong></p>
 
@@ -364,14 +331,20 @@ class ProductionSeeder extends Seeder
                         </td>
                     </tr>
                 </tbody>
-            </table>
-            ',
-            'sinopsis'=>'Adaptación del cuento del escritor Idris Sha. En un país muy lejano vivía una gallina
-             muy tonta que andaba por allí haciendo toc, toc, toc. Nadie en el pueblo sabía lo que la gallina 
-             quería decir y todos estaban en calma; hasta que un día... la gallina aprende a hablar 
-             “el lenguaje humano” y crea una terrible confusión entre los habitantes del pueblo.
+            </table>',
+
+            'sinopsis'=>'Dispositivo escénico en el que Norma Ferreira a través de anécdotas, 
+            música, fotografías, videos y registros sonoros, comparte sus experiencias en Afganistán, 
+            donde trabajó como profesora de música durante cinco años. Testimonios, registros audiovisuales 
+            y sonoros se entretejen con cuentos tradicionales afganos, narrados visualmente con un teatro de 
+            sombras hecho con un retroproyector. El centro del dispositivo escénico es la pantalla de proyección 
+            en la cual personajes mágicos se yuxtaponen a paisajes existentes, creando un universo visual híbrido 
+            entre lo real y lo imaginario. El espectáculo abre una ventana que nos muestra otra perspectiva de 
+            Afganistán, distinta a la que vemos en las noticias y nos adentra a la gran riqueza cultural que 
+            tiene ese país.
             ',
             'masinfo'=>'
+            
             <p><strong>Elenco</strong></p>
 
             <p><strong>Narradora:&nbsp;</strong>Norma&nbsp;Ferreira</p>
@@ -386,12 +359,14 @@ class ProductionSeeder extends Seeder
 
             <p><strong>Creaci&oacute;n&nbsp;sonora:</strong>&nbsp;Norma&nbsp;Ferreira</p>
 
-            <p><strong>Video&nbsp;y&nbsp;Fotograf&iacute;a:</strong>&nbsp;Norma&nbsp;Ferreira&nbsp;y&nbsp;Owen&nbsp;Breull</p>
-
-            ',
+            <p><strong>Video&nbsp;y&nbsp;Fotograf&iacute;a:</strong>&nbsp;Norma&nbsp;Ferreira&nbsp;y&nbsp;Owen&nbsp;Breull</p>'
+            ,
             'pdf'=>'',
-            'reconocimientos'=>'',
-            'fecha'=>'',
+            'reconocimientos'=>'Programa “Contigo en la Distancia: Movimiento de Arte en Casa” 2020, 
+            Secretaria de Cultura Federal.
+            ',
+            'n_reconocimientos'=>1,
+            'fecha'=>'2020-2019',
             'criticas'=>'',
             'quote'=>'',
             'tipo'=>'coproducción',
@@ -402,5 +377,6 @@ class ProductionSeeder extends Seeder
             https://www.facebook.com/maletaenristra
             '
         ]);
+
     }
 }

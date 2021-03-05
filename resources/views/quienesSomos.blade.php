@@ -26,7 +26,7 @@
                 y madres profesionistas dedicadas a la creación, producción y gestión de proyectos escénicos artísticos.
             </div>
             <div class="uk-width-3-4 uk-margin-left uk-margin-small-top uk-flex uk-flex-right div-logo-company">
-                <img src="{{asset('img/LOGOS/logoblancoynegro.png')}}" style="width:50%" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">
+                <img src="{{asset('img/LOGOS/logoblancoynegro.png')}}" style="width:50%; max-width:260px; max-height: 364px;" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">
             </div>
         </div>
 

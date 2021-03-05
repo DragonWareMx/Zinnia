@@ -334,7 +334,7 @@
     background:transparent;
     width:210px;
     margin-top:-340px;
-    margin-bottom:340px;
+    margin-bottom:125px;
     transform:rotate(90deg);
     margin-left:auto;
     margin-right:-70px;
@@ -379,17 +379,6 @@
     }
 }
 
-@media(max-width:539px){
-    .date_position{
-        display:none;
-    }
-    .date_position2{
-        display:block;
-    }
-    .date_position3{
-        display:block
-    }
-}
 @media(max-width:500px){
     .gal_disapear{
         display:none;
@@ -405,5 +394,14 @@
 @media(max-width:959px){
     .date_space{
         padding-right: 30px;
+    }
+    .date_position{
+        display:none;
+    }
+    .date_position2{
+        display:block;
+    }
+    .date_position3{
+        display:block
     }
 }

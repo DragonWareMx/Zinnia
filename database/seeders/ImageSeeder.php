@@ -282,5 +282,20 @@ class ImageSeeder extends Seeder
             'descripcion'=>'',
             'proyect_id'=>'1',
         ]);
+        DB::table('images')->insert([
+            'link' => 'lamujer1.jpg',
+            'descripcion'=>'',
+            'production_id'=>'3',
+        ]);
+        DB::table('images')->insert([
+            'link' => 'lamujer2.jpg',
+            'descripcion'=>'',
+            'production_id'=>'3',
+        ]);
+        DB::table('images')->insert([
+            'link' => 'lamujer3.jpg',
+            'descripcion'=>'',
+            'production_id'=>'3',
+        ]);
     }
 }

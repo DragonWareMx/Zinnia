@@ -72,7 +72,7 @@
     </div>
 
     @foreach ($elements as $element)
-    <div class="uk-container uk-container-xlarge uk-padding-remove-right" style="margin-bottom:50px;">
+    <div class="uk-container uk-container-xlarge uk-padding-remove-right">
         <div class="p_container uk-margin-medium-top uk-margin-large-bottom" style="min-height: 426px; width:100%;">
             @if ($element->fecha)
                 {{-- PONER AQUI LA FECHA --}}

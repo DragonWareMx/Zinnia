@@ -24,7 +24,7 @@ class VideoSeeder extends Seeder
         DB::table('videos')->insert([
             'link' => 'https://www.youtube.com/embed/5comEmpVLcY?ecver=2&enablejsapi=1',
             'descripcion'=>'Versión en línea',
-            'production_id'=>'5',
+            'production_id'=>'4',
         ]);
         
         DB::table('videos')->insert([
