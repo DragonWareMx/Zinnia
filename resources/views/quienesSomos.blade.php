@@ -26,7 +26,7 @@
                 y madres profesionistas dedicadas a la creación, producción y gestión de proyectos escénicos artísticos.
             </div>
             <div class="uk-width-3-4 uk-margin-left uk-margin-small-top uk-flex uk-flex-right div-logo-company">
-                <img src="{{asset('img/LOGOS/logoblancoynegro.png')}}" style="width:50%; max-width:260px; max-height: 364px;" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">
+                <img src="{{asset('img/LOGOS/logoblancoynegro.png')}}" style="width:50%; max-width:260px; max-height: 364px;" >
             </div>
         </div>
 
@@ -61,9 +61,9 @@
                     el espacio; y como metáfora buscamos sembrar una semilla, generar un espacio de exploración artística  en donde las y los artistas encuentren la libertad 
                     de crear lo inimaginable, para después, compartirlo.  
                 </div>
-                <img src="{{asset('img/fotoZinnia/foto2.1.png')}}" class="uk-width-2-5@s uk-position-absolute img2" style="margin-top:-15%; margin-left:55%; max-width:615px; max-height:400px" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">
+                <img src="{{asset('img/fotoZinnia/foto2.1.png')}}" class="uk-width-2-5@s uk-position-absolute img2" style="margin-top:-15%; margin-left:55%; max-width:615px; max-height:400px">
                 <div class="uk-flex uk-flex-right uk-width-1-1 div-img-responsive2 uk-margin-top uk-margin-bottom">
-                    <img src="{{asset('img/fotoZinnia/foto2.1.png')}}" style="width:50%" uk-parallax="opacity: 0,1; y: 50,0; viewport: 0.5">
+                    <img src="{{asset('img/fotoZinnia/foto2.1.png')}}" style="width:50%">
                 </div>
             </div>
         </div>
