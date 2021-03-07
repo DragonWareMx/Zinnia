@@ -23,3 +23,24 @@
         width:40% !important;
     }
 }
+@media(max-height:650px){
+    .img-logo-blanco{
+        margin-top: -500px !important;
+        padding-top: 5%;
+    }
+}
+@media(max-height:600px){
+    .img-logo-blanco{
+        margin-top: -450px !important;
+    }
+}
+@media(max-height:530px){
+    .img-logo-blanco{
+        margin-top: -430px !important;
+    }
+}
+@media(max-height:500px){
+    .img-logo-blanco{
+        margin-top: -410px !important;
+    }
+}
